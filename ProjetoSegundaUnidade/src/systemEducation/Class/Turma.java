@@ -6,13 +6,15 @@ public class Turma {
 	private String anoLetivo;
 	private String frequencia;
 	private Aluno[] alunos;
+	private Disciplina[] disciplinas;
 	
-	public Turma(String turno,String nivelEscolar,String anoLetivo, String frequencia, int numAlunos) {
+	public Turma(String turno,String nivelEscolar,String anoLetivo, String frequencia, int numAlunos, int numDisciplinas) {
 		this.turno = turno;
 		this.nivelEscolar = nivelEscolar;
 		this.anoLetivo = anoLetivo;
 		this.frequencia = frequencia;
 		this.alunos = new Aluno[numAlunos];
+		this.disciplinas = new Disciplina[numDisciplinas];
 	}
 
 	public String getTurno() {
@@ -59,6 +61,20 @@ public class Turma {
 		static int num = 0;
 		this.alunos[num] = aluno;
 	}
+
+	public Disciplina[] getDisciplinas() {
+		return disciplinas;
+	}
+
+	public void setDisciplinas(Disciplina[] disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+	
+	public void addDisciplinas(Disciplina disciplina) {
+		static int num1 = 0;
+		this.disciplinas[num1] = disciplina;
+	}
+	
 	
 	
 }
