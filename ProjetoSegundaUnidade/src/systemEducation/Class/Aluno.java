@@ -13,5 +13,37 @@ public class Aluno extends Pessoa {
 		this.curso = curso;
 		this.disciplina = disciplina;
 	}
+
+	public String getPeriodoRef() {
+		return periodoRef;
+	}
+
+	public void setPeriodoRef(String periodoRef) {
+		this.periodoRef = periodoRef;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+	public Disciplina getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
 	
 }
