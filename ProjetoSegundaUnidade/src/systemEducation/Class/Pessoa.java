@@ -1,4 +1,4 @@
-package systemEducation;
+package systemEducation.Class;
 
 public class Pessoa {
 	private int id;
