@@ -28,7 +28,7 @@ public class Professor extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Professor [formacao=" + formacao + ", cargaHoraria=" + cargaHoraria + "]";
+		return "O professor "+ this.getNome()+ " possui formação de :"+ formacao+ ", e carga horária na instituição de :" + cargaHoraria + " horas";
 	}
 
 }

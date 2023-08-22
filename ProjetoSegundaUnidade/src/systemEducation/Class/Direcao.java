@@ -7,15 +7,19 @@ public class Direcao extends Pessoa {
 	private int numFuncionarios;
 	private int numProfessores;
 		
-		public Direcao(String cargo, float orcamento,int id, String nome,String cpf,int dia,int mes, int ano){
+		public Direcao(String cargo, float orcamento,int numAlunos,int numFuncionarios,int numProfessores,int id, String nome,String cpf,int dia,int mes, int ano){
 			super(id, nome, cpf, dia, mes, ano);
 			this.cargo = cargo;
 			this.orcamento = orcamento;
+			this.numAlunos = numAlunos;
+			this.numFuncionarios = numFuncionarios;
+			this.numProfessores = numProfessores;
+			
 		}
 		@Override
 		public String toString() {
-			return "Direcao [cargo=" + cargo + ", orcamento=" + orcamento + ", numAlunos=" + numAlunos
-					+ ", numFuncionarios=" + numFuncionarios + ", numProfessores=" + numProfessores + "]";
+			return " A instituição possui o orçamento de " + orcamento +", com o "+this.getNome() + " como " + cargo +", e possui o número total de alunos de: " + numAlunos
+					+ ", número total de funcionários de: " + numFuncionarios + " e o número total de professores de: " + numProfessores;
 		}
 
 		public int getNumAlunos() {
