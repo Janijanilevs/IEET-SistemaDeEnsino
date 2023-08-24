@@ -42,6 +42,6 @@ public class Pessoa {
 	
 	@Override
 	public String toString() {
-		return "ID: " + id + "\n NOME:" + nome + "\n DATA" + data.toString();
+		return " ID: " + id + "\n NOME:" + nome + "\n " + data.toString();
 	}
 }

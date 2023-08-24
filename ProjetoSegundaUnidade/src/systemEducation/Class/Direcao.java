@@ -12,7 +12,6 @@ public class Direcao extends Pessoa {
 			this.cargo = cargo;
 			this.orcamento = orcamento;
 		}
-
 		@Override
 		public String toString() {
 			return "Direcao [cargo=" + cargo + ", orcamento=" + orcamento + ", numAlunos=" + numAlunos
