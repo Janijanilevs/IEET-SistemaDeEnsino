@@ -12,7 +12,13 @@ public class Pessoa {
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
-		this.data = new DataDeNascimento(dia,mes,ano); 
+		if(dia != 0 && mes != 0 && ano != 0){
+			this.data = new DataDeNascimento(dia,mes,ano); 
+		}else if(dia == 0 || mes == 0){
+			this.data = new DataDeNascimento(0); 
+		}else if(ano == 0){
+			this.data = new DataDeNascimento(); 
+		}
 	}
 	public int getId() {
 		return this.id;
@@ -39,6 +45,9 @@ public class Pessoa {
 	public void setData(DataDeNascimento data) {
 		this.data = data;
 	}
+	
+	
+
 	
 	@Override
 	public String toString() {

@@ -4,14 +4,12 @@ public class Aluno extends Pessoa {
 	private String periodoRef;
 	private String matricula;
 	private String curso;
-	private Disciplina disciplina;
 
-	public Aluno(String periodoRef, String matricula, String curso, Disciplina disciplina, int id, String nome, String cpf, int dia, int mes, int ano) {
+	public Aluno(String periodoRef, String matricula, String curso, int id, String nome, String cpf, int dia, int mes, int ano) {
 		super(id, nome, cpf, dia, mes, ano);
 		this.periodoRef = periodoRef;
 		this.matricula = matricula;
 		this.curso = curso;
-		this.disciplina = disciplina;
 	}
 
 	public String getPeriodoRef() {
@@ -38,12 +36,11 @@ public class Aluno extends Pessoa {
 		this.curso = curso;
 	}
 
-	public Disciplina getDisciplina() {
-		return disciplina;
+	@Override
+	public String toString() {
+		return "Aluno [periodoRef=" + periodoRef + ", matricula=" + matricula + ", curso=" + curso + "]";
 	}
 
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
+	// Criar metodo que concatena o numero da matricula com o ano de incersão desse aluno Ex: 202215148
 	
 }

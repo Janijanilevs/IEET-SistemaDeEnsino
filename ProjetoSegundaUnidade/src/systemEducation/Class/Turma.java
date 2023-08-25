@@ -1,20 +1,24 @@
 package systemEducation.Class;
 
+import java.util.Arrays;
+
 public class Turma {
 	private String turno;
 	private String nivelEscolar;
 	private String anoLetivo;
-	private String frequencia;
-	private Aluno[] alunos;
 	private Disciplina[] disciplinas;
+	private Aluno[] alunos;
+	private int numAlunos;
+	private int numDisciplinas;
 	
-	public Turma(String turno,String nivelEscolar,String anoLetivo, String frequencia, int numAlunos, int numDisciplinas) {
+	public Turma(String turno,String nivelEscolar,String anoLetivo, String frequencia, int numAlunos,int numMax, int numDisciplina,int numMaxDisciplinas) {
 		this.turno = turno;
 		this.nivelEscolar = nivelEscolar;
 		this.anoLetivo = anoLetivo;
-		this.frequencia = frequencia;
-		this.alunos = new Aluno[numAlunos];
-		this.disciplinas = new Disciplina[numDisciplinas];
+		this.numAlunos = 0;
+		this.alunos = new Aluno[numMax];
+		this.numDisciplinas = 0;
+		this.disciplinas = new Disciplina[numMaxDisciplinas];
 	}
 
 	public String getTurno() {
@@ -41,14 +45,6 @@ public class Turma {
 		this.anoLetivo = anoLetivo;
 	}
 
-	public String getFrequencia() {
-		return frequencia;
-	}
-
-	public void setFrequencia(String frequencia) {
-		this.frequencia = frequencia;
-	}
-
 	public Aluno[] getAlunos() {
 		return alunos;
 	}
@@ -57,9 +53,16 @@ public class Turma {
 		this.alunos[numAluno] = alunos;
 	}
 	
+	public int getNumAlunos() {
+		return numAlunos;
+	}
+
+	public void setNumAlunos(int numAlunos) {
+		this.numAlunos = numAlunos;
+	}
+
 	public void addAlunos(Aluno aluno) {
-		static int num = 0;
-		this.alunos[num] = aluno;
+		this.alunos[numAlunos] = aluno;
 	}
 
 	public Disciplina[] getDisciplinas() {
@@ -69,12 +72,37 @@ public class Turma {
 	public void setDisciplinas(Disciplina[] disciplinas) {
 		this.disciplinas = disciplinas;
 	}
-	
-	public void addDisciplinas(Disciplina disciplina) {
-		static int num1 = 0;
-		this.disciplinas[num1] = disciplina;
+
+	public void addDisciplinass(Disciplina disciplina) {
+		this.disciplinas[numDisciplinas] = disciplina;
 	}
 	
+	public int getNumDisciplinas() {
+		return numDisciplinas;
+	}
+
+	public void setNumDisciplinas(int numDisciplinas) {
+		this.numDisciplinas = numDisciplinas;
+	}
+
+	public void setAlunos(Aluno[] alunos) {
+		this.alunos = alunos;
+	}
+	
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Turma [turno=" + turno + ", nivelEscolar=" + nivelEscolar + ", anoLetivo=" + anoLetivo
+				+ ", disciplinas=" + Arrays.toString(disciplinas) + ", alunos=" + Arrays.toString(alunos)
+				+ ", numAlunos=" + numAlunos + ", numDisciplinas=" + numDisciplinas + ", getTurno()=" + getTurno()
+				+ ", getNivelEscolar()=" + getNivelEscolar() + ", getAnoLetivo()=" + getAnoLetivo() + ", getAlunos()="
+				+ Arrays.toString(getAlunos()) + ", getNumAlunos()=" + getNumAlunos() + ", getDisciplinas()="
+				+ Arrays.toString(getDisciplinas()) + ", getNumDisciplinas()=" + getNumDisciplinas() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
 	
 	
 }

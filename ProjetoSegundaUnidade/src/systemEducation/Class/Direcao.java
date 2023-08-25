@@ -4,18 +4,20 @@ public class Direcao extends Pessoa {
 	private String cargo;
 	private float orcamento;
 	private int numAlunos;
-	private int numFuncionarios;
 	private int numProfessores;
 		
-		public Direcao(String cargo, float orcamento,int id, String nome,String cpf,int dia,int mes, int ano){
+		public Direcao(String cargo, float orcamento,int numAlunos,int numProfessores,int id, String nome,String cpf,int dia,int mes, int ano){
 			super(id, nome, cpf, dia, mes, ano);
 			this.cargo = cargo;
 			this.orcamento = orcamento;
+			this.numAlunos = numAlunos;
+			this.numProfessores = numProfessores;
+			
 		}
 		@Override
 		public String toString() {
 			return "Direcao [cargo=" + cargo + ", orcamento=" + orcamento + ", numAlunos=" + numAlunos
-					+ ", numFuncionarios=" + numFuncionarios + ", numProfessores=" + numProfessores + "]";
+					+ ", numProfessores=" + numProfessores + "]";
 		}
 
 		public int getNumAlunos() {
@@ -24,14 +26,6 @@ public class Direcao extends Pessoa {
 
 		public void setNumAlunos(int numAlunos) {
 			this.numAlunos = numAlunos;
-		}
-
-		public int getNumFuncionarios() {
-			return numFuncionarios;
-		}
-
-		public void setNumFuncionarios(int numFuncionarios) {
-			this.numFuncionarios = numFuncionarios;
 		}
 
 		public int getNumProfessores() {
@@ -57,5 +51,8 @@ public class Direcao extends Pessoa {
 		public void setOrcamento(float orcamento) {
 			this.orcamento = orcamento;
 		}
+		
+		//Criar um metodo que vai realizar uma analise de orçamento
+		
 		
 }

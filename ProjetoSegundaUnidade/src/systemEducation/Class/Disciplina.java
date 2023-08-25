@@ -4,6 +4,7 @@ import java.util.Arrays;
 public class Disciplina {
 	private String nome;
 	private String descricao;
+	//private String frequencia;
 	private Professor professor;
 	private float notas[];
 	
@@ -40,6 +41,9 @@ public class Disciplina {
 	public void setNotas(float[] notas) {
 		this.notas = notas;
 	}
+	
+	
+	/*Criar função que retorna em porcentagem a frequencia de n aluno em n materia*/
 
 	@Override
 	public String toString() {

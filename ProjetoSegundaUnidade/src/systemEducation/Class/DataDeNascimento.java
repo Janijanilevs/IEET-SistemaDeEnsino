@@ -1,14 +1,26 @@
 package systemEducation.Class;
 
+import java.util.Date;
+import java.util.Calendar;
+
 public class DataDeNascimento {
 	private int dia;
 	private int mes;
 	private int ano;
 
-	DataDeNascimento() {
-		this.dia = 0;
-		this.mes = 0;
-		this.ano = 0;
+	public DataDeNascimento() {
+		Date dataAtual = new Date();
+		Calendar calendario = Calendar.getInstance();
+		calendario.setTime(dataAtual);
+		this.ano = calendario.get(Calendar.YEAR);
+	    this.mes = calendario.get(Calendar.MONTH) + 1; // Os meses são indexados a partir de 0
+	    this.dia = calendario.get(Calendar.DAY_OF_MONTH);
+	}
+	
+	public DataDeNascimento(int num) {
+		this.dia = num;
+		this.mes = num;
+		this.ano = num;
 	}
 
 	public DataDeNascimento(int dia, int mes, int ano) {
@@ -40,6 +52,8 @@ public class DataDeNascimento {
 	public void setAno(int ano) {
 		this.ano = ano;
 	}
+	
+	//Criar metodo que retorana idade
 
 	@Override
 	public String toString() {
