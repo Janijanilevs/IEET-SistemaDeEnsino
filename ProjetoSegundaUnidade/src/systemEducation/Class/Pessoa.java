@@ -4,22 +4,30 @@ public class Pessoa {
 	private int id;
 	private String nome;
 	private String cpf;
+	private String genero;
 	private DataDeNascimento data;
 	
 	public Pessoa(){}
 	
-	public Pessoa(int id, String nome,String cpf,int dia,int mes, int ano){
+	public Pessoa(int id, String nome,String cpf,String genero, int dia,int mes, int ano){
 		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
+		this.genero = genero;
 		if(dia != 0 && mes != 0 && ano != 0){
 			this.data = new DataDeNascimento(dia,mes,ano); 
-		}else if(dia == 0 || mes == 0){
+		}else if(dia == 0 || mes == 0 || ano == 0){
 			this.data = new DataDeNascimento(0); 
-		}else if(ano == 0){
-			this.data = new DataDeNascimento(); 
 		}
 	}
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
 	public int getId() {
 		return this.id;
 	}
@@ -46,9 +54,20 @@ public class Pessoa {
 		this.data = data;
 	}
 	
+	// Esse eu não consegui testa pq depende do outro
+	// Ps: Ele n é paia só diferente
 	
-
+	public void adicionaTitulo(){
+		if(data.retornaIdadeInt() > 30) {
+			this.nome = (getGenero() == "M") ? "Sr." + this.nome : "Sra." + this.nome;
+		}else {
+			this.nome = "Jovem" + this.nome;
+		}
+	}
 	
+	
+	
+	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
 		return " ID: " + id + "\n NOME:" + nome + "\n " + data.toString();

@@ -6,21 +6,21 @@ public class Professor extends Pessoa {
 	private double salario;
 
 	public Professor() {
-		super(0, "", "", 0, 0, 0);
+		super(0, "", "", "", 0, 0, 0);
 		this.formacao = "";
 		this.cargaHoraria = 0;
 		this.salario = 0;
 	}
 	
-	public Professor(int id, String nome, String cpf, int dia, int mes, int ano) {
-		super(id, nome, cpf, dia, mes, ano);
+	public Professor(int id, String nome, String cpf, String genero, int dia, int mes, int ano) {
+		super(id, nome, cpf, genero, dia, mes, ano);
 		this.formacao = "";
 		this.cargaHoraria = 0;
 		this.salario = 0;
 	}
 	
-	public Professor(String formacao, int cargaHoraria, double salario, int id, String nome, String cpf, int dia, int mes, int ano) {
-		super(id, nome, cpf, dia, mes, ano);
+	public Professor(String formacao, int cargaHoraria, double salario, int id, String nome, String cpf, String genero, int dia, int mes, int ano) {
+		super(id, nome, cpf, genero, dia, mes, ano);
 		this.formacao = formacao;
 		this.cargaHoraria = cargaHoraria;
 		this.salario = salario;
@@ -51,6 +51,9 @@ public class Professor extends Pessoa {
 	}
 	
 	
+	
+	//Criar metodo que retorna o salario por hora baseado na carga horaria
+	//Funcionando corretamente
 	public void valorPorHora() {
 		double valor = salario/cargaHoraria;
 		System.out.printf( "O salario/hora de " + getNome() + " é: R$ %.2f",valor);
@@ -58,10 +61,7 @@ public class Professor extends Pessoa {
 	
 	
 	
-	//Criar metodo que retorna o salario por hora baseado na carga horaria
-	
-	
-	
+	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
 		return "O professor "+ this.getNome()+ " possui formação de :"+ formacao+ ", e carga horária na instituição de :" + cargaHoraria + " horas";

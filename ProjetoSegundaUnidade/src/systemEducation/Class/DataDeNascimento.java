@@ -1,21 +1,13 @@
 package systemEducation.Class;
 
-import java.util.Date;
-import java.util.Calendar;
+
+import java.time.LocalDate;
+import java.time.Period;
 
 public class DataDeNascimento {
 	private int dia;
 	private int mes;
 	private int ano;
-
-	public DataDeNascimento() {
-		Date dataAtual = new Date();
-		Calendar calendario = Calendar.getInstance();
-		calendario.setTime(dataAtual);
-		this.ano = calendario.get(Calendar.YEAR);
-	    this.mes = calendario.get(Calendar.MONTH) + 1; // Os meses são indexados a partir de 0
-	    this.dia = calendario.get(Calendar.DAY_OF_MONTH);
-	}
 	
 	public DataDeNascimento(int num) {
 		this.dia = num;
@@ -53,8 +45,21 @@ public class DataDeNascimento {
 		this.ano = ano;
 	}
 	
+	// Tem algum problema neste metodo. No meu não compilou 
+	
+	public int retornaIdadeInt() {
+		LocalDate hoje = LocalDate.now();
+		LocalDate dataNascimento = LocalDate.of(ano, mes, ano);
+		Period periodo = Period.between(dataNascimento, hoje);
+		int idade = periodo.getYears();
+		
+		return idade;
+	}
+	
 	//Criar metodo que retorana idade
 
+	
+	//Formatar toString -> esse n precisa tanto
 	@Override
 	public String toString() {
 		return "Data: " + dia + "/" + mes + "/" + ano;

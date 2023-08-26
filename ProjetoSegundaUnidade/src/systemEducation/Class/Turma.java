@@ -11,7 +11,9 @@ public class Turma {
 	private int numAlunos;
 	private int numDisciplinas;
 	
-	public Turma(String turno,String nivelEscolar,String anoLetivo, String frequencia, int numAlunos,int numMax, int numDisciplina,int numMaxDisciplinas) {
+	//Funcionando
+	
+	public Turma(String turno,String nivelEscolar,String anoLetivo, int numMax, int numMaxDisciplinas) {
 		this.turno = turno;
 		this.nivelEscolar = nivelEscolar;
 		this.anoLetivo = anoLetivo;
@@ -61,20 +63,12 @@ public class Turma {
 		this.numAlunos = numAlunos;
 	}
 
-	public void addAlunos(Aluno aluno) {
-		this.alunos[numAlunos] = aluno;
-	}
-
 	public Disciplina[] getDisciplinas() {
 		return disciplinas;
 	}
 
 	public void setDisciplinas(Disciplina[] disciplinas) {
 		this.disciplinas = disciplinas;
-	}
-
-	public void addDisciplinass(Disciplina disciplina) {
-		this.disciplinas[numDisciplinas] = disciplina;
 	}
 	
 	public int getNumDisciplinas() {
@@ -90,9 +84,19 @@ public class Turma {
 	}
 	
 	
+	//Funções de adição de objeto funcionando corretamente
+	
+	public void addAlunos(Aluno aluno) {
+		this.alunos[numAlunos] = aluno;
+		this.numAlunos++;
+	}
+	public void addDisciplinas(Disciplina disciplina) {
+		this.disciplinas[numDisciplinas] = disciplina;
+		this.numDisciplinas++;
+	}
 	
 	
-
+	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
 		return "Turma [turno=" + turno + ", nivelEscolar=" + nivelEscolar + ", anoLetivo=" + anoLetivo

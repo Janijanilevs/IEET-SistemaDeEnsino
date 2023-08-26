@@ -1,14 +1,11 @@
 package systemEducation.Class;
-import java.util.Arrays;
 
 public class Disciplina {
 	private String nome;
 	private String descricao;
-	//private String frequencia;
 	private Professor professor;
-	private float notas[];
 	
-	Disciplina(String nome, String descricao, Professor professor){
+	public Disciplina(String nome, String descricao, Professor professor){
 		this.nome = nome;
 		this.descricao = descricao;
 		this.professor = professor;
@@ -34,21 +31,47 @@ public class Disciplina {
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
+	
+	
 
-	public float[] getNotas(int unidade) {
-		return this.notas = new float[unidade];
-	}
-	public void setNotas(float[] notas) {
-		this.notas = notas;
-	}
-	
-	
 	/*Criar função que retorna em porcentagem a frequencia de n aluno em n materia*/
+	//Funcionando corretamente
+	
+	public void inserirFrequencia(Aluno aluno, float aulasDadas, float aulasFrequentadas) {
+		if(aulasDadas > aulasFrequentadas) {
+			float freq = aulasFrequentadas/aulasDadas;
+			
+			for(String arrayDisciplina : aluno.getDisciplina()) {
+				int i = 0;
+				if(arrayDisciplina.equals(getNome())) {
+					aluno.addFrequencia(i,freq);
+				}
+				i++;
+			}
+			
+		}else {
+			System.out.printf( "As informações passadas estão incorretas ou este aluno não tem essa disciplina!");
+		}
+	}
+	
+	public void inserirNota(Aluno aluno, float nota) {
+			
+			for(String arrayDisciplina : aluno.getDisciplina()) {
+				int i = 0;
+				if(arrayDisciplina.equals(this.nome)) {
+					aluno.addNota(i,nota);
+				}
+				i++;
+			}
+	}
+	
+	
 
+	
+	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "Disciplina [nome=" + nome + ", descricao=" + descricao + ", professor=" + professor + ", notas="
-				+ Arrays.toString(notas) + "]";
+		return "Disciplina [nome=" + nome + ", descricao=" + descricao + ", professor=" + professor + "]";
 	}
 	
 	
