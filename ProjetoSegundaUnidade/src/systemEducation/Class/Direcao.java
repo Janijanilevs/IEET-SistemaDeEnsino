@@ -1,4 +1,5 @@
 package systemEducation.Class;
+import javax.swing.JOptionPane;
 
 public class Direcao extends Pessoa {
 	private String cargo;
@@ -66,9 +67,9 @@ public class Direcao extends Pessoa {
 		}
 		
 		if(salarioTotal > this.orcamento * 0.45) {
-			System.out.print( "O salario dos professores deve ser reavaliado imediatamente. A verba de 45% destinada a isso está sendo muito ultrapassada."+salarioTotal);
+			JOptionPane.showMessageDialog(null, "O salario dos professores deve ser reavaliado imediatamente. A verba de 45% destinada a isso está sendo ultrapassada. O salario total dos professores está sendo: "+salarioTotal+ " e deveria ser de "+ this.orcamento * 0.45);
 		}else{
-			System.out.print( "O salario dos professores está condizente com o padrão de verba estabalecido de 45% do orçamento Total.");
+			JOptionPane.showMessageDialog(null, "O salario dos professores está condizente com o padrão de verba estabalecido de 45% do orçamento Total.");
 		}
 		
 	}

@@ -24,7 +24,8 @@ public class Aluno extends Pessoa {
 		this.frequencia = new float[10];
 		this.numDisciplinas = 0;
 		this.numNotas = 0;
-		this.numFrequencia = 0;		
+		this.numFrequencia = 0;
+		this.adicionaAnoEId();
 	}
 
 	public String getPeriodoRef() {
@@ -83,15 +84,15 @@ public class Aluno extends Pessoa {
 	
 
 
-	// Criar metodo que concatena o numero da matricula com o ano de incersão desse aluno Ex: 202215148
+	// Criar metodo que concatena o numero da matricula com o ano de incersão desse aluno + seu Id Ex: 2022'1514'8
 	//Funcionando corretamente
-	public void adicionaAno() {
+	public void adicionaAnoEId() {
 		if(controle) {
-			Scanner myObj = new Scanner(System.in);
-			System.out.println("Qual o ano de inserção deste aluno na escola?");
-			String ano = myObj.nextLine();
-			this.matricula = ano + matricula;
-			System.out.println("Alterações realizadas!!");
+			//Scanner myObj = new Scanner(System.in);
+			//System.out.println("Qual o ano de inserção deste aluno na escola?");
+			String ano = "2020";//myObj.nextLine();
+			this.matricula = ano + matricula + getId();
+			//System.out.println("Alterações realizadas!!");
 			controle = false;
 		}else {
 			System.out.println("O ano ja foi inserido na matricula");
@@ -102,7 +103,6 @@ public class Aluno extends Pessoa {
 		for(String disciplina:this.disciplina) {
 			
 		}
-		
 	}
 	
 	
