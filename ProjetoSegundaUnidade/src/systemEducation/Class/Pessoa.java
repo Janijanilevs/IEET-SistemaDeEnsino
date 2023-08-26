@@ -65,6 +65,10 @@ public class Pessoa {
 		}
 	}
 	
+	public String retornaIdade() {
+		return "A idade dessa pessoa é "+ data.retornaIdadeInt();
+	}
+	
 	
 	
 	//Formatar toString -> deixem legivel

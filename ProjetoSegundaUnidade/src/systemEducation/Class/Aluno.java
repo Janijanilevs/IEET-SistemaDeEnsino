@@ -109,9 +109,9 @@ public class Aluno extends Pessoa {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "Aluno [periodoRef=" + periodoRef + ", matricula=" + matricula + ", disciplina="
-				+ Arrays.toString(disciplina) + ", notas=" + Arrays.toString(notas) + ", frequencia="
-				+ Arrays.toString(frequencia) + ", controle=" + controle + "]";
+		return "Aluno [Nome: " +getNome() +" - Periodo Referente:" + periodoRef + " - Matricula:" + matricula + " - Disciplina:"
+				+ Arrays.toString(disciplina) + "\n Notas: " + Arrays.toString(notas) + " - Frequencia:"
+				+ Arrays.toString(frequencia) + "]\n";
 	}
 	
 }

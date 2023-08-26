@@ -1,4 +1,6 @@
 package systemEducation.Main;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 import systemEducation.Class.Professor;
 import systemEducation.Class.Pessoa;
 import systemEducation.Class.Direcao;
@@ -8,7 +10,8 @@ import systemEducation.Class.Turma;
 
 public class Sistema {
 	public static void main(String[] args) {
-		
+		boolean sentinela = true;
+		String opcao;
 		
 		
 		Aluno aluno1 = new Aluno("2º Semestre", "1515", 4, "João", "222.222.222-22", "M", 30, 8, 2005);
@@ -42,7 +45,7 @@ public class Sistema {
 
         Professor[] arrayProfs = new Professor[] { prof1, prof2, prof3, prof4, prof5, prof6, prof7, prof8, prof9, prof10 };
 		
-		Direcao d1 = new Direcao("Diretor Geral",50000,30,101,"Paulo","222.222.222-22", "M",30,8,2005,arrayProfs);
+		Direcao d1 = new Direcao("Diretor Geral",50000,30,101,"Gerivaldo","222.222.222-22", "M",30,8,2005,arrayProfs);
 		
         Disciplina disc1 = new Disciplina("Matemática", "MAT101", prof1);
         Disciplina disc2 = new Disciplina("História", "HIS201", prof2);
@@ -83,28 +86,53 @@ public class Sistema {
 			}
 		}
 		
-		/*
-		aluno1.adicionaAno();
-        System.out.println("---------------------");
-        System.out.println(aluno1.getMatricula());
-        System.out.println("---------------------");
-        aluno1.adicionaAno();
-        System.out.println();*/
-		
-		/*
-		disc1.inserirFrequencia(aluno1, 10, 5);
-		disc1.inserirNota(aluno1, 7.5f);
-		
-		System.out.println(aluno1.toString());*/
-		
-		//System.out.println(prof1.getData().retornaIdadeInt());Esses comandos são os que estão com
-		//System.out.println(aluno1.getData().retornaIdadeInt());Problemas de data
 		
 		
+		// opcao = JOptionPane.showInputDialog("");
+		// JOptionPane.showMessageDialog(null,"");
 		
+		do {
+			opcao = JOptionPane.showInputDialog(null,"Bem-Vindo ao IEET! \n Você deseja entrar como qual tipo de usuário?\n( 1 ) para aluno "); /* \n( 2 ) para professor \n( 3 ) para direção */
+			int id = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite seu ID: "));
+			switch(opcao) {
+				case "1": // Escolheu aluno
+					for(int i = 0; i <= 15; i++) {
+						if(arrayAlunos[i].getId() == id) {
+							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações da turma");
+							switch(opcao) {
+								case "1": // Informações sobre turma
+									opcao = JOptionPane.showInputDialog(null, "Você deseja acessar que turma ? \n ( 1 ) Para turma 1 \n ( 2 ) Para turma 2 \n ( 3 ) Para turma 3");
+									switch(opcao) {
+										case "1":
+											JOptionPane.showMessageDialog(null, turma1.toString());
+											break;
+										case "2":
+											JOptionPane.showMessageDialog(null, turma2.toString());
+											break;
+										case "3":
+											JOptionPane.showMessageDialog(null, turma3.toString());
+											break;
+									}
+									break;
+								case "2":
+									
+									break;
+							} 
+						}
+						else if( i == 15 && arrayAlunos[i].getId() != id) {
+							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");
+						}	
+					}
+					break;
+				case "2": // Escolheu Professor
+					
+					break;
+				case "3": // Escolheu Direção
+					
+					break;
+			}
+			sentinela = false;
+		}while(sentinela);
 		
-		
-		
-        
 	}
 }

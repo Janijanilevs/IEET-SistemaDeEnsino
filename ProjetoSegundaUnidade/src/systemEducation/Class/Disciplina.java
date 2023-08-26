@@ -71,7 +71,7 @@ public class Disciplina {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "Disciplina [nome=" + nome + ", descricao=" + descricao + ", professor=" + professor + "]";
+		return "\nDisciplina [Materia: " + nome + " - Descricao:" + descricao + " - Professor=" + professor + "]";
 	}
 	
 	

@@ -99,13 +99,9 @@ public class Turma {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "Turma [turno=" + turno + ", nivelEscolar=" + nivelEscolar + ", anoLetivo=" + anoLetivo
-				+ ", disciplinas=" + Arrays.toString(disciplinas) + ", alunos=" + Arrays.toString(alunos)
-				+ ", numAlunos=" + numAlunos + ", numDisciplinas=" + numDisciplinas + ", getTurno()=" + getTurno()
-				+ ", getNivelEscolar()=" + getNivelEscolar() + ", getAnoLetivo()=" + getAnoLetivo() + ", getAlunos()="
-				+ Arrays.toString(getAlunos()) + ", getNumAlunos()=" + getNumAlunos() + ", getDisciplinas()="
-				+ Arrays.toString(getDisciplinas()) + ", getNumDisciplinas()=" + getNumDisciplinas() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Turma [Turno:" + turno + "\n NivelEscolar:" + nivelEscolar + "\n AnoLetivo:" + anoLetivo
+				+ "\n Disciplinas: " + Arrays.toString(disciplinas) + " Alunos: " + Arrays.toString(alunos)
+				+ "\n Número de Alunos:" + numAlunos + "\n Número de Disciplinas:" + numDisciplinas + "]";
 	}
 	
 	
