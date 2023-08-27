@@ -91,9 +91,6 @@ public class Sistema {
 			}
 		}
 		
-		// opcao = JOptionPane.showInputDialog("");
-		// JOptionPane.showMessageDialog(null,"");
-		
 		do {
 			id = 0;
 			opcao = JOptionPane.showInputDialog(null,"Bem-Vindo ao IEET! \n Você deseja entrar como qual tipo de usuário?\n( 1 ) para aluno \n( 2 ) para professor \n( 3 ) para direção \n( 4 ) Para sair do programa");
@@ -102,7 +99,7 @@ public class Sistema {
 					id = Integer.parseInt(JOptionPane.showInputDialog(null,"Você escolheu alunos \nDigite seu ID: "));
 					for(int i = 0; i < 15; i++) {
 						if(arrayAlunos[i].getId() == id) {
-							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações das turmas\n ( 2 ) Para receber informações sobre você \n ( 3 ) Ver suas notas");
+							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações das turmas\n ( 2 ) Para receber informações sobre você \n ( 3 ) Ver suas notas\n ( 4 ) Para adicionar sua data de inscrição e id à sua matricula");
 							switch(opcao) {
 								case "1": // Informações sobre turma
 									opcao = JOptionPane.showInputDialog(null, "Você deseja acessar que turma ? \n ( 1 ) Para turma 1 \n ( 2 ) Para turma 2 \n ( 3 ) Para turma 3");
@@ -122,11 +119,14 @@ public class Sistema {
 									JOptionPane.showMessageDialog(null, arrayAlunos[i].toString());
 									break;
 								case "3": // Ver suas notas
-									
+									arrayAlunos[i].mostrarNotas();
+									break;
+								case "4":
+									arrayAlunos[i].adicionaAnoEId();
 									break;
 							} 
 						}
-						else if( i == 14 && arrayAlunos[i].getId() != id) {
+						else if(i == 14 && arrayAlunos[i].getId() != id) {
 							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");
 						}
 					}
@@ -136,7 +136,7 @@ public class Sistema {
 					id = Integer.parseInt(JOptionPane.showInputDialog(null,"Você escolheu Professor \nDigite seu ID: "));
 					for(int i = 0; i < 10; i++) {
 						if(arrayProfs[i].getId() == id) {
-							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações da turma \n ( 2 ) Para receber informações sobre você ");
+							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações da turma \n ( 2 ) Para receber informações sobre você\n ( 3 ) Para inserir frequência de um aluno\n ( 4 ) Para inserir a nota de um aluno");
 							switch(opcao) {
 								case "1": // Informações sobre turma
 									opcao = JOptionPane.showInputDialog(null, "Você deseja acessar que turma ? \n ( 1 ) Para turma 1 \n ( 2 ) Para turma 2 \n ( 3 ) Para turma 3");
@@ -155,7 +155,43 @@ public class Sistema {
 								case "2":
 									JOptionPane.showMessageDialog(null, arrayProfs[i].toString());
 									break;
-							} 
+								case "3":
+									int idDoAluno = 0, aulasDadas = 0, aulasParticipadas = 0;
+									for(int j = 0; j <10; j++) {
+										if(arrayDisciplinas[j].getProfessor() == arrayProfs[i]) {
+											idDoAluno = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com o ID deste aluno: "));
+											for(int z = 0; z < 15; z++) {
+												if(arrayAlunos[z].getId() == idDoAluno) {
+													aulasDadas = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com a quantidade de aulas dadas por você: "));
+													aulasParticipadas = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com a quantidade de aulas participadas pelo aluno."));
+													arrayDisciplinas[j].inserirFrequencia(arrayAlunos[z], aulasDadas, aulasParticipadas);
+												}
+												else if(z == 14 && arrayAlunos[z].getId() != idDoAluno) {
+													JOptionPane.showMessageDialog(null, "Este Id não foi encontrado no nosso banco de dados!");
+												}
+											}
+											
+										}
+									}
+									break;
+								case "4":
+									float notas = 0;
+									for(int j = 0; j <10; j++) {
+										if(arrayDisciplinas[j].getProfessor() == arrayProfs[i]) {
+											idDoAluno = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com o ID deste aluno: "));
+											for(int z = 0; z < 15; z++) {
+												if(arrayAlunos[z].getId() == idDoAluno) {
+													notas = Float.parseFloat(JOptionPane.showInputDialog(null, "Entre com a nota desse aluno"));
+													arrayDisciplinas[j].inserirNota(arrayAlunos[z], notas);
+												}
+												else if(z == 14 && arrayAlunos[z].getId() != idDoAluno) {
+													JOptionPane.showMessageDialog(null, "Este Id não foi encontrado no nosso banco de dados!");
+												}
+											}	
+										}
+									}
+									break;
+							}
 						}
 						else if( i == 9 && arrayProfs[i].getId() != id) {
 							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");

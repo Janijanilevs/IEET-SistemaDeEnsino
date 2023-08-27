@@ -54,9 +54,9 @@ public class Professor extends Pessoa {
 	
 	//Criar metodo que retorna o salario por hora baseado na carga horaria
 	//Funcionando corretamente
-	public void valorPorHora() {
+	public String valorPorHora() {
 		double valor = salario/cargaHoraria;
-		System.out.printf( "O salario/hora de " + getNome() + " é: R$ %.2f",valor);
+		return "O salario/hora de " + getNome() + " é: R$ " + valor;
 	}
 	
 	
@@ -64,7 +64,7 @@ public class Professor extends Pessoa {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "O professor "+ this.getNome()+ " possui formação de: "+ formacao+ ", e uma carga horária na instituição de: " + cargaHoraria + " horas";
+		return "O professor "+ this.getNome()+ " possui formação de: "+ formacao+ ", e uma carga horária na instituição de: " + cargaHoraria + " horas. \n"+ valorPorHora();
 	}
 
 }

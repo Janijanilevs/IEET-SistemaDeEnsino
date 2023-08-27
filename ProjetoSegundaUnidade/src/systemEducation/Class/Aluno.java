@@ -1,7 +1,7 @@
 package systemEducation.Class;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Aluno extends Pessoa {
 	private String periodoRef;
@@ -25,7 +25,6 @@ public class Aluno extends Pessoa {
 		this.numDisciplinas = 0;
 		this.numNotas = 0;
 		this.numFrequencia = 0;
-		this.adicionaAnoEId();
 	}
 
 	public String getPeriodoRef() {
@@ -88,11 +87,9 @@ public class Aluno extends Pessoa {
 	//Funcionando corretamente
 	public void adicionaAnoEId() {
 		if(controle) {
-			//Scanner myObj = new Scanner(System.in);
-			//System.out.println("Qual o ano de inserção deste aluno na escola?");
-			String ano = "2020";//myObj.nextLine();
+			String ano = JOptionPane.showInputDialog(null, "Qual o ano de inserção deste aluno na escola?");
 			this.matricula = ano + matricula + getId();
-			//System.out.println("Alterações realizadas!!");
+			JOptionPane.showMessageDialog(null,"Alterações realizadas!!");
 			controle = false;
 		}else {
 			System.out.println("O ano ja foi inserido na matricula");
@@ -100,9 +97,11 @@ public class Aluno extends Pessoa {
 	}
 	
 	public void mostrarNotas() {
-		for(String disciplina:this.disciplina) {
-			
+		String stringconcatenada = " ";
+		for(int i = 0; i < 10 ; i++) {
+			stringconcatenada += "Disciplina: "+ disciplina[i] +" - "+ notas[i] + "\n";
 		}
+		JOptionPane.showMessageDialog(null, stringconcatenada);
 	}
 	
 	

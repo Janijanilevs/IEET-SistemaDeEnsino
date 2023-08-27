@@ -1,4 +1,5 @@
 package systemEducation.Class;
+import javax.swing.JOptionPane;
 
 public class Disciplina {
 	private String nome;
@@ -37,7 +38,7 @@ public class Disciplina {
 	/*Criar função que retorna em porcentagem a frequencia de n aluno em n materia*/
 	//Funcionando corretamente
 	
-	public void inserirFrequencia(Aluno aluno, float aulasDadas, float aulasFrequentadas) {
+	public void inserirFrequencia(Aluno aluno, int aulasDadas, int aulasFrequentadas) {
 		if(aulasDadas > aulasFrequentadas) {
 			float freq = aulasFrequentadas/aulasDadas;
 			
@@ -48,9 +49,9 @@ public class Disciplina {
 				}
 				i++;
 			}
-			
+			JOptionPane.showMessageDialog(null, "Frequência inserida com sucesso!");
 		}else {
-			System.out.printf( "As informações passadas estão incorretas ou este aluno não tem essa disciplina!");
+			JOptionPane.showMessageDialog(null, "As informações passadas estão incorretas ou este aluno não tem essa disciplina!");
 		}
 	}
 	
@@ -63,6 +64,7 @@ public class Disciplina {
 				}
 				i++;
 			}
+			JOptionPane.showMessageDialog(null, "Frequência inserida com sucesso!");
 	}
 	
 	
