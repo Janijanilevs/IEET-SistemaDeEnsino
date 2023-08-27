@@ -75,6 +75,7 @@ public class Aluno extends Pessoa {
 		this.frequencia = frequencia;
 	}
 	public void addFrequencia(int pos, float freq) {
+		
 		this.frequencia[pos] = freq * 100;
 		this.numFrequencia++;
 	}

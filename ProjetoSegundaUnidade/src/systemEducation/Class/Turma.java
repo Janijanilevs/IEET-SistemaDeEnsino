@@ -100,8 +100,8 @@ public class Turma {
 	@Override
 	public String toString() {
 		return "Turma [Turno:" + turno + "\n NivelEscolar:" + nivelEscolar + "\n AnoLetivo:" + anoLetivo
-				+ "\n Disciplinas: " + Arrays.toString(disciplinas) + " Alunos: " + Arrays.toString(alunos)
-				+ "\n Número de Alunos:" + numAlunos + "\n Número de Disciplinas:" + numDisciplinas + "]";
+				+ "\n\n Disciplinas: " + Arrays.toString(disciplinas) + "\n\n Alunos: " + Arrays.toString(alunos)
+				+ "\n\n Número de Alunos:" + numAlunos + "\n\n Número de Disciplinas:" + numDisciplinas + "]";
 	}
 	
 	
