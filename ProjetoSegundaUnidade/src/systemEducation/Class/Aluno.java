@@ -2,6 +2,7 @@ package systemEducation.Class;
 
 import java.util.Arrays;
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
 
 public class Aluno extends Pessoa {
 	private String periodoRef;
@@ -108,7 +109,7 @@ public class Aluno extends Pessoa {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "Aluno [Nome: " +getNome() +" - Periodo Referente:" + periodoRef + " - Matricula:" + matricula + " - Disciplina:"
+		return "\n Aluno [Nome: " +getNome() +" - Periodo Referente:" + periodoRef + " - Matricula:" + matricula + " - Disciplina:"
 				+ Arrays.toString(disciplina) + "\n Notas: " + Arrays.toString(notas) + " - Frequencia:"
 				+ Arrays.toString(frequencia) + "]\n";
 	}

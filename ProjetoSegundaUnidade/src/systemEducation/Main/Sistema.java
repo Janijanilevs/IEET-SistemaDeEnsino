@@ -32,7 +32,7 @@ public class Sistema {
         Aluno[] arrayAlunos = new Aluno[] { aluno1,aluno2,aluno3,aluno4,aluno5,aluno6,aluno7,aluno8,aluno9,aluno10,aluno11,aluno12,aluno13,aluno14,aluno15 };
 
 		Professor prof1 = new Professor("Doutorado", 60, 2120, 16, "Janielcio", "222.222.222-22", "M", 14, 10, 1996);
-        Professor prof2 = new Professor("Cursante", 13, 2345, 17, "Pablo", "112.432.432-54", "M", 43, 6, 1980);
+        Professor prof2 = new Professor("Cursante", 13, 2345, 17, "Pablo", "112.432.432-54", "M", 23, 6, 1980);
         Professor prof3 = new Professor("Mestrado", 35, 3000, 18, "Maria", "333.333.333-33", "F", 15, 2, 1990);
         Professor prof4 = new Professor("Graduação", 28, 1800.75, 19, "Lucas", "444.444.444-44", "M", 2, 12, 1995);
         Professor prof5 = new Professor("Doutorado", 50, 2500.25, 20, "Carla", "555.555.555-55", "F", 20, 4, 1973);
@@ -43,8 +43,6 @@ public class Sistema {
         Professor prof10 = new Professor("Graduação", 29, 1600, 25, "Ana", "123.123.123-12", "F", 24, 11, 1994);
 
         Professor[] arrayProfs = new Professor[] { prof1, prof2, prof3, prof4, prof5, prof6, prof7, prof8, prof9, prof10 };
-		
-		Direcao d1 = new Direcao("Diretor Geral",50000,30,101,"Gerivaldo","222.222.222-22", "M",30,8,2005,arrayProfs);
 		
         Disciplina disc1 = new Disciplina("Matemática", "MAT101", prof1);
         Disciplina disc2 = new Disciplina("História", "HIS201", prof2);
@@ -113,6 +111,9 @@ public class Sistema {
 										case "3":
 											JOptionPane.showMessageDialog(null, turma3.toString());
 											break;
+										default:
+											JOptionPane.showMessageDialog(null, "Valor Invalido");
+											break;
 									}
 									break;
 								case "2": // Informações sobre a pessoa
@@ -124,19 +125,23 @@ public class Sistema {
 								case "4":
 									arrayAlunos[i].adicionaAnoEId();
 									break;
+								default:
+									JOptionPane.showMessageDialog(null, "Valor Invalido");
+									break;
 							} 
 						}
-						else if(i == 14 && arrayAlunos[i].getId() != id) {
+						else if((id < 0 || id > 15) && i == 14) {
 							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");
 						}
 					}
 					break;
+				
 					
 				case "2": // Escolheu Professor
 					id = Integer.parseInt(JOptionPane.showInputDialog(null,"Você escolheu Professor \nDigite seu ID: "));
 					for(int i = 0; i < 10; i++) {
 						if(arrayProfs[i].getId() == id) {
-							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações da turma \n ( 2 ) Para receber informações sobre você\n ( 3 ) Para inserir frequência de um aluno\n ( 4 ) Para inserir a nota de um aluno");
+							opcao = JOptionPane.showInputDialog(null,"Menu: \n ( 1 ) Para receber informações da turma \n ( 2 ) Para receber informações sobre você\n ( 3 ) Para inserir frequência de um aluno\n ( 4 ) Para inserir a nota de um aluno\n ( 5 ) Para receber seu salario/Hora");
 							switch(opcao) {
 								case "1": // Informações sobre turma
 									opcao = JOptionPane.showInputDialog(null, "Você deseja acessar que turma ? \n ( 1 ) Para turma 1 \n ( 2 ) Para turma 2 \n ( 3 ) Para turma 3");
@@ -149,6 +154,9 @@ public class Sistema {
 											break;
 										case "3":
 											JOptionPane.showMessageDialog(null, turma3.toString());
+											break;
+										default:
+											JOptionPane.showMessageDialog(null, "Valor Invalido");
 											break;
 									}
 									break;
@@ -166,7 +174,7 @@ public class Sistema {
 													aulasParticipadas = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com a quantidade de aulas participadas pelo aluno."));
 													arrayDisciplinas[j].inserirFrequencia(arrayAlunos[z], aulasDadas, aulasParticipadas);
 												}
-												else if(z == 14 && arrayAlunos[z].getId() != idDoAluno) {
+												else if((idDoAluno < 0 || idDoAluno > 15) && i == 14) {
 													JOptionPane.showMessageDialog(null, "Este Id não foi encontrado no nosso banco de dados!");
 												}
 											}
@@ -177,28 +185,33 @@ public class Sistema {
 								case "4":
 									float notas = 0;
 									for(int j = 0; j <10; j++) {
-										if(arrayDisciplinas[j].getProfessor() == arrayProfs[i]) {
+										if(arrayDisciplinas[j].getProfessor().getId() == arrayProfs[i].getId()) {
 											idDoAluno = Integer.parseInt(JOptionPane.showInputDialog(null, "Entre com o ID deste aluno: "));
 											for(int z = 0; z < 15; z++) {
 												if(arrayAlunos[z].getId() == idDoAluno) {
 													notas = Float.parseFloat(JOptionPane.showInputDialog(null, "Entre com a nota desse aluno"));
 													arrayDisciplinas[j].inserirNota(arrayAlunos[z], notas);
 												}
-												else if(z == 14 && arrayAlunos[z].getId() != idDoAluno) {
+												else if((idDoAluno < 0 || idDoAluno > 15) &&  z == 14) {
 													JOptionPane.showMessageDialog(null, "Este Id não foi encontrado no nosso banco de dados!");
 												}
 											}	
 										}
 									}
 									break;
+								case "5":
+									arrayProfs[i].valorPorHora();
+									break;
+								default:
+									JOptionPane.showMessageDialog(null, "Valor Invalido");
+									break;
 							}
 						}
-						else if( i == 9 && arrayProfs[i].getId() != id) {
+						else if((id < 16 || id > 25) && i == 9) {
 							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");
 						}	
 					}
-					break;
-					
+					break;	
 				case "3": // Escolheu Direção
 					id = Integer.parseInt(JOptionPane.showInputDialog(null,"Você escolheu: Direção \nDigite seu ID: "));
 					for(int i = 0; i < 3; i++) {
@@ -211,15 +224,21 @@ public class Sistema {
 								case "2": // Informações sobre a pessoa
 									JOptionPane.showMessageDialog(null, arrayDirecao[i].toString());
 									break;
+								default:
+									JOptionPane.showMessageDialog(null, "Valor Invalido");
+									break;
 							} 
 						}
-						else if( i == 2 && arrayDirecao[i].getId() != id) {
+						else if((id < 26 || id > 28) && i == 2) {
 							JOptionPane.showMessageDialog(null,"Este id não foi encontrado no nosso banco de dados");
 						}	
 					}
 					break;
 				case "4":
 					sentinela = false;
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Valor Invalido");
 					break;
 			}
 		}while(sentinela);

@@ -1,5 +1,9 @@
 package systemEducation.Class;
 
+import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+
+
 public class Professor extends Pessoa {
 	private String formacao;
 	private int cargaHoraria;
@@ -54,9 +58,10 @@ public class Professor extends Pessoa {
 	
 	//Criar metodo que retorna o salario por hora baseado na carga horaria
 	//Funcionando corretamente
-	public String valorPorHora() {
+	public void valorPorHora() {
 		double valor = salario/cargaHoraria;
-		return "O salario/hora de " + getNome() + " é: R$ " + valor;
+		DecimalFormat formato = new DecimalFormat("0.00");
+		JOptionPane.showMessageDialog(null, "O salario/hora de " + getNome() + " é: R$ " + formato.format(valor));
 	}
 	
 	
@@ -64,7 +69,7 @@ public class Professor extends Pessoa {
 	//Formatar toString -> deixem legivel
 	@Override
 	public String toString() {
-		return "O professor "+ this.getNome()+ " possui formação de: "+ formacao+ ", e uma carga horária na instituição de: " + cargaHoraria + " horas. \n"+ valorPorHora();
+		return "O professor "+ this.getNome()+ " possui formação de: "+ formacao+ ", e uma carga horária na instituição de: " + cargaHoraria + " horas. \n";
 	}
 
 }

@@ -5,7 +5,7 @@ public class Pessoa {
 	private String nome;
 	private String cpf;
 	private String genero;
-	private DataDeNascimento data;
+	private Data data;
 	
 	public Pessoa(){}
 	
@@ -15,10 +15,12 @@ public class Pessoa {
 		this.cpf = cpf;
 		this.genero = genero;
 		if(dia != 0 && mes != 0 && ano != 0){
-			this.data = new DataDeNascimento(dia,mes,ano); 
-		}else if(dia == 0 || mes == 0 || ano == 0){
-			this.data = new DataDeNascimento(0); 
+			this.data = new Data(dia,mes,ano); 
 		}
+		else{
+			this.data = new Data(0); 
+		}
+		this.adicionaTitulo();
 	}
 	public String getGenero() {
 		return genero;
@@ -37,7 +39,7 @@ public class Pessoa {
 	public String getCpf() {
 		return this.cpf;
 	}
-	public DataDeNascimento getData() {
+	public Data getData() {
 		return this.data;
 	}
 	
@@ -50,7 +52,7 @@ public class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public void setData(DataDeNascimento data) {
+	public void setData(Data data) {
 		this.data = data;
 	}
 	
@@ -61,7 +63,7 @@ public class Pessoa {
 		if(data.retornaIdadeInt() > 30) {
 			this.nome = (getGenero() == "M") ? "Sr." + this.nome : "Sra." + this.nome;
 		}else {
-			this.nome = "Jovem" + this.nome;
+			this.nome = "Jovem " + this.nome;
 		}
 	}
 	

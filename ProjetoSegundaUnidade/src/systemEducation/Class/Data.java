@@ -4,18 +4,18 @@ package systemEducation.Class;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class DataDeNascimento {
+public class Data {
 	private int dia;
 	private int mes;
 	private int ano;
 	
-	public DataDeNascimento(int num) {
+	public Data(int num) {
 		this.dia = num;
 		this.mes = num;
 		this.ano = num;
 	}
 
-	public DataDeNascimento(int dia, int mes, int ano) {
+	public Data(int dia, int mes, int ano) {
 		this.dia = dia;
 		this.mes = mes;
 		this.ano = ano;
@@ -49,7 +49,7 @@ public class DataDeNascimento {
 	
 	public int retornaIdadeInt() {
 		LocalDate hoje = LocalDate.now();
-		LocalDate dataNascimento = LocalDate.of(ano, mes, ano);
+		LocalDate dataNascimento = LocalDate.of(ano, mes, dia);
 		Period periodo = Period.between(dataNascimento, hoje);
 		int idade = periodo.getYears();
 		

@@ -1,6 +1,7 @@
 package systemEducation.Class;
 import javax.swing.JOptionPane;
 
+
 public class Disciplina {
 	private String nome;
 	private String descricao;
@@ -40,10 +41,10 @@ public class Disciplina {
 	
 	public void inserirFrequencia(Aluno aluno, int aulasDadas, int aulasFrequentadas) {
 		if(aulasDadas > aulasFrequentadas) {
-			float freq = aulasFrequentadas/aulasDadas;
-			
+			float freq = (float)aulasFrequentadas/aulasDadas;
+			int i = 0;
 			for(String arrayDisciplina : aluno.getDisciplina()) {
-				int i = 0;
+				
 				if(arrayDisciplina.equals(getNome())) {
 					aluno.addFrequencia(i,freq);
 				}
@@ -56,15 +57,14 @@ public class Disciplina {
 	}
 	
 	public void inserirNota(Aluno aluno, float nota) {
-			
+		int i = 0;
 			for(String arrayDisciplina : aluno.getDisciplina()) {
-				int i = 0;
 				if(arrayDisciplina.equals(this.nome)) {
 					aluno.addNota(i,nota);
 				}
 				i++;
 			}
-			JOptionPane.showMessageDialog(null, "Frequência inserida com sucesso!");
+			JOptionPane.showMessageDialog(null, "Nota inserida com sucesso!");
 	}
 	
 	
