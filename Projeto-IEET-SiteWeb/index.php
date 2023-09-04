@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="estilos/estiloPrincipal.css" rel="stylesheet">
-    <link href="estilos/estiloIndex.css" rel="stylesheet">
+    <link href="estilos/estiloPrincipal.css" rel="stylesheet"><!-- Isso são links de arquivos diferentes para coisas mais inportantes como o menu e o rodapé onde todos vão herdar essas estilizaçõees-->
+    <link href="estilos/estiloIndex.css" rel="stylesheet"> <!-- E o arquivo css da propria pagina para estilizar a mesma-->
     <title>IEET- Sistema de Ensino</title>
 </head>
 <body>
