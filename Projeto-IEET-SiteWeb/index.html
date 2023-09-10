@@ -1,8 +1,3 @@
-<?php
-    $endereco = $_GET["destino"] ?? "";
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,11 +13,11 @@
         <div id="loginTotal">
             <img id="logo" src="imagens/Logo.png" alt="IEET">
             <div id="formLogin">
-                <form action="" method="post">
-                    <label>
+                <form action="paginaPrincipal.html" method="post">
+                    <label class="campoDados">
                         <input type="email" name="email" placeholder="Email" required class="dados">   
                     </label>
-                    <label>
+                    <label class="campoDados">
                         <input type="text" name="senha" placeholder="Senha" required class="dados">   
                     </label>
                     <button name="acessar" class="botaoAcesso"> Acessar </button>
