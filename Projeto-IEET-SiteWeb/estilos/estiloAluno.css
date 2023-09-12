@@ -1,0 +1,82 @@
+/*Zerando o layout*/
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.topo{
+    background: #FF914D;
+    width: 1450px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+  width: 30rem;
+  height: 20rem;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 129px;
+}
+.menu{
+    width: 100%;
+    height: 33px;
+    color: #FFF;
+    
+}
+.submenu ul li{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+    list-style: none;   
+}
+/*-----BANER*/
+.banner{
+    width: 1450px;
+    height: 316px;
+    margin-top: 20px;
+    background-image: url("../imagens/banner.png");
+}
+.banner h1{
+    text-align: center;
+    color: #f0ffff;
+}
+/*------------Tarefas*/
+.tarefas{
+    width: 100%;
+    height: 400px;
+    text-align: center;    
+
+}
+.modificador{
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.bannertarefa{
+    height: 100px;
+    width: 150px;
+    background-color: #000000;
+}
+.boletim{
+    margin-top: 20px;
+    height: 600px;
+    background-color: blueviolet;
+}
+.boletim h3{
+    text-align: center;
+}
+.mostraboletim{
+    width: 90%;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 80px;
+    background-image: url("../imagens/boletim.jpeg");
+}

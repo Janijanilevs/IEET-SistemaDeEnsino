@@ -1,18 +1,56 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="estilos/estiloPrincipal.css" rel="stylesheet"><!-- Isso são links de arquivos diferentes para coisas mais inportantes como o menu e o rodapé onde todos vão herdar essas estilizaçõees-->
-    <link href="estilos/estiloAluno.css" rel="stylesheet"> <!-- E o arquivo css da propria pagina para estilizar a mesma-->
+    -<link href="../estilos/estiloPrincipal.css" rel="stylesheet">  <!--Isso são links de arquivos diferentes para coisas mais inportantes como o menu e o rodapé onde todos vão herdar essas estilizaçõees-->
+    <link href="../estilos/estiloAluno.css" rel="stylesheet"> <!-- E o arquivo css da propria pagina para estilizar a mesma-->
     <title>IEET- Sistema de Ensino</title>
 </head>
 <body>
-    <main>
-            <img id="logo" src="imagens/Logo.png" alt="IEET">
-    </main>
+   <!-- Menu do Site -->
+   <header class="topo">
+    <div class="logo">
+        <a href="aluno.html"><img src="../Imagens/logo.png"></a>
+    </div>
+<div class="menu">
+    <nav class="submenu">
+        <ul>
+            <li> Área do Aluno</li>
+            <li> DashBoard</li>
+            <li> Tarefas</li>
+            <li> Login</li>
+        </ul>
+    </nav>
+</div>
+</header>
+<!-- Corpo do Site-->
+<main>
+    <!-- Área do Banner escrito área do aluno ou área do prof-->
+    <div class="banner">
+        <h1> Área do Aluno</h1>
+    </div>
+    <section class="tarefas">
+        <h3>Tarefas Diárias</h3>
+        <div class="modificador">
+            <div class="bannertarefa">
+
+            </div>
+            <div class="bannertarefa">
+
+            </div>
+            <div class="bannertarefa">
+
+            </div>
+        </div>
+    </section>
+    <section class="boletim">
+        <h3>Boletim Escolar</h3>
+        <div class="mostraboletim"></div>
+    </section>
+</main>
+    <footer class="rodape">
+        
+    </footer>
 </body>
 </html>
