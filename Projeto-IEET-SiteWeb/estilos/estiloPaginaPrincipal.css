@@ -26,6 +26,10 @@ ul{
     font-size: 20px;
     color: white;
 }
+.nav-item a{
+    text-decoration: none;
+    color: #f0ffff;
+}
 /*-----BANER*/
 .banner{
     width: 100%;
