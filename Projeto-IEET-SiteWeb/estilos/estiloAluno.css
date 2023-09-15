@@ -184,12 +184,8 @@ footer{
     height: 100%;
 }
 .bloco3{
-    min-height: 25rem;
-    width: 33%;
+
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
 }
 .social{
     margin: 1rem;
