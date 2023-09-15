@@ -91,3 +91,11 @@ ul{
 .padraoBoletim li{
     margin-right: 15px;
 }
+.materia{
+    display: flex;
+    flex-direction: row;
+    
+}
+.materia li{
+    margin-right: 50px;
+}
