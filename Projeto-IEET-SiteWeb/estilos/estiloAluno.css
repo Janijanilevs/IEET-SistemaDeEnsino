@@ -71,6 +71,7 @@ ul{
 .boletim{
     margin-top: 15%;
     margin-left: 10%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,19 +84,119 @@ ul{
     margin-top: 2%;
     margin-bottom: 2%;
 }
+.boletim li{
+    margin-bottom: 2%;
+}
 .padraoBoletim{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 80%;
 }
 .padraoBoletim li{
     margin-right: 15px;
+    font-size: 20px;
+    list-style-type: none;
 }
-.materia{
+#materiaPadrao{
+    width: 80%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
     
 }
-.materia li{
-    margin-right: 50px;
+#materiaPadrao li{
+    margin-right: 35px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    list-style-type: none;
 }
+#materia{
+    width: 14%;
+}
+#cargaH{
+    width: 10%;
+}
+#TotalAulas{
+    width: 10%;
+}
+#TotalFaltas{
+    width: 10%;
+}
+#freq{
+    width: 10%;
+}
+#nota1{
+    width: 10%;
+}
+#nota2{
+    width: 10%;
+}
+#nota2{
+    width: 10%;
+}
+#media{
+    width: 10%;
+}
+footer{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 184px;
+    color: #000000;
+}
+.footer1{
+    background-color: #ff924e;
+    display: flex;
+    justify-content: center;
+}
+.footer2{
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloco1{
+    min-height: 25rem;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloco1 h3{
+    margin: 0.8rem 0;
+}
+.bloco2{
+    min-height: 25rem;
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.baixar{
+    width: 15rem;
+    height: 8rem;
+    margin-top: 1.5rem;
+}
+.baixar img{
+    width: 100%;
+    height: 100%;
+}
+.bloco3{
+    min-height: 25rem;
+    width: 33%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.social{
+    margin: 1rem;
+    width: 50px;
+    height: 50px;
+}
+.social img{
+    width: 100%;
+    height: 100%;
+}   
