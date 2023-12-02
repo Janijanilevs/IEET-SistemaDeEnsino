@@ -1,4 +1,4 @@
 # IEET: Sistema De Ensino    
 ## Situação Atual: MVC
 ### Grupo: Elisa, Gilberto, Gleice, Janielcio, Luan, Paulo e Vitor
-#### Classes: Admin, Direcao, Professor, Aluno
+#### Classes: Admin -> Escola -> Direcao -> Professor e Aluno
