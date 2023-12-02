@@ -2,7 +2,7 @@
     "name": "ifba/siteieet",
     "autoload": {
         "psr-4": {
-            "SiteIeet\\": "app/"
+            "IeetSite\\": "app/"
         }
     },
     "authors": [
