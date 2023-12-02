@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS alunos(
     id_usuario INT,
 	FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
+
 CREATE TABLE IF NOT EXISTS professor(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT,
@@ -22,6 +23,7 @@ CREATE TABLE IF NOT EXISTS professor(
     disciplina VARCHAR(50),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
+
 CREATE TABLE IF NOT EXISTS notas(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     id_aluno INT,
@@ -30,6 +32,7 @@ CREATE TABLE IF NOT EXISTS notas(
     nota3 FLOAT,
     FOREIGN KEY (id_aluno) REFERENCES alunos(id)
 );
+
 CREATE TABLE IF NOT EXISTS turma(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     aluno_id INT,
@@ -37,6 +40,7 @@ CREATE TABLE IF NOT EXISTS turma(
     FOREIGN KEY (aluno_id) REFERENCES alunos(id),
     FOREIGN KEY (professor_id) REFERENCES professor(id)
 );
+
 CREATE TABLE IF NOT EXISTS disciplina(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     turma_id INT,
