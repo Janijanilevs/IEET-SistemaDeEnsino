@@ -1,0 +1,15 @@
+{
+    "name": "ifba/siteieet",
+    "autoload": {
+        "psr-4": {
+            "SiteIeet\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PauloHenryLimaBomfim",
+            "email": "zzHenryx@gmail.com"
+        }
+    ],
+    "require": {}
+}

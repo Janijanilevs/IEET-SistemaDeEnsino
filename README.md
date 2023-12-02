@@ -1,3 +1,3 @@
-# IEET-SistemaDeEnsino
+# IEET Sistema De Ensino    
 
 Situação Atual: Pagina HTML
