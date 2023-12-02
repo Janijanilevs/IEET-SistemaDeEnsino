@@ -6,6 +6,6 @@
     <title><?=$titulo?></title>
 </head>
 <body>
-    <h1>Inicial Pagina</h1>
+    <h1>Página onde apresentamos a empresa e formas de contratamos</h1>
 </body>
 </html>

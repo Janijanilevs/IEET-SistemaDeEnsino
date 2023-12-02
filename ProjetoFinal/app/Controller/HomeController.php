@@ -6,6 +6,6 @@ use IeetSite\Core\Controller;
 
 class HomeController extends Controller{
     public function index(){
-        $this->view("inicial");
+        $this->view("inicial", [ "titulo" => " Ieet Sistema de Ensino" ]);
     }
 }
