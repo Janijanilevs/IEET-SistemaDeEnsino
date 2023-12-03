@@ -1,4 +1,5 @@
-<main id="main-inicial">
+<?php componente('topo')?>
+    <main id="main-inicial">
         <div id="banner">
             <img src="public/imagens/mulhermain.png">
             <section id="section-main-1">
@@ -54,3 +55,4 @@
             <iframe width="100%" height="500" src="https://www.youtube.com/embed/s4nXf0Ltvic?si=lFSjO1E17ujOAnhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </main>
+<?php componente('rodape')?>
