@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+#body-simulador-topo{
     background-color: #20273f;
 }
 /* Topo */
@@ -75,6 +75,9 @@ footer{
 
 
 /* main - Página inicial*/
+#main-inicial{
+    background-color: #20273f;
+}
 #banner{
     display: flex;
     background: linear-gradient(238deg, rgba(8, 182, 150, 0.53) 36.69%, rgba(255, 255, 255, 0.00) 65.82%);
@@ -173,7 +176,7 @@ footer{
 }
     
 
-/* main - página login */
+/* main - página login */ /* Não usem body/main/h1/h2... sem referencia Ex:( #main-5 h1{} )*/
 
 /* main - página cadastro */
 

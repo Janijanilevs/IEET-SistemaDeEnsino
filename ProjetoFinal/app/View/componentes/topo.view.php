@@ -15,25 +15,26 @@
     <title><?=$titulo?></title>
 </head>
 <body>
-    <header>
-        <a href="/IEET-SistemaDeEnsino/ProjetoFinal/"  id="link-home-header">
-            <img src="public/imagens/Logo-ieet-topo.png">
-            <h1 id="ieet-header"> IEET </h1>
-        </a>
-        <a href="cadastro">
-            <h1>Contrate nossos serviços</h1>
-        </a>
-        <a href="faleconosco"> 
-            <h1>Fale conosco</h1>
-        </a>
-        <a href="login" id="login">
-            <h1>Login</h1>
-        </a>
-    </header>
-
+    <div id="body-simulador-topo">
+        <header>
+            <a href="/IEET-SistemaDeEnsino/ProjetoFinal/"  id="link-home-header">
+                <img src="public/imagens/Logo-ieet-topo.png">
+                <h1 id="ieet-header"> IEET </h1>
+            </a>
+            <a href="cadastro">
+                <h1>Contrate nossos serviços</h1>
+            </a>
+            <a href="faleconosco"> 
+                <h1>Fale conosco</h1>
+            </a>
+            <a href="login" id="login">
+                <h1>Login</h1>
+            </a>
+        </header>
+    </div>
 <!-- A partir daqui é da página inicial.view.php-->
 
-    <main>
+    <main id="main-inicial">
         <div id="banner">
             <img src="public/imagens/mulhermain.png">
             <section id="section-main-1">
