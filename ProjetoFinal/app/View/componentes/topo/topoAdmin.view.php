@@ -20,13 +20,13 @@
             <img src="public/imagens/Logo-ieet-topo.png">
             <h1 id="ieet-header"> IEET </h1>
         </a>
-        <a href="cadastro">
-            <h1>Contrate nossos serviços</h1>
+        <a href="">
+            <h1>Mensagens</h1>
         </a>
-        <a href="faleconosco"> 
-            <h1>Fale conosco</h1>
+        <a href=""> 
+            <h1>Criar Escolas e adicionar direção</h1>
         </a>
-        <a href="login" id="login">
-            <h1>Login</h1>
+        <a href="" id="login">
+            <h1>Perfil</h1>
         </a>
     </header>
