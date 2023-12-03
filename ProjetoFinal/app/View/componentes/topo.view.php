@@ -49,27 +49,33 @@
         </div>
 
         <h1 id="possibilidades">Nossas Possibilidades:</h1>
-        
+
         <div id="div-possibilidades">
-            <section class="section-usuario"> 
-                <h2>Verifique seu boletim;</h2>
-                <h2>Complete? Conclua suas atividades;</h2>
-                <h2>Conheça seu progresso;</h2>
-                <h2>Veja seus materiais de estudo online.</h2>
+            <section class="section-padrao"> 
+                <div class="section-usuario">
+                    <h2>Verifique seu boletim;</h2>
+                    <h2>Complete? Conclua suas atividades;</h2>
+                    <h2>Conheça seu progresso;</h2>
+                    <h2>Veja seus materiais de estudo online.</h2>
+                    </div>
                 <a href="login">Acesse como aluno</a>
             </section>
-            <section class="section-usuario"> 
-                <h2>Notifique rapidamente;</h2>
-                <h2>Gerencie suas turmas;</h2>
-                <h2>Informações organizadas;</h2>
-                <h2>Ouça sugestões.</h2>
+            <section class="section-padrao">
+                <div class="section-usuario"> 
+                    <h2>Notifique rapidamente;</h2>
+                    <h2>Gerencie suas turmas;</h2>
+                    <h2>Informações organizadas;</h2>
+                    <h2>Ouça sugestões.</h2>
+                </div>
                 <a href="login">Acesse como Direção</a>
             </section>
-            <section class="section-usuario"> 
-                <h2>Organize suas turmas;</h2>
-                <h2>Lecione atividades;</h2>
-                <h2>Forneça materiais de estudo;</h2>
-                <h2>Comunique-se com seus alunos.</h2>
+            <section class="section-padrao">
+                <div class="section-usuario">
+                    <h2>Organize suas turmas;</h2>
+                    <h2>Lecione atividades;</h2>
+                    <h2>Forneça materiais de estudo;</h2>
+                    <h2>Comunique-se com seus alunos.</h2>
+                </div>
                 <a href="login">Acesse como Professor</a>
             </section>
         </div>
