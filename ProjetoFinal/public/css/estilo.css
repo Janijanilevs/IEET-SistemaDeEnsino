@@ -62,7 +62,7 @@ header img{
 
 /* Rodapé */
 footer{
-    bottom: 0;
+    bottom: 1;
     width: 100%;
     display:flex;
     align-items: center;
@@ -70,7 +70,7 @@ footer{
     background-color: #FF5C00;
     padding: 1%;
     padding-left: 3%;
-    position: fixed;
+    position: absolute;
 }
 
 
