@@ -4,8 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
 }
 #TituloRegistroEscolar{
     text-align: center;
 
+}
+main{
+    background-color: black;
 }

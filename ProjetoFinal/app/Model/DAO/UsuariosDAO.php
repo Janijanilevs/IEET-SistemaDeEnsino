@@ -56,13 +56,13 @@ class UsuariosDAO{
                 $sql = "UPDATE ieet SET nome = ?, login = ?, senha = ?";
                 break;
             case 3:
-                
+                $sql = "UPDATE ieet SET nome = ?, login = ?, senha = ?";
                 break;
             case 4:
-                
+                $sql = "UPDATE ieet SET nome = ?, login = ?, senha = ?";
                 break;
             default:
-                
+                $sql = "UPDATE ieet SET nome = ?, login = ?, senha = ?";
                 break;
         }
 

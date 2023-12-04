@@ -24,7 +24,7 @@
         <a href="<?=linkrota('')?>">
             <h1>Registro</h1>
         </a>
-        <a href="<?=linkrota('')?>"> 
+        <a href="<?=linkrota('')?>" id="login"> 
             <h1>Página Inicial</h1>
         </a>
     </header>

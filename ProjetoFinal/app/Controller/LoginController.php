@@ -11,7 +11,7 @@ class LoginController extends Controller{
     }
 
     public function cadastro(){
-        $this->view("cadastro",["titulo" => "Página de Cadastrow - Ieet"]);
+        $this->view("cadastro",["titulo" => "Página de Cadastro - Ieet"]);
     }
 
 
