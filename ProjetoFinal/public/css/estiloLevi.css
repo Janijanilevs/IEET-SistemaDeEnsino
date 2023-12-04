@@ -12,9 +12,12 @@
     color: white;
     font-size: 12vh;
     font-family: 'Paytone One', sans-serif;
-    -webkit-text-stroke-width: 1.5px; /* largura da borda */
+    -webkit-text-stroke-width: 1px; /* largura da borda */
     -webkit-text-stroke-color: #000; /* cor da borda */
     position: absolute;
-    top: 28%;
-    left: 26%;
+    height: 45vh;
+    top: 14rem;
+    width: 100%;
+    text-align: center;
+    
 }
