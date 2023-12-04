@@ -69,19 +69,59 @@ header img{
 
 /* Rodapé */
 footer{
-    bottom: 1;
-    width: 100%;
-    display:flex;
+    background-color: #FF5C00;
+    padding: 1.5%;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dentrofooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #FF5C00;
-    padding: 1%;
-    padding-left: 3%;
-    
-    position: absolute;
+    width: 200px;
 }
 
-
+/*
+footer{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #FF5C00;
+    padding: 2%;
+    position: absolute;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+#dentrofooter{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #FF5C00;
+    position: absolute;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+*/
 /* main - Página inicial*/
 
 #body-simulador-topo{

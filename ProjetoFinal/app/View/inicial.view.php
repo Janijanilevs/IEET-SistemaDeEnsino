@@ -25,7 +25,7 @@
                     <h2>Conheça seu progresso;</h2>
                     <h2>Veja seus materiais de estudo online.</h2>
                     </div>
-                <a href="login">Acesse como aluno</a>
+                <a href="<?=linkrota('login')?>">Acesse como aluno</a>
             </section>
             <section class="section-padrao">
                 <div class="section-usuario"> 
@@ -35,7 +35,7 @@
                     <h2>Informações organizadas;</h2>
                     <h2>Ouça sugestões.</h2>
                 </div>
-                <a href="login">Acesse como Direção</a>
+                <a href="<?=linkrota('login')?>">Acesse como Direção</a>
             </section>
             <section class="section-padrao">
                 <div class="section-usuario">
@@ -45,7 +45,7 @@
                     <h2>Forneça materiais de estudo;</h2>
                     <h2>Comunique-se com seus alunos.</h2>
                 </div>
-                <a href="login">Acesse como Professor</a>
+                <a href="<?=linkrota('login')?>">Acesse como Professor</a>
             </section>
         </div>
         <div class="video-inicial">
