@@ -9,4 +9,5 @@ Router::add("/insereDiretor", "HomeController", "insereDiretor");
 Router::add("/recuperaDiretor", "HomeController", "recuperaDiretor");
 Router::add("/recuperaId", "HomeController", "recuperaByIdETipo");
 Router::add("/direcaoMain", "HomeController", "mainDirecao");
+Router::add("/confirmacao", "HomeController", "confirmacao");
 Router::add("/cadastro", "LoginController", "cadastro");

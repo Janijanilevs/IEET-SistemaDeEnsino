@@ -356,3 +356,24 @@ footer{
 /* main - página direção*/
 
 /* main - página admin */
+
+/* main - confirmacao */
+
+#confirmaMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirma{
+    width:50%;
+    height: 100px;
+    background-color: 	#32CD32;
+    font-family: 'ubuntu', sans-serif;
+    color: aliceblue;
+    border-radius: 30px;
+    border: 2px #000 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -45,8 +45,27 @@ class UsuariosDAO{
         }
     }
     
-    public function editarUsuario($usuario){
-        
+    public function editarUsuario($usuario, $tipo){
+        $db = new Database();
+
+        switch($tipo){
+            case 1:
+                print "Não é possível atualizar um ADM";
+                break;
+            case 2:
+                $sql = "UPDATE ieet SET nome = ?, login = ?, senha = ?";
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            default:
+                
+                break;
+        }
+
     }
     
 
