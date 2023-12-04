@@ -38,9 +38,10 @@ class HomeController extends Controller{
         $dao->cadastrarDiretor($direcao);
     }
 
-    public function recuperaDiretor(){
+    public function getAll(){
         $dao = new UsuariosDAO();
         $consulta = ($dao->getAll());
+        
         foreach($consulta as $usuarios){
             print $usuarios->nome;
             print "<hr>";
