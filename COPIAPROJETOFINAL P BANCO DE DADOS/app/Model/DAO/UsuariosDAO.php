@@ -6,7 +6,7 @@ use IeetSite\Core\DAO;
 use IeetSite\Core\Database;
 use IeetSite\Model\Entities\Direcao;
 use PDO;
-
+    
 class UsuariosDAO extends DAO{
 
     protected string $tabela = "usuario_direcao";

@@ -1,0 +1,379 @@
+/* Padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-end;
+}
+main{
+    flex: 1 ;
+}
+
+/* Topo */
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FF5C00;
+    padding: 1%;
+    padding-left: 3%;
+}
+header #login {
+    text-decoration: none;
+    color:aliceblue;
+    font-family: 'Overpass Mono','Open Sans', sans-serif;
+    border-radius: 18px;
+    background: #FF7E36;
+    padding: 1%;
+}
+header a{
+    color:aliceblue;
+    text-align: center;
+    font-family: 'Overpass Mono', 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+header img{
+    width: 69px;
+    height: 69px;
+    flex-shrink: 0;
+    /* box-shadow: 10px 10px 3px 1px black; */
+}
+#link-home-header{
+    display: flex;
+    align-items: center;
+    margin-right: 20%;
+    text-decoration: none;
+}
+#ieet-header{
+    color: #00FFE9;
+    text-shadow: 8px 5px 5.1px rgba(0, 0, 0, 0.40);
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 11.52px;
+
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+}
+
+/* Rodapé */
+footer{
+    background-color: #FF5C00;
+    padding: 1.5%;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dentrofooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+/*
+footer{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #FF5C00;
+    padding: 2%;
+    position: absolute;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+#dentrofooter{
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #FF5C00;
+    position: absolute;
+    font-family: ubuntu, sans-serif;
+    color:aliceblue;
+    font-size: 14px;
+}
+*/
+/* main - Página inicial*/
+
+#body-simulador-topo{
+    background-color: #20273f;
+}
+#main-inicial{
+    background-color: #20273f;
+    
+}
+#banner{
+    display: flex;
+    background: linear-gradient(238deg, rgba(8, 182, 150, 0.53) 36.69%, rgba(255, 255, 255, 0.00) 65.82%);
+    background-color: #20273f;
+}
+#banner img{
+    height: 516px;
+    flex-shrink: 0;
+    margin-left: 10%;
+}
+#section-main-1{
+    margin-left: 10%;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#section-main-1 h1{
+    color:white;
+    font-family: Timmana, sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+}
+#section-beneficios{
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+}
+#section-beneficios h2{
+    font-family: Urbanist, sans-serif;
+    border-radius: 40px;
+    margin-right: 5%;
+    padding: 3%;
+    background: linear-gradient(180deg, #B2D1FF 0%, #07D68B 100%);
+}
+#possibilidades{
+    width: 100%;
+    height: 307px;
+    background: linear-gradient(180deg, #FF5C00 58.33%, rgba(255, 92, 0, 0.00) 100%);
+    background-color: #20273f;
+}
+#possibilidades{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    font-size: 70px;
+    color: aliceblue;
+    font-family: 'Zilla slab',sans-serif;
+}
+.section-usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.section-usuario img{
+    width: 100%;
+    margin-bottom: 10%;
+}
+.section-padrao{
+    background-color: #909694;
+    box-shadow: 20px 20px 55px black;
+    height:12%;
+    width: 30%;
+
+    border-radius: 60px;
+
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-padrao a{
+    text-decoration: none;
+    font-family: 'Zila slab', sans-serif;
+    color: black;
+    margin-top: 15%;
+    padding: 5%;
+    border-radius: 19px;
+    background: #D9D9D9;
+}
+.section-usuario h2{
+    font-size: 18px;
+    color: aliceblue;
+    font-family: 'Zilla slab',sans-serif;
+    margin-left: 0%;
+    margin-top: 2%;
+}
+#div-possibilidades{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+.video-inicial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 17%;
+    color: aliceblue;
+    font-family: Ubuntu, sans-serif;
+    font-size: 35px;
+}
+
+/*
+#alunoCard{
+
+}
+#professorCard{
+    top:3255px;
+    left: 0px;
+    width: 1440px;
+    height: 346px;
+    position: absolute;
+}
+#diretorCard{
+    
+}
+*/
+
+
+
+
+/* main - página login */ /* Não usem body/main/h1/h2... sem referencia Ex:( #main-5 h1{} )*/
+#loginTotal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#loginTotal a {
+    font-size: 13px;
+    text-decoration: none;
+    width: 100%;
+    background-color: rgb(255, 155, 61);
+    color: rgb(255, 255, 255);
+    border: 1px #000 solid;
+    border-radius: 30px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 25%;
+    border-radius: 80px;
+}
+
+#formLogin {
+    width: 25rem;
+    height: 15rem;
+}
+
+#formLogin form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.campoDados {
+    width: 100%;
+}
+
+.dados {
+    font-size: 3vh;
+    background-color: rgb(218, 217, 217);
+    height: 6vh;
+    width: 100%;
+    padding-left: 10%;
+    border-radius: 30px;
+}
+
+.botaoAcesso {
+    background-color: rgb(255, 155, 61);
+    color: rgb(255, 255, 255);
+    font-size: 4vh;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#selectForm {
+    width: 100%;
+    height: 50px;
+    border: none;
+}
+#selectForm:focus {
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+#selectForm select{
+    font-size: 3vh;
+    background-color: rgb(218, 217, 217);
+    height: 6vh;
+    width: 100%;
+    padding-left: 10%;
+    border-radius: 30px;
+}
+
+
+
+/* main - página cadastro */
+
+/* main - página aluno */
+
+/* main - página professor */
+
+/* main - página direção*/
+
+/* main - página admin */
+
+/* main - confirmacao */
+
+#confirmaMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#confirma{
+    width:50%;
+    height: 100px;
+    background-color: 	#32CD32;
+    font-family: 'ubuntu', sans-serif;
+    color: aliceblue;
+    border-radius: 30px;
+    border: 2px #000 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
