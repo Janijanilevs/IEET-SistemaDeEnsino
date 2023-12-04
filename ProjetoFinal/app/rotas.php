@@ -23,4 +23,4 @@ Router::add("/direcaoMain", "HomeController", "mainDirecao");
 Router::add("/alunoMain", "HomeController", "mainAluno");
 Router::add("/confirmacao", "HomeController", "confirmacao");
 Router::add("/alunoBoletim", "HomeController", "alunoBoletim");
-Router::add("/atividadesAluno", "HomeController", "atividadesAluno");
+Router::add("/alunoMaterias", "HomeController", "atividadesAluno");
