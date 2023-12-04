@@ -22,7 +22,7 @@
             <h1 id="ieet-header"> IEET </h1>
         </a>
         <a href="<?=linkrota('')?>">
-            <h1>boletim</h1>
+            <h1>Boletim</h1>
         </a>
         <a href="<?=linkrota('')?>"> 
             <h1>Atividades<br>Material de estudo</h1>
