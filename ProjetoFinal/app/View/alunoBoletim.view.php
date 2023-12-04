@@ -5,7 +5,7 @@
                 <img src="./public/imagens/perfil.png">
                 <h1>Meu Boletim</h1>
             </div>
-            <div class="boletim">
+            <div class="boletim" id="boletim">
                 <h2>Materia</h2>
                 <h2>Carga Horaria</h2>
                 <h2>Media 1</h2>
