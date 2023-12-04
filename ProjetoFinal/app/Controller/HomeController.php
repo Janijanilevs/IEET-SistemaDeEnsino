@@ -24,6 +24,10 @@ class HomeController extends Controller{
         $this->view("confirmacao", ["titulo" => "Ieet Sistema de Ensino"]);
     }
 
+    public function alunoBoletim(){
+        $this->view("alunoBoletim", ["titulo" => "Ieet Sistema de Ensino"]);
+    }
+
     public function atividadesAluno(){
         $this->view("AlunoMateriais", ["titulo" => "Ieet - Atividade e Materiais do aluno"]);
     }
