@@ -26,7 +26,4 @@
         <a href="<?=linkrota('')?>"> 
             <h1>Adicionar professores e alunos</h1>
         </a>
-        <a href="<?=linkrota('')?>" id="login">
-            <h1>Perfil</h1>
-        </a>
     </header>

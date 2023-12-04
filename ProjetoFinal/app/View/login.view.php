@@ -22,10 +22,16 @@
                         <label class="campoDados">
                             <input type="password" name="senha" placeholder="Senha" required class="dados">   
                         </label>
-                        <label class="campoDados">
-                            <input type="hidden" name="tipo" placeholder="Tipo" required class="dados">
-                        </label>
+                        <div id="selectForm">
+                            <select name="tipo:" id="seletortipo" placeholder="Tipo">
+                                <option value="1"> Entrar como Admin </option>
+                                <option value="2"> Entrar como Direção </option>
+                                <option value="3"> Entrar como Professor </option>
+                                <option value="4"> Entrar como Aluno </option>
+                            </select>
+                        </div>
                         <button name="acessar" class="botaoAcesso"> Acessar </button>
+                        <a href="<?=linkrota("")?>"><h1> Voltar para a página inicial</h1></a>
                     </form>
                 </div>
             </div>
