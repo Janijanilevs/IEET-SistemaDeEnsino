@@ -22,6 +22,6 @@ Router::add("/teste5", "HomeController", "teste5");
 Router::add("/direcaoMain", "HomeController", "mainDirecao");
 Router::add("/alunoMain", "HomeController", "mainAluno");
 Router::add("/confirmacao", "HomeController", "confirmacao");
-Router::add("/alunoMateriais", "HomeController", "alunoBoletim");
-Router::add("/atividadesAluno", "HomeController", "atividadesAluno");
+Router::add("/alunoBoletim", "HomeController", "alunoBoletim");
+Router::add("/alunoMateriais", "HomeController", "atividadesAluno");
 Router::add("/professorMain", "HomeController", "mainProfessor");
