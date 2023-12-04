@@ -4,11 +4,16 @@
     width: 100%;
 }
 
-#bannerAluno{
-    width: 100%;
-    height: 45vh;
-}
 
+#divArea{
+    background-image: url(../imagens/bannerAluno.png);
+    width: 100%;
+    height: 40vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #areaAluno{
     color: white;
@@ -16,8 +21,50 @@
     font-family: 'Paytone One', sans-serif;
     -webkit-text-stroke-width: 1px; /* largura da borda */
     -webkit-text-stroke-color: #000; /* cor da borda */
-    position: absolute;
-    top: 15rem;
-    right: 25%;
-    left: 25%;
+
+}
+
+#imgPerfil{
+    height: 30vh;
+    width: 100%;
+    padding-top: 3vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgPerfil img{
+    height: 30vh;
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+#imgPerfil h2{
+    font-size: 4vh;
+    font-family: 'Open Sans';
+    color: #FF5C00;
+}
+
+#infAluno{
+    height: 70vh;
+    display: flex;
+    margin-top: 3vh;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dadAluno{
+    background-color: #FF5C00;
+    width: 40%;
+    height: 10vh;
+    border-radius: 30rem;
+    border: 2px solid rgb(255, 70, 0);
+    font-size: 2.5vh;
+    font-family: 'Open Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
