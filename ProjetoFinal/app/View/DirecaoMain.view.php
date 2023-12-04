@@ -1,6 +1,6 @@
 <?=componente('topo/topoDirecao')?>
     <main id="MainRegistroEscolar">
-        <div id="TituloRegistrarEscola"><h1>Registro Escolar</h1></div>
+        <div id="Titulo"><h1>Registro Escolar</h1></div>
 
         <div id="EscolhaUsuario">
             <div id="Aluno"><img src="./public/imagens/AlunoDirecao.png"></div>
