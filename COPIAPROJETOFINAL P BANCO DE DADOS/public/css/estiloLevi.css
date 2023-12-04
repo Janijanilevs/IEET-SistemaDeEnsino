@@ -1,0 +1,23 @@
+
+#MainAlunoPerfil{
+    height: 150vh;
+    width: 100%;
+}
+
+#bannerAluno{
+    width: 100%;
+    height: 45vh;
+}
+
+
+#areaAluno{
+    color: white;
+    font-size: 12vh;
+    font-family: 'Paytone One', sans-serif;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    position: absolute;
+    top: 15rem;
+    right: 25%;
+    left: 25%;
+}
