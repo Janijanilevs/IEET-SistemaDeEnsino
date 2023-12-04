@@ -19,7 +19,7 @@
         <div id="div-possibilidades">
             <section class="section-padrao"> 
                 <div class="section-usuario">
-                    <img src="./public/imagens/AlunoInicial.png">
+                    <img src="./public/imagens/AlunoInicial.png" id="alunoCard">
                     <h2>Verifique seu boletim;</h2>
                     <h2>Complete? Conclua suas atividades;</h2>
                     <h2>Conheça seu progresso;</h2>
@@ -29,7 +29,7 @@
             </section>
             <section class="section-padrao">
                 <div class="section-usuario"> 
-                    <img src="./public/imagens/DiretorInicial.png">
+                    <img src="./public/imagens/DiretorInicial.png" id="diretorCard">
                     <h2>Notifique rapidamente;</h2>
                     <h2>Gerencie suas turmas;</h2>
                     <h2>Informações organizadas;</h2>
@@ -39,7 +39,7 @@
             </section>
             <section class="section-padrao">
                 <div class="section-usuario">
-                    <img src="./public/imagens/ProfessorIncial.png">
+                    <img src="./public/imagens/ProfessorIncial.png" id="professorCard">
                     <h2>Organize suas turmas;</h2>
                     <h2>Lecione atividades;</h2>
                     <h2>Forneça materiais de estudo;</h2>

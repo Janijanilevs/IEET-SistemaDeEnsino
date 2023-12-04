@@ -1,15 +1,31 @@
 <?php
 
-namespace IeetSite\Model;
+namespace IeetSite\Model\DAO;
 
 use IeetSite\Core\Database;
+use IeetSite\Model\Entities\Direcao;
 use PDO;
-
-class Usuarios{
-    public function cadastrarDiretor($usuario){
+/* Criar um default para cada usuario:
+    Admin tipo 1: não precisa só tem uma adm
+    Diretor tipo 2
+    Professor tipo 3
+    Aluno tipo 4 */ 
+class UsuariosDAO{
+    public function cadastrarDiretor(Direcao $direcao){
         $db = new Database();
         $sql = "INSERT INTO usuario_direcao(nome,email,login,senha,tipo,Ieet_idUsuarioAdmin) value(?,?,?,?,?,?)";
-        var_dump($db->execute($sql, $usuario));
+
+        $dados = [
+            $direcao->nome,
+            $direcao->email,
+            $direcao->login,
+            $direcao->senha,
+            $direcao->tipo,
+            $direcao->ieet_idUsuarioAdmin = 123456789
+        ];
+        
+        var_dump($db->execute($sql, $dados));
+        
     }
 
     public function cadastrarAluno($usuario){
