@@ -12,5 +12,5 @@ class Direcao{
     public ?int $tipo;
     public ?int $Ieet_idUsuarioAdmin;
     public ?int $cnpj;
-    public ?int $situacao;
+    public ?string $situacao;
 }

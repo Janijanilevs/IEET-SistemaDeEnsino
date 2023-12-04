@@ -12,9 +12,11 @@ Router::add("/cadastro", "LoginController", "cadastro");
 
 /* Teste Banco de Dados */
 
-Router::add("/vacao", "HomeController", "teste");
+Router::add("/teste1", "HomeController", "teste");
+Router::add("/teste2", "HomeController", "teste2");
 
 /* Páginas: */
 Router::add("/direcaoMain", "HomeController", "mainDirecao");
 Router::add("/alunoMain", "HomeController", "mainAluno");
 Router::add("/confirmacao", "HomeController", "confirmacao");
+Router::add("/atividadesAluno", "HomeController", "atividadesAluno");

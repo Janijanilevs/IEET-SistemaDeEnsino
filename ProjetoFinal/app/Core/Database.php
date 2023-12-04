@@ -13,6 +13,7 @@ class Database{
         $senha = BD['senha'];
 
         $dsn = "mysql:host={$servidor};dbname={$banco}";
+
         $this->conexao = new \PDO($dsn, $usuario, $senha);
 
     }
@@ -24,11 +25,11 @@ class Database{
         
     }
 
-    public function recuperaTabela(string $classe): array{
+    public function getAll(string $classe):array{
         return $this->stmt->fetchAll(\PDO::FETCH_CLASS, $classe);
     }
 
-    public function recuperaUsuario(string $classe){
+    public function get(string $classe){
         return $this->stmt->fetchObject($classe);
     }
 }
