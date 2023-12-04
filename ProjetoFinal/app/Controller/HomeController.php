@@ -59,8 +59,33 @@ class HomeController extends Controller{
 
     public function teste3(){
         $dao = new UsuariosDAO();
-        $usuario = $dao->getById(4);
+        $usuario = $dao->getById(5);
         var_dump($usuario);
     }
 
+    public function teste4(){
+        $dao = new UsuariosDAO;
+        $usuario = $dao->getById(3);
+
+        $usuario->nome = "UFBA Rio Vermelho";
+        $usuario->email = "ufba@gmail.com";
+        $usuario->login = "ufba";
+        $usuario->senha = "ufba";
+        $dao->editar($usuario);
+        print "<pre>";
+        var_dump($usuario);
+    }
+
+    public function teste5(){
+        $dao = new UsuariosDAO;
+        $usuario = $dao->getById(2);
+
+        if($usuario){
+            $dao->excluir($usuario);
+            print "Usuário excluido com sucesso!";
+        }else{
+            print "Usuário não existe!";
+        }
+
+    }
 }

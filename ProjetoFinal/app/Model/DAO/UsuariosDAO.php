@@ -8,10 +8,10 @@ use IeetSite\Model\Entities\Direcao;
 use PDO;
 
 class UsuariosDAO extends DAO{
-    /*
-    protected string $tabela = "usuario_direcao";
+    
+    protected string $tabela = "direcao";
     protected string $class = Direcao::class;
-    */
+    
     
     public function inserir($usuario){
         $db = new Database();
@@ -29,18 +29,24 @@ class UsuariosDAO extends DAO{
         return $db->execute($sql, $dados);
     }
 
-    public function getAll(){
+    
+
+    
+
+    public function editar($usuario){
         $db = new Database;
-        $sql = "SELECT * from Direcao";
-        $db->execute($sql);
-        return $db->getAll(Direcao::class);
-    }
+        $sql = "UPDATE direcao Set Nome = ?, email = ?, login = ?, senha = ?, cnpj = ?, situacao = ?";
 
-    public function getById($id){
-        $db = new Database();
-        $sql = "SELECT * from direcao where id = ?";
-        $db->execute($sql, [$id]);
+        $dados = [
+            $usuario->nome,
+            $usuario->email,
+            $usuario->login,
+            $usuario->senha,
+            $usuario->cnpj,
+            $usuario->situacao
+        ];
 
-        return $db->get(Direcao::class);
+        return $db->execute($sql, $dados);
     }
+    
 }
