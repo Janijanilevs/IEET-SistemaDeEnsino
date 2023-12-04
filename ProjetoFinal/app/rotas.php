@@ -18,3 +18,4 @@ Router::add("/vacao", "HomeController", "teste");
 Router::add("/direcaoMain", "HomeController", "mainDirecao");
 Router::add("/alunoMain", "HomeController", "mainAluno");
 Router::add("/confirmacao", "HomeController", "confirmacao");
+Router::add("/alunoBoletim", "HomeController", "alunoBoletim");

@@ -24,6 +24,9 @@ class HomeController extends Controller{
         $this->view("confirmacao", ["titulo" => "Ieet Sistema de Ensino"]);
     }
 
+    public function alunoBoletim(){
+        $this->view("alunoBoletim", ["titulo" => "Ieet Sistema de Ensino"]);
+    }
     #-----------------------------------------------------------------------#
     
     public function teste(){
