@@ -10,7 +10,7 @@ Router::add("/testeErro", "LoginController", "testeErro");
 
 Router::add("/insereDiretor", "HomeController", "insereDiretor");
 
-Router::add("/getAll", "HomeController", "getAll");
+Router::add("/recuperaDiretor", "HomeController", "recuperaDiretor");
 
 Router::add("/recuperaId", "HomeController", "recuperaByIdETipo");
 

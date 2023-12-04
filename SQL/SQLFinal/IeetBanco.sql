@@ -206,7 +206,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `ieetbanco`.`notas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ieetbanco`.`notas` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL auto_increment,
   `nota1.1` FLOAT NULL DEFAULT NULL,
   `nota1.2` FLOAT NULL DEFAULT NULL,
   `nota1.3` FLOAT NULL DEFAULT NULL,

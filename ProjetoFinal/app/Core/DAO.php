@@ -20,7 +20,6 @@ abstract class DAO{
         $sql = //$this->recuperaTipo($tipo);
         
         $db->execute($sql, [ $id ]);
-
         
     }
 }
