@@ -29,7 +29,7 @@
             </section>
             <section class="section-padrao">
                 <div class="section-usuario"> 
-                    <img src="./public/imagens/DiretoriaInicial.png">
+                    <img src="./public/imagens/DiretorInicial.png">
                     <h2>Notifique rapidamente;</h2>
                     <h2>Gerencie suas turmas;</h2>
                     <h2>Informações organizadas;</h2>
