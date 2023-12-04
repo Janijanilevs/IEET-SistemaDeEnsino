@@ -45,26 +45,10 @@ class UsuariosDAO{
         }
     }
     
-
-    public function recuperaTipo($tipo): string {
-        switch($tipo){
-            case 1:
-                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
-                break;
-            case 2:
-                return "SELECT * FROM usuario_direcao where idUsuarioDirecao = ?";
-                break;
-            case 3:
-                return "SELECT * FROM usuario_professor where idUsuarioProfessor = ?";
-                break;
-            case 4:
-                return "SELECT * FROM usuario_aluno where idUsuarioAluno = ?";
-                break;
-            default:
-                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
-                break;
-        }
+    public function editarUsuario($usuario){
+        
     }
+    
 
     public function cadastrarDiretor(Direcao $direcao){
         $db = new Database();
@@ -92,5 +76,25 @@ class UsuariosDAO{
         $db = new Database();
         $sql = "INSERT INTO usuario_professor(nome,email,cpf,login,senha,tipo,dataDeNascimento,dataDeCriacao,Turma_idTurma,matricula,Escola_idEscola,formacao) value(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         var_dump($db->execute($sql, $usuario));
+    }
+
+    public function recuperaTipo($tipo): string {
+        switch($tipo){
+            case 1:
+                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
+                break;
+            case 2:
+                return "SELECT * FROM usuario_direcao where idUsuarioDirecao = ?";
+                break;
+            case 3:
+                return "SELECT * FROM usuario_professor where idUsuarioProfessor = ?";
+                break;
+            case 4:
+                return "SELECT * FROM usuario_aluno where idUsuarioAluno = ?";
+                break;
+            default:
+                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
+                break;
+        }
     }
 }

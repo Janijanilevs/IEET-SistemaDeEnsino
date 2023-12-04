@@ -10,6 +10,9 @@ class HomeController extends Controller{
     public function index(){
         $this->view("inicial",["titulo" => "Ieet Sistema de Ensino" ]);
     }
+    public function mainDirecao(){
+        $this->view("DirecaoMain", ["titulo" => "Ieet Sistema de Ensino"]);
+    }
 
     public function insereDiretor(){
         $direcao = new Direcao();
