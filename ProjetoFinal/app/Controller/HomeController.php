@@ -31,8 +31,8 @@ class HomeController extends Controller{
         $direcao->email = "vascao@ifba.edu.br";
         $direcao->login = "vascao";
         $direcao->senha = "vascao";
-        $direcao->tipo = 2;
-        $direcao->ieet_idUsuarioAdmin = 123456789;
+        $direcao->tipo;
+        $direcao->ieet_idUsuarioAdmin ;
 
         $dao = new UsuariosDAO();
         $dao->cadastrarDiretor($direcao);
@@ -50,7 +50,7 @@ class HomeController extends Controller{
     
     public function recuperaByIdETipo(){
         $dao = new UsuariosDAO();
-        $usuarios = $dao->getById(123456789, 2); // Não está funcionando ainda para Admin, professor e aluno ver depois, está funcionando somente com diretor.
+        $usuarios = $dao->getById(1, 2); // Não está funcionando ainda para Admin, professor e aluno ver depois, está funcionando somente com diretor.
         print "<pre>";
         var_dump($usuarios);
     }

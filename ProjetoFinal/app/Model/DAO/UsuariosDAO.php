@@ -20,26 +20,6 @@ class UsuariosDAO extends DAO{
     
     public function editarUsuario($usuario, $tipo){
         $db = new Database();
-
-        switch($tipo){
-            case 1:
-                print "Não é possível atualizar um ADM";
-                break;
-            case 2:
-                $sql = "UPDATE usuario_direcao SET nome = ?, login = ?, senha = ?";
-                $dados = [
-                    $usuario->nome,
-                    $usuario->email
-                ];
-                break;
-            case 3:
-                $sql = "UPDATE usuario_professor SET nome = ?, login = ?, senha = ?";
-                break;
-            case 4:
-                $sql = "UPDATE usuario_aluno SET nome = ?, login = ?, senha = ?";
-                break;
-        }
-
     }
     
 
