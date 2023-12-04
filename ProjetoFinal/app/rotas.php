@@ -5,5 +5,7 @@ use IeetSite\Core\Router;
 Router::add("/", "HomeController", "index");
 Router::add("/login", "LoginController", "login");
 Router::add("/testeErro", "LoginController", "testeErro");
-Router::add("/testeBD", "HomeController", "teste");
+Router::add("/insereDiretor", "HomeController", "insereDiretor");
+Router::add("/recuperaDiretor", "HomeController", "recuperaDiretor");
+Router::add("/recuperaId", "HomeController", "recuperaByIdETipo");
 Router::add("/cadastro", "LoginController", "cadastro");

@@ -11,6 +11,61 @@ use PDO;
     Professor tipo 3
     Aluno tipo 4 */ 
 class UsuariosDAO{
+    public function getAll(){
+        $db = new Database();
+        $sql = "SELECT * from usuario_direcao";
+        $db->execute($sql);
+        return $db->recuperaTabela(Direcao::class);
+    }
+
+    public function getById($id, $tipo){
+        $db = new Database;
+
+        $sql = $this->recuperaTipo($tipo);
+        
+        $db->execute($sql, [ $id ]);
+        
+        
+        switch($tipo){
+            case 1:
+                return $db->recuperaUsuario(Admin::class);
+                break;
+            case 2:
+                return $db->recuperaUsuario(Direcao::class);
+                break;
+            case 3:
+                return $db->recuperaUsuario(Professor::class);
+                break;
+            case 4:
+                return $db->recuperaUsuario(Aluno::class);
+                break;
+            default:
+                return $db->recuperaUsuario(Admin::class);
+                break;
+        }
+    }
+    
+
+    public function recuperaTipo($tipo): string {
+        switch($tipo){
+            case 1:
+                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
+                break;
+            case 2:
+                return "SELECT * FROM usuario_direcao where idUsuarioDirecao = ?";
+                break;
+            case 3:
+                return "SELECT * FROM usuario_professor where idUsuarioProfessor = ?";
+                break;
+            case 4:
+                return "SELECT * FROM usuario_aluno where idUsuarioAluno = ?";
+                break;
+            default:
+                return "SELECT * FROM ieet where idUsuarioAdmin = ?";
+                break;
+        }
+    }
+
     public function cadastrarDiretor(Direcao $direcao){
         $db = new Database();
         $sql = "INSERT INTO usuario_direcao(nome,email,login,senha,tipo,Ieet_idUsuarioAdmin) value(?,?,?,?,?,?)";
@@ -23,9 +78,8 @@ class UsuariosDAO{
             $direcao->tipo,
             $direcao->ieet_idUsuarioAdmin = 123456789
         ];
-        
-        var_dump($db->execute($sql, $dados));
-        
+
+        return var_dump($db->execute($sql, $dados)); // Isso retorna true ou false para a inserção de alguem na tabela, podemos usar isso para criar uma tela de confirmação ou erro.
     }
 
     public function cadastrarAluno($usuario){

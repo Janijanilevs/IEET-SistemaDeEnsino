@@ -19,6 +19,16 @@ class Database{
 
     public function execute(string $sql, array $dados = []): bool{
         $this->stmt = $this->conexao->prepare($sql);
+
         return $this->stmt->execute($dados);
+        
+    }
+
+    public function recuperaTabela(string $classe): array{
+        return $this->stmt->fetchAll(\PDO::FETCH_CLASS, $classe);
+    }
+
+    public function recuperaUsuario(string $classe){
+        return $this->stmt->fetchObject($classe);
     }
 }

@@ -11,7 +11,7 @@ class HomeController extends Controller{
         $this->view("inicial",["titulo" => "Ieet Sistema de Ensino" ]);
     }
 
-    public function teste(){
+    public function insereDiretor(){
         $direcao = new Direcao();
         $direcao->nome = "vascao";
         $direcao->email = "vascao@ifba.edu.br";
@@ -19,9 +19,25 @@ class HomeController extends Controller{
         $direcao->senha = "vascao";
         $direcao->tipo = 2;
         $direcao->ieet_idUsuarioAdmin = 123456789;
-        
+
         $dao = new UsuariosDAO();
         $dao->cadastrarDiretor($direcao);
     }
+
+    public function recuperaDiretor(){
+        $dao = new UsuariosDAO();
+        $consulta = ($dao->getAll());
+        foreach($consulta as $usuarios){
+            print $usuarios->nome;
+            print "<hr>";
+        }
+    }
     
+    public function recuperaByIdETipo(){
+        $dao = new UsuariosDAO();
+        $usuarios = $dao->getById(123456789, 2); // Não está funcionando ainda para Admin, professor e aluno ver depois, está funcionando somente com diretor.
+        print "<pre>";
+        var_dump($usuarios);
+    }
+
 }
