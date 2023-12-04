@@ -1,0 +1,11 @@
+#MainRegistrarEscola{
+    width: 599px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#TituloRegistroEscolar{
+    text-align: center;
+
+}
