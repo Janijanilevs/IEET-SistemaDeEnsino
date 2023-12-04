@@ -1,3 +1,3 @@
-<?=componente('topo')?>
-    <br><br><br>
+<?=componente('topo/topoDirecao')?>
+<main id="MainRegistrarEscola">
 <?=componente('rodape')?>
