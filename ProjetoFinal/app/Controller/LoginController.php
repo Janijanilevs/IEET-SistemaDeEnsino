@@ -30,7 +30,7 @@ class LoginController extends Controller{
     public function adicioAluno(){
         $houveErro = Validator::execute(Aluno::getRegras(), $this->post());
         if($houveErro){
-            $_SESSION['__form'] = $this->post();
+            addFormData($this->post());
             verificaSession(Validator::getListaErros(), "erro");
             redirecionar('adicionarAluno');
         }

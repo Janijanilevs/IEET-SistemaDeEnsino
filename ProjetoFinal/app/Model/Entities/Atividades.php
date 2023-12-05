@@ -12,4 +12,14 @@ class Atividades extends Entity{
     protected ?string $dataFinal;
     protected ?string $dataInicial;
     protected ?int $Disciplinas_idDisciplinas;
-}
+
+    public static function getRegras(){
+        return[
+            'nome' => 'obrigatorio ',
+            'descricao' => 'obrigatorio ',
+            'dataFinal' => 'obrigatorio ',
+             'dataInicial' => 'obrigatorio ',
+             'Disciplinas_idDisciplinas' => 'obrigatorio '
+        ];
+        }
+    }

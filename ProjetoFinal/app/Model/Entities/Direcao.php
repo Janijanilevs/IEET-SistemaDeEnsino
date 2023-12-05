@@ -20,4 +20,17 @@ class Direcao extends Entity{
     public function setSenha($valor){
         $this->senha = password_hash($valor, PASSWORD_DEFAULT);
     }
+
+    public function getRegras(){
+        return[
+            'nome' => 'obrigatorio',
+            'email' => 'obrigatorio|email ',
+            'login' => 'obrigatorio',
+            'senha' => 'obrigatorio',
+            'tipo' => 'obrigatorio',
+            'Ieet_idUsuarioAdmin' => 'obrigatorio',
+            'cnpj' => 'obrigatorio',
+            'situacao' => 'obrigatorio'
+        ];
+    }
 }
