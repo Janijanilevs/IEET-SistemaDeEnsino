@@ -109,3 +109,15 @@
     display: flex;
     justify-content: end;
 }
+/*------------------- Planos Ieet--------------------------------------------*/
+#TitulosPlanos{
+    width: 100%;
+}
+#TituloPlanos h1{
+    text-align: center;
+    margin-top: 15vh;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight:bold;
+    font-size: 55px;
+}

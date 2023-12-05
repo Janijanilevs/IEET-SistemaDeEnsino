@@ -43,6 +43,7 @@ Router::get("/adicionaProfessor", "HomeController", "adicionaProfessor");
 Router::get("/adicionaTurma", "HomeController", "adicionaTurma");
 Router::get("/inserirNotas", "HomeController", "inserirNotas");
 Router::get("/inserirAtividades", "HomeController", "inserirAtividades");
+Router::get("/dadosRequisicao", "HomeController", "dadosrequisicao");
 
 /*
 Router::post("/direcaoMain", "HomeController", "mainDirecao");
