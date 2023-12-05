@@ -33,7 +33,7 @@ class Aluno extends Entity{
             "tipo" => "",
             "dataDeNascimento" => "obrigatorio",
             "dataDeCriacao" => "obrigatorio",
-            "Turma_idTurma" => "obrigatorio",
+            "Turma_idTurma" => "obrigatorio",   
             "matricula" => "obrigatorio",
             "Direcao_id" => "obrigatorio"
             ];
