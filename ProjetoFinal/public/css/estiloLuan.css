@@ -109,3 +109,11 @@
     display: flex;
     justify-content: end;
 }
+/*------------------- Planos Ieet--------------------------------------------*/
+#TitulosPlanos{
+    width: 100%;
+}
+#TituloPlanos h1{
+    text-align: center;
+    margin-top: 15vh;
+}
