@@ -32,3 +32,18 @@ function redirecionar(string $rota){
     header("location: ". linkrota($rota));
     die;
 }
+
+function getMatricula(string $tipo){
+    switch($tipo){
+        case 'Aluno':
+            $tipoNum = ".04";
+            break;
+        case 'Professor':
+            $tipoNum = ".03";
+            break;
+        case 'Direcao':
+            $tipoNum = ".02";
+            break;
+    }
+    return date('Y'). "." .rand(1, 999). "." .rand(1, 99). $tipoNum;
+}

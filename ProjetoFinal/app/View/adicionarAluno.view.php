@@ -24,12 +24,14 @@
 
         <label for="dataNascimento">Data de Nascimento:</label>
         <input type="date" id="dataNascimento" name="dataDeNascimento" required>
+
         <input type="hidden" name="dataDeCriacao" value="<?=date('Y/m/d')?>">
+
         <label for="turma">Turma:</label>
         <input type="text" id="turma" name="Turma_idTurma" required>
 
-        <label for="matricula">Matrícula:</label>
-        <input type="text" id="matricula" name="matricula" required>
+        <input type="hidden" id="matricula" name="matricula" value="<?= getMatricula('Aluno') ?>">
+
         <label for="Direcao_id">Direção:</label>
         <input type="text" id="Direcao_id" name="Direcao_id" required>
         

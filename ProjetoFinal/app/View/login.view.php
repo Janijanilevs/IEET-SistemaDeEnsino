@@ -24,6 +24,7 @@
                         </label>
                         <div id="selectForm">
                             <select name="tipo:" id="seletortipo" placeholder="Tipo">
+                                <option value=""> Selecione o nivel de usuário </option>
                                 <option value="1"> Entrar como Admin </option>
                                 <option value="2"> Entrar como Direção </option>
                                 <option value="3"> Entrar como Professor </option>
