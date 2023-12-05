@@ -20,5 +20,27 @@ class Notas extends Entity{
     protected ?int $Disciplinas_idDisciplinas;
     protected ?int $Turma_idTurma;
 
-    
+    public function getMedia1(): float{
+        return ($nota1_1 + $nota1_2 + $nota1_3) / 3;
+    }
+
+    public function getMedia2(): float{
+        return ($nota2_1 + $nota2_2 + $nota2_3) / 3;
+    }
+
+    public function getMedia3(): float{
+        return ($nota3_1 + $nota3_2 + $nota3_3) / 3;
+    }
+
+    public function getMediaFinal():float{
+        return (getMedia1() + getMedia2() + getMedia3())/3;
+    }
+
+    public function getStatus(){
+        if(getMediaFinal() >= 6){
+            $this->status = 1;
+        }else{
+            $this->status = 0;
+        }
+    }
 }
