@@ -9,7 +9,7 @@
             <h1>Novo Aluno</h1>
             <div class="flexInput">
             <label for="nome">Nome: </label>
-            <input type="text" id="nome" name="nome" >
+            <input type="text" id="nome" name="nome" value="<?= $_SESSION['__form']['nome'] ?? ''?>">
             </div>
             <div class="flexInput">
             <label for="email">Email: </label>

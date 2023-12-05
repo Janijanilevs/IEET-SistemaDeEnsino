@@ -1,1 +1,4 @@
-<?php componente('topo/topo');
+<?php componente('topo')?>
+    <main>
+    </main>
+<?php componente('rodape')?>

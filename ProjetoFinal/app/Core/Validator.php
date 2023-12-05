@@ -28,14 +28,14 @@ class Validator{
         $valor = trim($valor);
         if(strlen($valor)== 0){
             static::$houveErro = true;
-            static::$msg[$nomecampo] = "O {$nomecampo} é obrigatório e não foi preenchido";
+            static::$msg[$nomecampo] = "O campo {$nomecampo} é obrigatório e não foi preenchido";
         }
     }
 
     protected static function email($valor, $nomecampo){
         if(!filter_var($valor, FILTER_VALIDATE_EMAIL )){
             static::$houveErro = true;
-            static::$msg[$nomecampo] = "O {$nomecampo} precisa ser um email válido!";
+            static::$msg[$nomecampo] = "O campo {$nomecampo} precisa ser um email válido!";
         }
     }
 
@@ -43,4 +43,11 @@ class Validator{
         return static::$msg;
     }
     
+    public static function getListaErros(): string{
+        $lista = "";
+        foreach(Validator::getErros() as $erros){
+            $lista .= "<li> {$erros} </li>";
+        }
+        return $lista;
+    }
 }
