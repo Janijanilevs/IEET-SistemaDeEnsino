@@ -25,9 +25,10 @@
     align-items: center;
     justify-content: space-around;
 }
+    /*----------------------Aba de AdicionarAluno------------------------------------------------------*/
 #FormAdicionarAluno{
     width: 150vh;
-    height: 120vh;
+    height: 90vh;
     margin: 20vh auto;
     padding: 20px;
     background-color: #FF5C00;
@@ -35,6 +36,7 @@
     border-radius: 29px;
     color:white;
     position: relative;
+    font-family: 'Secular One',sans-serif;
 }
 #FormAdicionarAluno h1{
     text-align: center;
@@ -65,7 +67,7 @@
     border-radius: 20px;
     cursor: pointer;
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     right: 10px;
     font-size: 60px;
 }
