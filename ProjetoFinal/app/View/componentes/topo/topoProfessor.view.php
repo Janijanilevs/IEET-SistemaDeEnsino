@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Timmana&family=Urbanist&family=Water+Brush&family=Zilla+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2? family= Open+Sans & display=swap" rel="stylesheet">
 
     <title><?=$titulo?></title>
 </head>
