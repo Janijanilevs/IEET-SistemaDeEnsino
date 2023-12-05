@@ -23,8 +23,14 @@ class LoginController extends Controller{
     }
 
     public function adicioAluno(){
-        if(Validator::execute(Aluno::getRegras(), $this->post()))
+        $houveErro = Validator::execute(Aluno::getRegras(), $this->post());
+        if($houveErro){
+            foreach(Validator::getErros() as $erros){
+                print "<li> {$erros} </li>";
+            }
+        }
         
+        die;
 
 
         $adicionado = new Aluno($this->post());

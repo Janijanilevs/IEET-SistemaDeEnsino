@@ -38,5 +38,9 @@ class Validator{
             static::$msg[$nomecampo] = "O {$nomecampo} precisa ser um email válido!";
         }
     }
+
+    public static function getErros(): array{
+        return static::$msg;
+    }
     
 }
