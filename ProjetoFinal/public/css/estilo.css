@@ -12,6 +12,9 @@ body{
 }
 main{
     flex: 1 ;
+    height: min-content;
+    width: 100%;
+    margin-bottom: 10vh;
 }
 
 /* Topo */
@@ -87,7 +90,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: 250px;
 }
 
 
@@ -213,23 +216,6 @@ footer{
     font-size: 35px;
 }
 
-/*
-#alunoCard{
-
-}
-#professorCard{
-    top:3255px;
-    left: 0px;
-    width: 1440px;
-    height: 346px;
-    position: absolute;
-}
-#diretorCard{
-    
-}
-*/
-
-
 
 
 /* main - página login */ /* Não usem body/main/h1/h2... sem referencia Ex:( #main-5 h1{} )*/
@@ -319,6 +305,20 @@ footer{
 /* main - página cadastro */
 
 /* main - página aluno */
+    /* Materiais e atividades*/
+
+.CaixaTarefasMateriais{
+    display: flex;
+    flex-direction: column;
+
+}
+.agrupar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
 
 /* main - página professor */
 
