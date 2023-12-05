@@ -9,6 +9,7 @@ require __DIR__ . "/app/rotas.php";
 require __DIR__ . "/app/Core/helper.php";
 
 $url = $_GET["url"] ?? "";
+$metodoHTTP = $_SERVER["REQUEST_METHOD"];
 
-Router::exec($url);
+Router::exec($url, $metodoHTTP);
 

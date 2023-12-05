@@ -2,39 +2,64 @@
 
 use IeetSite\Core\Router;
 
+
+# Fase de teste: Usem get quando página 'Não exigir' segurança e post quando a página exigir segurança 
+# Mas por enquando só criem usando get
+
 /* Index */
-Router::add("/", "HomeController", "index");
+Router::get("/", "HomeController", "index");
 
 
 /* Login */
-Router::add("/login", "LoginController", "login");
-Router::add("/cadastro", "LoginController", "cadastro");
-
+    /* Formularios:*/
+        Router::get("/login", "LoginController", "login");
+        Router::get("/cadastro", "LoginController", "cadastro");
+    /* Actions:*/
+        Router::post("/logarconta", "LoginController", "logarConta");
 /* Teste Banco de Dados */
 
-Router::add("/teste1", "TesteController", "teste");
-Router::add("/teste2", "TesteController", "teste2");
-Router::add("/teste3", "TesteController", "teste3");
-Router::add("/teste4", "TesteController", "teste4");
-Router::add("/teste5", "TesteController", "teste5");
-Router::add("/teste6", "TesteController", "teste6");
+Router::get("/teste1", "TesteController", "teste");
+Router::get("/teste2", "TesteController", "teste2");
+Router::get("/teste3", "TesteController", "teste3");
+Router::get("/teste4", "TesteController", "teste4");
+Router::get("/teste5", "TesteController", "teste5");
+Router::get("/teste6", "TesteController", "teste6");
 
 
 /* Páginas: */
-Router::add("/direcaoMain", "HomeController", "mainDirecao");
-Router::add("/alunoMain", "HomeController", "mainAluno");
-Router::add("/confirmacao", "HomeController", "confirmacao");
-Router::add("/alunoBoletim", "HomeController", "alunoBoletim");
-Router::add("/alunoMateriais", "HomeController", "atividadesAluno");
-Router::add("/professorMain", "HomeController", "mainProfessor");
-Router::add("/adicionarAluno", "HomeController", "adcAluno");
-Router::add("/turmaAlunos", "HomeController", "turmaAlunos");
-Router::add("/turmas", "HomeController", "turmas");
-Router::add("/inserirNotas", "HomeController", "inserirNotas");
-Router::add("/inserirAtividades", "HomeController", "inserirAtividades");
-Router::add("/verificaAtividade", "HomeController", "verificaAtividade");
-Router::add("/adicionaProfessor", "HomeController", "adicionaProfessor");
-Router::add("/adicionaTurma", "HomeController", "adicionaTurma");
+Router::get("/direcaoMain", "HomeController", "mainDirecao");
+Router::get("/alunoMain", "HomeController", "mainAluno");
+Router::get("/confirmacao", "HomeController", "confirmacao");
+Router::get("/alunoBoletim", "HomeController", "alunoBoletim");
+Router::get("/alunoMateriais", "HomeController", "atividadesAluno");
+Router::get("/professorMain", "HomeController", "mainProfessor");
+Router::get("/turmaAlunos", "HomeController", "turmaAlunos");
+Router::get("/turmas", "HomeController", "turmas");
+Router::get("/verificaAtividade", "HomeController", "verificaAtividade");
+Router::get("/adicionarAluno", "HomeController", "adcAluno"); // Candidato para ir para login controller
+Router::get("/adicionaProfessor", "HomeController", "adicionaProfessor");
+Router::get("/adicionaTurma", "HomeController", "adicionaTurma");
+Router::get("/inserirNotas", "HomeController", "inserirNotas");
+Router::get("/inserirAtividades", "HomeController", "inserirAtividades");
+
+/*
+Router::post("/direcaoMain", "HomeController", "mainDirecao");
+Router::post("/alunoMain", "HomeController", "mainAluno");
+Router::post("/confirmacao", "HomeController", "confirmacao");
+Router::post("/alunoBoletim", "HomeController", "alunoBoletim");
+Router::post("/alunoMateriais", "HomeController", "atividadesAluno");
+Router::post("/professorMain", "HomeController", "mainProfessor");
+Router::post("/turmaAlunos", "HomeController", "turmaAlunos");
+Router::post("/turmas", "HomeController", "turmas");
+Router::post("/verificaAtividade", "HomeController", "verificaAtividade");
+Router::post("/adicionarAluno", "HomeController", "adcAluno"); // Candidato para ir para login controller
+Router::post("/adicionaProfessor", "HomeController", "adicionaProfessor");
+Router::post("/adicionaTurma", "HomeController", "adicionaTurma");
+Router::post("/inserirNotas", "HomeController", "inserirNotas");
+Router::post("/inserirAtividades", "HomeController", "inserirAtividades");
+*/
+
+
 
 
 

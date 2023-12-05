@@ -14,5 +14,9 @@ class LoginController extends Controller{
         $this->view("cadastro",["titulo" => "Página de Cadastro - Ieet"]);
     }
 
+    public function logarConta(){
+        var_dump($_POST);
+    }
+
 
 }

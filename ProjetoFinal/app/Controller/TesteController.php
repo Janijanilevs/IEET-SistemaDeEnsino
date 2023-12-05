@@ -3,9 +3,11 @@
 namespace IeetSite\Controller;
 
 use IeetSite\Core\Controller;
-use IeetSite\Model\DAO\UsuariosDao;
+use IeetSite\Model\Entities\Direcao;
+use IeetSite\Model\DAO\DirecaoDao;
 
 class TesteController extends Controller{
+    
     public function teste(){
         $direcao = new Direcao();
         $direcao->nome = "Colegio municipal Vespasiano Filho";
@@ -15,7 +17,7 @@ class TesteController extends Controller{
         $direcao->cnpj = "40404041";
         $direcao->situacao = "pendente";
 
-        UsuariosDAO::inserir($direcao);
+        DirecaoDAO::inserir($direcao);
     }
 
     public function teste2(){

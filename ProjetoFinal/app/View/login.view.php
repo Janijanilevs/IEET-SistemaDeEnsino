@@ -15,7 +15,7 @@
             <div id="loginTotal">
                 <img id="logo" src="public/imagens/Logo.png" alt="IEET">
                 <div id="formLogin">
-                    <form action="direcionamento.php" method="post">
+                    <form action="<?=linkrota('logarconta')?>" method="post">
                         <label class="campoDados">
                             <input type="text" name="email" placeholder="Login" required class="dados">   
                         </label>
