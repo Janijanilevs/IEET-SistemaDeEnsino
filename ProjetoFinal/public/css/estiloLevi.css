@@ -7,7 +7,7 @@
 }
 
 
-#divArea{
+#divAreaA   {
     background-image: url(../imagens/bannerAluno.png);
     width: 100%;
     height: 40vh;
@@ -26,7 +26,7 @@
 
 }
 
-#imgPerfil{
+#imgPerfilA{
     height: 30vh;
     width: 100%;
     padding-top: 3vh;
@@ -37,13 +37,13 @@
     justify-content: center;
 }
 
-#imgPerfil img{
+#imgPerfilA img{
     height: 30vh;
     margin-left: 5%;
     margin-right: 15%;
 }
 
-#imgPerfil h2{
+#imgPerfilA h2{
     font-size: 4vh;
     font-family: 'Open Sans';
     color: #FF5C00;
@@ -119,3 +119,61 @@
 #boletim{
     background-color: #707070;
 }
+
+
+/*Professor Pagina Inicial*/
+
+#MainProfessorPerfil{
+    height: 150vh;
+    width: 100%;
+}
+
+#divAreaP {
+    background-image: url(../imagens/bannerProf.png);
+    width: 100%;
+    height: 40vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#areaProf{
+    color: white;
+    font-size: 12vh;
+    font-family: 'Paytone One', sans-serif;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+
+}
+
+
+#imgPerfilP{
+    height: 30vh;
+    width: 100%;
+    padding-top: 3vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#imgPerfilP img{
+    margin-top: 5vh;
+    height: 35vh;
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,8 @@
 <?=componente('topo/topoAluno')?>
     <main >
         <div id="MainAlunoPerfil">  
-            <div id="divArea"><h1 id="areaAluno">Área Do Aluno</h1></div>
-            <div id="imgPerfil">
+            <div id="divAreaA"><h1 id="areaAluno">Área Do Aluno</h1></div>
+            <div id="imgPerfilA">
                 <h2>Turma: 2º ano</h2>
                 <img src="./public/imagens/perfil.png">
             </div>
