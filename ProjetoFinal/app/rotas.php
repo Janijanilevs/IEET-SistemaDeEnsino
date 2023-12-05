@@ -26,3 +26,4 @@ Router::add("/alunoBoletim", "HomeController", "alunoBoletim");
 Router::add("/alunoMateriais", "HomeController", "atividadesAluno");
 Router::add("/professorMain", "HomeController", "mainProfessor");
 Router::add("/adicionarAluno", "HomeController", "adcAluno");
+Router::add("/turmaAlunos", "HomeController", "turmaAlunos");
