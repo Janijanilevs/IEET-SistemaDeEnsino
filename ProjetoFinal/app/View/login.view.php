@@ -17,7 +17,7 @@
                 <div id="formLogin">
                     <form action="<?=linkrota('logarconta')?>" method="post">
                         <label class="campoDados">
-                            <input type="text" name="email" placeholder="Login" required class="dados">   
+                            <input type="text" name="login" placeholder="Login" required class="dados">   
                         </label>
                         <label class="campoDados">
                             <input type="password" name="senha" placeholder="Senha" required class="dados">   

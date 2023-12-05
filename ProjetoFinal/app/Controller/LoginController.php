@@ -3,6 +3,8 @@
 namespace IeetSite\Controller;
 
 use IeetSite\Core\Controller;
+use IeetSite\Model\Entities\Aluno;
+use IeetSite\Model\DAO\AlunoDAO;
 
 class LoginController extends Controller{
 
@@ -15,8 +17,17 @@ class LoginController extends Controller{
     }
 
     public function logarConta(){
-        var_dump($_POST);
+        /* Por enquanto funcionando como cadastros */
+        
     }
 
+    public function adicioAluno(){
+        
+        $adicionado = new Aluno($this->post());
+        if(AlunoDAO::inserir($adicionado)){
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionarAluno');
+    }
 
 }

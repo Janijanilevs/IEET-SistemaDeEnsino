@@ -30,7 +30,7 @@ abstract class DAO{
 
         $campos = implode(',',$campos);
         $coringas = implode(',', $coringas);
-        print $sql .= "({$campos}) Values ({$coringas})";
+        $sql .= "({$campos}) Values ({$coringas})";
 
         return $db->execute($sql, $dados);
     }

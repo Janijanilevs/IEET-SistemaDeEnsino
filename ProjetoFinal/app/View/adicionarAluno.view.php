@@ -1,7 +1,10 @@
 <?php componente('topo/topoDirecao')?>
 <main id="AdicionarAlunoForm">
-
-    <form action="form.php" method="post" id="FormAdicionarAluno">
+    
+    <form action="<?=linkrota('adicioAluno')?>" method="post" id="FormAdicionarAluno">
+        <center>
+        <h3><?= verificaSession()?></h3>
+        </center>
         <title>Novo Aluno</title>
         <h1>Novo Aluno</h1>
         <label for="nome">Nome:</label>
@@ -20,13 +23,15 @@
         <input type="password" id="senha" name="senha" required>
 
         <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="dataNascimento" name="dataNascimento" required>
-
+        <input type="date" id="dataNascimento" name="dataDeNascimento" required>
+        <input type="hidden" name="dataDeCriacao" value="<?=date('Y/m/d')?>">
         <label for="turma">Turma:</label>
-        <input type="text" id="turma" name="turma" required>
+        <input type="text" id="turma" name="Turma_idTurma" required>
 
         <label for="matricula">Matrícula:</label>
         <input type="text" id="matricula" name="matricula" required>
+        <label for="Direcao_id">Direção:</label>
+        <input type="text" id="Direcao_id" name="Direcao_id" required>
         
         <button type="submit">Registrar</button>
 

@@ -16,6 +16,7 @@ Router::get("/", "HomeController", "index");
         Router::get("/cadastro", "LoginController", "cadastro");
     /* Actions:*/
         Router::post("/logarconta", "LoginController", "logarConta");
+        Router::post("/adicioAluno", "LoginController", "adicioAluno");
 /* Teste Banco de Dados */
 
 Router::get("/teste1", "TesteController", "teste");
