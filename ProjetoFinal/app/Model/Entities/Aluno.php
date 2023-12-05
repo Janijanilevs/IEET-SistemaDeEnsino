@@ -30,11 +30,11 @@ class Aluno extends Entity{
             "cpf" => "obrigatorio",
             "login" => "obrigatorio",
             "senha" => "obrigatorio",
-            "tipo" => "obrigatorio",
+            "tipo" => "",
             "dataDeNascimento" => "obrigatorio",
             "dataDeCriacao" => "obrigatorio",
+            "Turma_idTurma" => "obrigatorio",
             "matricula" => "obrigatorio",
-            "formacao" => "obrigatorio",
             "Direcao_id" => "obrigatorio"
             ];
     }
