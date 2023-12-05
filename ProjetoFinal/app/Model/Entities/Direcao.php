@@ -4,6 +4,7 @@ namespace IeetSite\Model\Entities;
 
 use IeetSite\Core\Entity;
 
+
 class Direcao extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;

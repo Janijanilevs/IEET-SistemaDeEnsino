@@ -2,7 +2,9 @@
 
 namespace IeetSite\Model\Entities;
 
-class Turma{
+use IeetSite\Core\Entity;
+
+class Turma extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;
     protected ?string $nome;

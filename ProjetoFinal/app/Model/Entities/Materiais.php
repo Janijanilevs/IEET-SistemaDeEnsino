@@ -2,7 +2,9 @@
 
 namespace IeetSite\Model\Entities;
 
-class Materiais{
+use IeetSite\Core\Entity;
+
+class Materiais extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;
     protected ?string $link;

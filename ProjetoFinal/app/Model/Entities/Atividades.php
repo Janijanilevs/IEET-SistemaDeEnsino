@@ -2,7 +2,9 @@
 
 namespace IeetSite\Model\Entities;
 
-class Atividades{
+use IeetSite\Core\Entity;
+
+class Atividades extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;
     protected ?string $titulo;

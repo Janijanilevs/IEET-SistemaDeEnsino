@@ -2,7 +2,9 @@
 
 namespace IeetSite\Model\Entities;
 
-class Disciplina{
+use IeetSite\Core\Entity;
+
+class Disciplina extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;
     protected ?string $nome;

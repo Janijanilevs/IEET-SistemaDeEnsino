@@ -2,7 +2,9 @@
 
 namespace IeetSite\Model\Entities;
 
-class Notas{
+use IeetSite\Core\Entity;
+
+class Notas extends Entity{
     // ? significa que pode ser nullo
     protected ?int $id;
     protected ?float $nota1_1;
