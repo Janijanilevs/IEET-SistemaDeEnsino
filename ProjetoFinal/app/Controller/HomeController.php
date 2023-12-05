@@ -32,6 +32,10 @@ class HomeController extends Controller{
         $this->view("AlunoMateriais", ["titulo" => "Ieet - Atividade e Materiais do aluno"]);
     }
 
+    public function mainProfessor(){
+        $this->view("professorMain", ["titulo" => "Ieet - Atividade e Materiais do aluno"]);
+    }
+
     #-----------------------------------------------------------------------#
     
     public function teste(){
