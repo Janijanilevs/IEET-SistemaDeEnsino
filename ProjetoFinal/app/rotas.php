@@ -29,3 +29,12 @@ Router::add("/alunoMateriais", "HomeController", "atividadesAluno");
 Router::add("/professorMain", "HomeController", "mainProfessor");
 Router::add("/adicionarAluno", "HomeController", "adcAluno");
 Router::add("/turmaAlunos", "HomeController", "turmaAlunos");
+Router::add("/turmas", "HomeController", "turmas");
+Router::add("/inserirNotas", "HomeController", "inserirNotas");
+Router::add("/inserirAtividades", "HomeController", "inserirAtividades");
+Router::add("/verificaAtividade", "HomeController", "verificaAtividade");
+Router::add("/adicionaProfessor", "HomeController", "adicionaProfessor");
+Router::add("/adicionaTurma", "HomeController", "adicionaTurma");
+
+
+

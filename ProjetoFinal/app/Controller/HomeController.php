@@ -44,6 +44,30 @@ class HomeController extends Controller{
         $this->view("turmaAlunos", ["titulo" => "Ieet - Adicionar aluno"]);
     }
 
+    public function turmas(){
+        $this->view("turmas", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
+    public function inserirNotas(){
+        $this->view("inserirNotas", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
+    public function inserirAtividades(){
+        $this->view("inserirAtividades", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
+    public function verificaAtividade(){
+        $this->view("verificaAtividade", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
+    public function adicionaProfessor(){
+        $this->view("adicionaProfessor", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
+    public function adicionaTurma(){
+        $this->view("adicionaTurma", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
     #-----------------------------------------------------------------------#
     
     public function teste(){
