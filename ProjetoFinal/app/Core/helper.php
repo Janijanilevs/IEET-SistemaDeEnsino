@@ -47,3 +47,32 @@ function getMatricula(string $tipo){
     }
     return date('Y'). "." .rand(1, 999). "." .rand(1, 99). $tipoNum;
 }
+
+function addFormData(array $dados){
+    $_SESSION['__form'] = $dados;
+}
+
+function limparFormData(string $campo = ""){
+    if($campo == ""){
+        unset($_SESSION['__form']);
+    }else{
+        if( isset($_SESSION['__form'][$campo])){
+            unset($_SESSION['__form'][$campo]);
+        }
+    }
+    
+}
+
+function getValue(string $campo){
+
+    $form = $_SESSION['__form'];
+
+    if(isset($form[$campo])){
+         $valor = $form[$campo];
+         limparFormData($campo);
+         return $valor;
+    }
+    else{
+        return "";
+    }
+}
