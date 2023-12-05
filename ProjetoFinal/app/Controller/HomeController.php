@@ -55,13 +55,11 @@ class HomeController extends Controller{
         $direcao->cnpj = "40404041";
         $direcao->situacao = "pendente";
 
-        $dao = new UsuariosDAO();
-        $dao->inserir($direcao);
+        UsuariosDAO::inserir($direcao);
     }
 
     public function teste2(){
-        $dao = new UsuariosDAO();
-        $usuarios = $dao->getAll();
+        $usuarios = UsuariosDAO::getAll();
 
         foreach($usuarios as $usuario){
             print $usuario->nome;
@@ -70,30 +68,27 @@ class HomeController extends Controller{
     }
 
     public function teste3(){
-        $dao = new UsuariosDAO();
-        $usuario = $dao->getById(5);
+        $usuario = UsuariosDAO::getById(5);
         var_dump($usuario);
     }
 
     public function teste4(){
-        $dao = new UsuariosDAO;
-        $usuario = $dao->getById(3);
+        $usuario = UsuariosDAO::getById(3);
 
         $usuario->nome = "UFBA Rio Vermelho";
         $usuario->email = "ufba@gmail.com";
         $usuario->login = "ufba";
         $usuario->senha = "ufba";
-        $dao->editar($usuario);
+        UsuariosDAO::editar($usuario);
         print "<pre>";
         var_dump($usuario);
     }
 
     public function teste5(){
-        $dao = new UsuariosDAO;
-        $usuario = $dao->getById(2);
+        $usuario = UsuariosDAO::getById(2);
 
         if($usuario){
-            $dao->excluir($usuario);
+            UsuariosDAO::excluir($usuario);
             print "Usuário excluido com sucesso!";
         }else{
             print "Usuário não existe!";

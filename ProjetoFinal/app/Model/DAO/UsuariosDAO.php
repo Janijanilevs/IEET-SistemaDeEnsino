@@ -9,13 +9,15 @@ use PDO;
 
 class UsuariosDAO extends DAO{
     
-    protected string $tabela = "direcao";
-    protected string $class = Direcao::class;
+    protected static string $tabela = "direcao";
+    protected static string $class = Direcao::class;
     
     
-    public function inserir($usuario){
+    public static function inserir($usuario){
+        /* Este inserir só funciona para diretores, se thiago não ensinar alguma forma de modificar teremos que fazer varios inserir'' */
         $db = new Database();
-        $sql = "INSERT INTO Direcao(nome, email, login, senha, cnpj, situacao) Values(?,?,?,?,?,?)";
+        $tabela = static::$tabela;
+        $sql = "INSERT INTO $tabela(nome, email, login, senha, cnpj, situacao) Values(?,?,?,?,?,?)";
         
         $dados = [
             $usuario->nome,
@@ -26,16 +28,18 @@ class UsuariosDAO extends DAO{
             $usuario->situacao
         ];
 
+
         return $db->execute($sql, $dados);
     }
 
-    
+
 
     
 
-    public function editar($usuario){
+    public static function editar($usuario){
         $db = new Database;
-        $sql = "UPDATE direcao Set Nome = ?, email = ?, login = ?, senha = ?, cnpj = ?, situacao = ?";
+        $tabela = static::$tabela;
+        $sql = "UPDATE $tabela Set Nome = ?, email = ?, login = ?, senha = ?, cnpj = ?, situacao = ?";
 
         $dados = [
             $usuario->nome,
