@@ -1,7 +1,7 @@
 <?php componente('topo/topoDirecao')?>
 <main id="AdicionarAlunoForm">
     <div id="divAlunoForm">
-        <form action="<?=linkrota('adicioAluno')?>" method="post" id="FormAdicionarAluno">
+        <form action="<?=linkrota('adicioAluno')?>" method="post" class="FormAdicionar">
             <center>
             <h3><?= verificaSession()?></h3>
             </center>
@@ -45,7 +45,9 @@
             <label for="Direcao_id">Direção:</label>
             <input type="text" id="Direcao_id" name="Direcao_id" >
             </div>
+            <div class="buttonRegistra">
             <button type="submit">Registrar</button>
+            </div>
 
         </form>
     </div>

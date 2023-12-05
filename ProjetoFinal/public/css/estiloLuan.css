@@ -37,7 +37,7 @@
     width: 100%;
 }
 
-#FormAdicionarAluno{
+.FormAdicionar{
     margin: 10vh 15%;
     padding: 20px;
     background-color: #FF5C00;
@@ -47,19 +47,21 @@
     position: relative;
     font-family: 'Secular One',sans-serif;
 }
-#FormAdicionarAluno h1{
+.FormAdicionar h1{
     text-align: center;
     color: white;
     font-size: 60px;
+    margin-bottom: 5vh;
 }
-#FormAdicionarAluno label {
+.FormAdicionar label {
     display: block;
     margin-bottom: 8px;
     font-size: 40px;
     white-space: nowrap;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#FormAdicionarAluno input {
+.FormAdicionar input {
     width: calc(100% - 16px);
     padding: 10px;
     margin-bottom: 16px;
@@ -68,12 +70,11 @@
     font-size: 30px;
 }
 
-#FormAdicionarAluno button {
+.FormAdicionar button {
     background-color: #ffffff;
     color: black;
     padding: 10px 15px;
-    margin-top: 40px;
-    margin-left: 20px;
+    margin: 3vh 3vw;
     border-radius: 20px;
     cursor: pointer;
     bottom: 50px;
@@ -84,5 +85,27 @@
 .flexInput{
     display: flex;
     align-items: center;
-    margin: 1% 5%;
+    margin: 2% 5%;
+}
+
+
+
+/*-------------------------- Adicionar Professor-------------------*/
+
+
+#AdicionarProfForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#divProfForm{
+    width: 100%;
+}
+
+.buttonRegistra{
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }

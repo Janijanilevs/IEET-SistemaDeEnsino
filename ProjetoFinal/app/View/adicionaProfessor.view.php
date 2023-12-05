@@ -1,17 +1,12 @@
 <?=componente('topo/topoDirecao')?>
-    <main id="MainRegistroProfessor">
-
-    </main>
-<?=componente('rodape')?>
-<?php componente('topo/topoDirecao')?>
-<main id="AdicionarAlunoForm">
-    <div id="divAlunoForm">
-        <form action="<?=linkrota('adicioAluno')?>" method="post" id="FormAdicionarAluno">
+    <main id="AdicionarProfForm">
+    <div id="divProfForm">
+        <form action="<?=linkrota('adicioAluno')?>" method="post" class="FormAdicionar">
             <center>
             <h3><?= verificaSession()?></h3>
             </center>
-            <title>Novo Aluno</title>
-            <h1>Novo Aluno</h1>
+            <title>Novo Professor</title>
+            <h1>Novo Professor</h1>
             <div class="flexInput">
             <label for="nome">Nome: </label>
             <input type="text" id="nome" name="nome" required>
@@ -40,19 +35,23 @@
             <input type="hidden" name="dataDeCriacao" value="<?=date('Y/m/d')?>">
             </div>
             <div class="flexInput">
-            <label for="turma">Turma:</label>
-            <input type="text" id="turma" name="Turma_idTurma" required>
+            <label for="turma">Formação: </label>
+            <input type="text" id="formacao" name="Turma_idTurma" required>
             </div>
             <div class="flexInput">
             <input type="hidden" id="matricula" name="matricula" value="<?= getMatricula('Aluno') ?>">
             </div>
             <div class="flexInput">
-            <label for="Direcao_id">Direção:</label>
+            <label for="Direcao_id">Direção: </label>
             <input type="text" id="Direcao_id" name="Direcao_id" required>
             </div>
+            <div class="buttonRegistra">
             <button type="submit">Registrar</button>
+            </div>
 
         </form>
     </div>
-</main>
-<?php componente('rodape')?>
+    </main>
+<?=componente('rodape')?>
+
+    
