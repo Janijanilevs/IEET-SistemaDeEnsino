@@ -11,4 +11,13 @@ class Disciplina extends Entity{
     protected ?int $Turma_idTurma;
     protected ?string $carga_Horaria;
     protected ?int $usuario_professor_id;
+
+    public static function getRegras(){
+        return[
+            'nome' => 'obrigatorio ',
+             'Turma_idTurma' => 'obrigatorio ',
+             'carga_Horaria' => 'obrigatorio ',
+             'usuario_professor_id' => 'obrigatorio '
+        ];
+    }
 }

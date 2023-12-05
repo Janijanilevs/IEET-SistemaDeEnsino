@@ -9,4 +9,11 @@ class Turma extends Entity{
     protected ?int $id;
     protected ?string $nome;
     protected ?int $Direcao_id;
+
+    public static function getRegras(){
+        return[
+            'nome' => 'obrigatorio ',
+             'Direcao_id' => 'obrigatorio '
+            ];
+    }
 }

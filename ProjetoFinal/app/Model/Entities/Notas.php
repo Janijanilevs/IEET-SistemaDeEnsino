@@ -19,4 +19,6 @@ class Notas extends Entity{
     protected ?int $status;
     protected ?int $Disciplinas_idDisciplinas;
     protected ?int $Turma_idTurma;
+
+    
 }
