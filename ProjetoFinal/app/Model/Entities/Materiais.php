@@ -4,9 +4,9 @@ namespace IeetSite\Model\Entities;
 
 class Materiais{
     // ? significa que pode ser nullo
-    public ?int $id;
-    public ?string $link;
-    public ?string $nome;
-    public ?string $descricao;
-    public ?int $disciplina_id;
+    protected ?int $id;
+    protected ?string $link;
+    protected ?string $nome;
+    protected ?string $descricao;
+    protected ?int $disciplina_id;
 }

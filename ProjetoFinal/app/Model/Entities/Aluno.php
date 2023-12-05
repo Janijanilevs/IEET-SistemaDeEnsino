@@ -4,16 +4,20 @@ namespace IeetSite\Model\Entities;
 
 class Aluno{
     // ? significa que pode ser nullo
-    public ?int $id;
-    public ?string $nome;
-    public ?string $email;
-    public ?string $cpf;
-    public ?string $login;
-    public ?string $senha;
-    public ?int $tipo;
-    public ?string $dataDeNascimento;
-    public ?string $dataDeCriacao;
-    public ?int $Turma_idTurma;
-    public ?string $matricula;
-    public ?int $Direcao_id;
+    protected ?int $id;
+    protected ?string $nome;
+    protected ?string $email;
+    protected ?string $cpf;
+    protected ?string $login;
+    protected ?string $senha;
+    protected ?int $tipo;
+    protected ?string $dataDeNascimento;
+    protected ?string $dataDeCriacao;
+    protected ?int $Turma_idTurma;
+    protected ?string $matricula;
+    protected ?int $Direcao_id;
+
+    public function setSenha($valor){
+        $this->senha = password_hash($valor, PASSWORD_DEFAULT);
+    }
 }

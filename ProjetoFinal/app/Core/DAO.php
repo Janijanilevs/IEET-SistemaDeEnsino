@@ -3,28 +3,34 @@
 namespace IeetSite\Core;
 
 abstract class DAO{
-    protected string $tabela = "";
-    protected string $class = \stdClass::class;
+    protected static string $tabela = "";
+    protected static string $class = \stdClass::class;
     
-    public function getAll(){
+    public abstract static function inserir($entidade);
+    public abstract static function editar($entidade);
+    
+    public static function getAll(){
         $db = new Database();
-        $sql = "SELECT * FROM  $this->tabela";
+        $tabela = static::$tabela;
+        $sql = "SELECT * FROM  {$tabela}";
         $db->execute($sql);
 
-        return $db->getAll($this->class);
+        return $db->getAll(static::$class);
     }
 
-    public function getById($id){
+    public static function getById($id){
         $db = new Database();
-        $sql = "SELECT * from {$this->tabela} where id = ?";
+        $tabela = static::$tabela;
+        $sql = "SELECT * from {$tabela} where id = ?";
         $db->execute($sql, [$id]);
         print "<pre>";
-        return $db->get($this->class);
+        return $db->get(static::$class);
     }
 
-    public function excluir( $usuario){
+    public static function excluir( $usuario){
         $db = new Database;
-        $sql = "DELETE From {$this->tabela} where id = ?";
+        $tabela = static::$tabela;
+        $sql = "DELETE From {$tabela} where id = ?";
 
         return $db->execute($sql, [$usuario->id]);
     }
