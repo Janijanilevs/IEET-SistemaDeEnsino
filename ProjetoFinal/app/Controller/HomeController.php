@@ -95,4 +95,10 @@ class HomeController extends Controller{
         }
 
     }
+
+    public function teste6(){
+        $direcao = new Direcao(['nome' => 'IFBA - Campus Guajeru', 'email' => 'guajeruIfba@gmail.com', 'login' => 'ifbaGuajeru','senha' => 'ifbaGuajeru', 'cnpj' => '40404042', 'situacao' => 'pendente']);
+        print "<pre>";
+        var_dump($direcao->getProps());
+    }
 }

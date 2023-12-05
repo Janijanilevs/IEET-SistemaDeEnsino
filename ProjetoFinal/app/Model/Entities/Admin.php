@@ -4,9 +4,9 @@ namespace IeetSite\Model\Entities;
 
 class Admin{
     // ? significa que pode ser nullo
-    public ?int $id;
-    public ?string $nome;
-    public ?string $login;
-    public ?string $senha;
-    public ?int $tipo;
+    protected ?int $id;
+    protected ?string $nome;
+    protected ?string $login;
+    protected ?string $senha;
+    protected ?int $tipo;
 }

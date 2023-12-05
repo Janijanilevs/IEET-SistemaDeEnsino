@@ -4,16 +4,20 @@ namespace IeetSite\Model\Entities;
 
 class Professor{
     // ? significa que pode ser nullo
-    public ?int $id;
-    public ?string $nome;
-    public ?string $email;
-    public ?string $cpf;
-    public ?string $login;
-    public ?string $senha;
-    public ?int $tipo;
-    public ?string $dataDeNascimento;
-    public ?string $dataDeCriacao;
-    public ?string $matricula;
-    public ?string $formacao;
-    public ?int $Direcao_id;
+    protected ?int $id;
+    protected ?string $nome;
+    protected ?string $email;
+    protected ?string $cpf;
+    protected ?string $login;
+    protected ?string $senha;
+    protected ?int $tipo;
+    protected ?string $dataDeNascimento;
+    protected ?string $dataDeCriacao;
+    protected ?string $matricula;
+    protected ?string $formacao;
+    protected ?int $Direcao_id;
+
+    public function setSenha($valor){
+        $this->senha = password_hash($valor, PASSWORD_DEFAULT);
+    }
 }

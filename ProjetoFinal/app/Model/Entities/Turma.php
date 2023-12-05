@@ -4,7 +4,7 @@ namespace IeetSite\Model\Entities;
 
 class Turma{
     // ? significa que pode ser nullo
-    public ?int $id;
-    public ?string $nome;
-    public ?int $Direcao_id;
+    protected ?int $id;
+    protected ?string $nome;
+    protected ?int $Direcao_id;
 }
