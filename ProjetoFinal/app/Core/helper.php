@@ -20,7 +20,7 @@ function verificaSession($mensagem = '', $tipo = "sucesso"){
         [$mensagem, $tipo] = $_SESSION['__mensagem'];
         $retorno = "";
         $retorno .= "<div class='session {$tipo}'>";
-        $retorno .= $_SESSION['mensagem'] . "</div>";
+        $retorno .= $mensagem . "</div>";
         unset($_SESSION['__mensagem']);
         return $retorno;
     }else{
