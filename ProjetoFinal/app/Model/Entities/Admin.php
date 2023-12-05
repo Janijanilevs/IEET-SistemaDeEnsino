@@ -11,6 +11,4 @@ class Admin extends Entity{
     protected ?string $login;
     protected ?string $senha;
     protected ?int $tipo;
-
-    
 }

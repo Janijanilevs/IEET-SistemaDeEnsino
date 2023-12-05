@@ -22,4 +22,20 @@ class Aluno extends Entity{
     public function setSenha($valor){
         $this->senha = password_hash($valor, PASSWORD_DEFAULT);
     }
+
+    public static function getRegras():array{
+        return[
+            "nome" => "obrigatorio",
+            "email" => "obrigatorio|email",
+            "cpf" => "obrigatorio",
+            "login" => "obrigatorio",
+            "senha" => "obrigatorio",
+            "tipo" => "obrigatorio",
+            "dataDeNascimento" => "obrigatorio",
+            "dataDeCriacao" => "obrigatorio",
+            "matricula" => "obrigatorio",
+            "formacao" => "obrigatorio",
+            "Direcao_id" => "obrigatorio"
+            ];
+    }
 }
