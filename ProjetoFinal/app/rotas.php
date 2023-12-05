@@ -12,12 +12,12 @@ Router::add("/cadastro", "LoginController", "cadastro");
 
 /* Teste Banco de Dados */
 
-Router::add("/teste1", "HomeController", "teste");
-Router::add("/teste2", "HomeController", "teste2");
-Router::add("/teste3", "HomeController", "teste3");
-Router::add("/teste4", "HomeController", "teste4");
-Router::add("/teste5", "HomeController", "teste5");
-Router::add("/teste6", "HomeController", "teste6");
+Router::add("/teste1", "TesteController", "teste");
+Router::add("/teste2", "TesteController", "teste2");
+Router::add("/teste3", "TesteController", "teste3");
+Router::add("/teste4", "TesteController", "teste4");
+Router::add("/teste5", "TesteController", "teste5");
+Router::add("/teste6", "TesteController", "teste6");
 
 
 /* Páginas: */

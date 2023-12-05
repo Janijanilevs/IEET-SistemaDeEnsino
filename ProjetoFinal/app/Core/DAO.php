@@ -35,7 +35,30 @@ abstract class DAO{
         return $db->execute($sql, $dados);
     }
 
-    public abstract static function editar(Entity $entidade);
+    public static function editar($entidade){
+        $db = new Database;
+        $tabela = static::$tabela;
+        
+        $sql = "UPDATE {$tabela} Set";
+
+        $propriedades = $entidade->getProps();
+        $dados = [];
+        $campos = "";
+
+        foreach($propriedades as $propriedade => $valor){
+            if($propriedade != 'id' && !is_null($entidade->$propriedade)){
+                $campos .= " {$propriedade} = ?,";
+                array_push($dados, $valor);
+            }
+        }
+        $campos = rtrim($campos, ',');
+        $sql .= "{$campos} WHERE id = ?";
+        array_push($dados, $entidade->id);
+
+        print $sql;
+   
+        return $db->execute($sql, $dados);
+    }
     
     public static function getAll(){
         $db = new Database();
