@@ -25,3 +25,48 @@
     align-items: center;
     justify-content: space-around;
 }
+#FormAdicionarAluno{
+    width: 150vh;
+    height: 120vh;
+    margin: 20vh auto;
+    padding: 20px;
+    background-color: #FF5C00;
+    border: 1px solid black;
+    border-radius: 29px;
+    color:white;
+    position: relative;
+}
+#FormAdicionarAluno h1{
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+#FormAdicionarAluno label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+#FormAdicionarAluno input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 70px;
+    font-size: 30px;
+}
+
+#FormAdicionarAluno button {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 80px;
+    margin-left: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 60px;
+}
+
