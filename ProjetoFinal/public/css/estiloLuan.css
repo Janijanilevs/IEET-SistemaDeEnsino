@@ -121,3 +121,47 @@
     font-weight:bold;
     font-size: 55px;
 }
+#MostrarPlanos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Planos{
+    height: 40vh;
+    margin-top: 5%;
+    margin-left: 3% ;
+    background-color: #FF5C00;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border-radius: 110px;
+    box-shadow: 0 12px 8px gray;
+    
+}
+.Planos h4{
+    text-align: center;
+    margin-top: 5vh;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-left: 2%;
+}
+#AdquirirPlanos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+.BtnAdquirir{
+    width: 10%;
+    margin-left: 3% ;
+    background-color: #FF5C00;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border-radius: 20px;    
+}
+.BtnAdquirir h4{
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    
+
+}
