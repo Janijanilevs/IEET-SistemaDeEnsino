@@ -40,6 +40,10 @@ class HomeController extends Controller{
         $this->view("adicionarAluno", ["titulo" => "Ieet - Adicionar aluno"]);
     }
 
+    public function turmaAlunos(){
+        $this->view("turmaAlunos", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
+
     #-----------------------------------------------------------------------#
     
     public function teste(){
