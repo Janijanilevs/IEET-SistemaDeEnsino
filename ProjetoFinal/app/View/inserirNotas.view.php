@@ -48,8 +48,9 @@
                         </div>
                     </div>
                     <div id="btnM">
-                        <h2>Media Final: Media</h2>
-                        
+                        <div id="MediaF">
+                            <h2>Media Final: Media</h2>
+                        </div>
                         <div id="buttonBoletim"> 
                             <button type="submit">Salvar Dados</button>
                         </div>
