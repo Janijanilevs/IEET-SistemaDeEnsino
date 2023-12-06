@@ -1,7 +1,7 @@
 <?=componente('topo/topoAdmin')?>
     <main id="RequisicaoForm">
     <div id="divReqForm">
-        <form action="<?=linkrota('')?>" method="post" class="FormAdicionar">
+        <form action="<?=linkrota('adicioDirecao')?>" method="post" class="FormAdicionar">
             <center>
             <h3><?= verificaSession()?></h3>
             </center>
@@ -14,10 +14,6 @@
             <div class="flexInput">
             <label for="cnpj">CNPJ: </label>
             <input type="text" id="cnpj" name="cnpj" required>
-            </div>
-            <div class="flexInput">
-            <label for="cpf">CPF: </label>
-            <input type="text" id="cpf" name="cpf" required>
             </div>
             <div class="flexInput">
             <label for="email">Email: </label>

@@ -23,14 +23,13 @@ class Professor extends Entity{
         $this->senha = password_hash($valor, PASSWORD_DEFAULT);
     }
 
-    public static function getRegras(): arrray{
+    public static function getRegras(): array{
         return [
             'nome' => 'obrigatorio',
             'email' => 'obrigatorioemail',
             'cpf' => 'obrigatorio',
             'login' => 'obrigatorio',
             'senha' => 'obrigatorio',
-            'tipo' => 'obrigatorio',
             'dataDeNascimento' => 'obrigatorio',
             'dataDeCriacao' => 'obrigatorio',
             'matricula' => 'obrigatorio',

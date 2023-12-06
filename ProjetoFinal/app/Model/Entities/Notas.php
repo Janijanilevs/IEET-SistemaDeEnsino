@@ -21,23 +21,23 @@ class Notas extends Entity{
     protected ?int $Turma_idTurma;
 
     public function getMedia1(): float{
-        return ($nota1_1 + $nota1_2 + $nota1_3) / 3;
+        return ($this->nota1_1 + $this->nota1_2 + $this->nota1_3) / 3;
     }
 
     public function getMedia2(): float{
-        return ($nota2_1 + $nota2_2 + $nota2_3) / 3;
+        return ($this->nota2_1 + $this->nota2_2 + $this->nota2_3) / 3;
     }
 
     public function getMedia3(): float{
-        return ($nota3_1 + $nota3_2 + $nota3_3) / 3;
+        return ($this->nota3_1 + $this->nota3_2 + $this->nota3_3) / 3;
     }
 
     public function getMediaFinal():float{
-        return (getMedia1() + getMedia2() + getMedia3())/3;
+        return ($this->getMedia1() + $this->getMedia2() + $this->getMedia3())/3;
     }
 
     public function getStatus(){
-        if(getMediaFinal() >= 6){
+        if($this->getMediaFinal() >= 6){
             $this->status = 1;
         }else{
             $this->status = 0;

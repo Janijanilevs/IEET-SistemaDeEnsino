@@ -7,6 +7,12 @@ use IeetSite\Model\Entities\Aluno;
 use IeetSite\Model\DAO\AlunoDAO;
 use IeetSite\Core\Validator;
 use IeetSite\Core\helper;
+use IeetSite\Model\DAO\DirecaoDAO;
+use IeetSite\Model\DAO\ProfessorDAO;
+use IeetSite\Model\DAO\TurmaDAO;
+use IeetSite\Model\Entities\Direcao;
+use IeetSite\Model\Entities\Professor;
+use IeetSite\Model\Entities\Turma;
 
 class LoginController extends Controller{
 
@@ -19,7 +25,7 @@ class LoginController extends Controller{
     }
 
     public function logarConta(){
-        /* Por enquanto funcionando como cadastros */
+        
         
     }
 
@@ -45,4 +51,51 @@ class LoginController extends Controller{
         redirecionar('adicionarAluno');
     }
 
+    public function adicionaProf(){
+        $houveErro = Validator::execute(Professor::getRegras(), $this->post());
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('adicionaProfessor');
+        }
+        
+       
+
+
+        $adicionado = new Professor($this->post());
+        if(ProfessorDAO::inserir($adicionado)){
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionaProfessor');
+    }
+
+    public function adicionaDirecao(){
+        $houveErro = Validator::execute(Direcao::getRegras(), $this->post());
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('adicionaDirecao');
+        }
+
+        $adicionado = new Direcao($this->post());
+        if(DirecaoDAO::inserir($adicionado)){
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionaDirecao');
+    }
+
+    public function adicionaTurma(){
+        $houveErro = Validator::execute(Turma::getRegras(), $this->post());
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('adicionaTurma');
+        }
+
+        $adicionado = new Turma($this->post());
+        if(TurmaDAO::inserir($adicionado)){
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionaTurma');
+    }
 }

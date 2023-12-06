@@ -21,7 +21,7 @@
                 <div class="section-usuario">
                     <img src="./public/imagens/AlunoInicial.png" id="alunoCard">
                     <h2>Verifique seu boletim;</h2>
-                    <h2>Complete? Conclua suas atividades;</h2>
+                    <h2>Conclua suas atividades;</h2>
                     <h2>Conheça seu progresso;</h2>
                     <h2>Veja seus materiais de estudo online.</h2>
                     </div>

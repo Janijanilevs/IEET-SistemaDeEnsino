@@ -18,6 +18,16 @@ Router::get("/", "HomeController", "index");
     /* Actions:*/
         Router::post("/logarconta", "LoginController", "logarConta");
         Router::post("/adicioAluno", "LoginController", "adicioAluno");
+        Router::post("/adicioProf", "LoginController", "adicionaProf");
+        Router::post("/adicioDirecao", "LoginController", "adicionaDirecao");
+        
+        Router::post("/adicioTurma", "LoginController", "adicionaTurma");
+        Router::post("/adicioDisciplina", "LoginController", "adicionaDisciplina");
+        Router::post("/adicioAtividade", "LoginController", "adicionaAtividade");
+        Router::post("/adicioMaterial", "LoginController", "adicionaMaterial");
+        Router::post("/adicioNota", "LoginController", "adicionaNota");
+
+        
 /* Teste Banco de Dados */
 
 Router::get("/teste1", "TesteController", "teste");
@@ -38,32 +48,11 @@ Router::get("/professorMain", "HomeController", "mainProfessor");
 Router::get("/turmaAlunos", "HomeController", "turmaAlunos");
 Router::get("/turmas", "HomeController", "turmas");
 Router::get("/verificaAtividade", "HomeController", "verificaAtividade");
+Router::get("/dadosRequisicao", "HomeController", "dadosrequisicao");
+
 Router::get("/adicionarAluno", "HomeController", "adcAluno"); // Candidato para ir para login controller
 Router::get("/adicionaProfessor", "HomeController", "adicionaProfessor");
 Router::get("/adicionaTurma", "HomeController", "adicionaTurma");
 Router::get("/inserirNotas", "HomeController", "inserirNotas");
 Router::get("/inserirAtividades", "HomeController", "inserirAtividades");
-Router::get("/dadosRequisicao", "HomeController", "dadosrequisicao");
 Router::get("/adicionaDirecao", "HomeController", "adicionaDirecao");
-
-/*
-Router::post("/direcaoMain", "HomeController", "mainDirecao");
-Router::post("/alunoMain", "HomeController", "mainAluno");
-Router::post("/confirmacao", "HomeController", "confirmacao");
-Router::post("/alunoBoletim", "HomeController", "alunoBoletim");
-Router::post("/alunoMateriais", "HomeController", "atividadesAluno");
-Router::post("/professorMain", "HomeController", "mainProfessor");
-Router::post("/turmaAlunos", "HomeController", "turmaAlunos");
-Router::post("/turmas", "HomeController", "turmas");
-Router::post("/verificaAtividade", "HomeController", "verificaAtividade");
-Router::post("/adicionarAluno", "HomeController", "adcAluno"); // Candidato para ir para login controller
-Router::post("/adicionaProfessor", "HomeController", "adicionaProfessor");
-Router::post("/adicionaTurma", "HomeController", "adicionaTurma");
-Router::post("/inserirNotas", "HomeController", "inserirNotas");
-Router::post("/inserirAtividades", "HomeController", "inserirAtividades");
-*/
-
-
-
-
-

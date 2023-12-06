@@ -1,7 +1,7 @@
 <?=componente('topo/topoDirecao')?>
     <main id="AdicionarProfForm">
     <div id="divProfForm">
-        <form action="<?=linkrota('adicioAluno')?>" method="post" class="FormAdicionar">
+        <form action="<?=linkrota('adicioProf')?>" method="post" class="FormAdicionar">
             <center>
             <h3><?= verificaSession()?></h3>
             </center>
@@ -36,7 +36,7 @@
             </div>
             <div class="flexInput">
             <label for="turma">Formação: </label>
-            <input type="text" id="formacao" name="Turma_idTurma" required>
+            <input type="text" id="formacao" name="formacao" required>
             </div>
             <div class="flexInput">
             <input type="hidden" id="matricula" name="matricula" value="<?= getMatricula('Aluno') ?>">
