@@ -8,9 +8,12 @@ use IeetSite\Model\DAO\AlunoDAO;
 use IeetSite\Core\Validator;
 use IeetSite\Core\helper;
 use IeetSite\Model\DAO\DirecaoDAO;
+use IeetSite\Model\DAO\DisciplinasDAO;
 use IeetSite\Model\DAO\ProfessorDAO;
 use IeetSite\Model\DAO\TurmaDAO;
 use IeetSite\Model\Entities\Direcao;
+use IeetSite\Model\Entities\Disciplina;
+use IeetSite\Model\Entities\Notas;
 use IeetSite\Model\Entities\Professor;
 use IeetSite\Model\Entities\Turma;
 
@@ -18,10 +21,6 @@ class LoginController extends Controller{
 
     public function login(){
         $this->view("login",["titulo" => "Página de Login - Ieet"]);
-    }
-
-    public function cadastro(){
-        $this->view("cadastro",["titulo" => "Página de Cadastro - Ieet"]);
     }
 
     public function logarConta(){
@@ -97,5 +96,35 @@ class LoginController extends Controller{
             verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
         }
         redirecionar('adicionaTurma');
+    }
+
+    public function adicionaDisciplina(){ // Mudar aqui
+        $houveErro = Validator::execute(Disciplina::getRegras(), $this->post()); // Mudar aqui
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('adicionaDisciplina'); //Mudar aqui
+        }
+
+        $adicionado = new Disciplina($this->post()); // Mudar aqui
+        if(DisciplinasDAO::inserir($adicionado)){ // Mudar aqui
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionaDisciplina'); // Mudar aqui 
+    }
+
+    public function adicionaNota(){ // Mudar aqui
+        $houveErro = Validator::execute(Notas::getRegras(), $this->post()); // Mudar aqui
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('adicionaDisciplina'); //Mudar aqui
+        }
+
+        $adicionado = new Disciplina($this->post()); // Mudar aqui
+        if(DisciplinasDAO::inserir($adicionado)){ // Mudar aqui
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('adicionaDisciplina'); // Mudar aqui 
     }
 }

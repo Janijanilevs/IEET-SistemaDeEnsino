@@ -43,4 +43,8 @@ class Notas extends Entity{
             $this->status = 0;
         }
     }
+
+    public static function getRegras(): array{
+        return [];
+    }
 }
