@@ -11,7 +11,7 @@
     <title><?=$titulo?></title>
 </head>
 <body>
-        <main>
+        <main id="mainDoLogin">
             <div id="loginTotal">
                 <img id="logo" src="public/imagens/Logo.png" alt="IEET">
                 <div id="formLogin">
@@ -25,7 +25,7 @@
                         <label class="campoDados">
                             <input type="password" name="senha" placeholder="Senha" required class="dados">   
                         </label>
-                        <div id="selectForm">
+                        <div id="selectForm" >
                             <select name="tipo" id="seletortipo" placeholder="Tipo" required>
 
                                 <option value=""> Selecione o nivel de usuário </option>
@@ -37,7 +37,7 @@
                             </select>
                         </div>
                         <button name="acessar" class="botaoAcesso"> Acessar </button>
-                        <a href="<?=linkrota("")?>"><h1> Voltar para a página inicial</h1></a>
+                        <a href="<?=linkrota("")?>"><h1> &#10094 Voltar para a página inicial</h1></a>
                     </form>
                 </div>
             </div>

@@ -229,9 +229,14 @@ footer{
 
 
 /* main - página login */ /* Não usem body/main/h1/h2... sem referencia Ex:( #main-5 h1{} )*/
+
+#mainDoLogin{
+    height: 100%;
+}
+
 #loginTotal {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -271,6 +276,7 @@ footer{
 
 .campoDados {
     width: 100%;
+    padding-bottom: 2vh;
 }
 
 .dados {
@@ -285,15 +291,17 @@ footer{
 .botaoAcesso {
     background-color: rgb(255, 155, 61);
     color: rgb(255, 255, 255);
-    font-size: 4vh;
-    width: 100%;
+    font-size: 6vh;
+    width: 60%;
     border-radius: 30px;
+    margin-bottom: 2vh;
 }
 
 #selectForm {
     width: 100%;
     height: 50px;
     border: none;
+    margin-bottom: 2vh;
 }
 #selectForm:focus {
     border: none;
