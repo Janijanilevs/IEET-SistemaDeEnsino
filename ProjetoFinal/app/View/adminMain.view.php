@@ -1,18 +1,11 @@
 <?php componente('topo/topoAdmin')?>
-<main id="AdicionaDirecao">
-    <div>
-        <div id="EscolhaUsuarioDirecao">
-            <div class="adUsuario">
-                <img src="./public/imagens/AlunoDirecao.png">
-                <div><h2>Aluno</h2></div>
-            </div>
-            <div class="adUsuario">
-                <img src="./public/imagens/ProfessorDirecao.png">
-                <div><h2>Professor</h2></div>
-            </div>
-            <div class="adUsuario">
-                <img src="./public/imagens/turma2ano.png">
-                <div><h2>Turma</h2></div>
+<main>
+    <div id="AdicionaDirecao">
+        <div id="TituloDirecaoMain"><h1>Registar Escola e Direção</h1></div>
+        <div id="AdUsuarioDirecao">
+            <div id="regDir" class="adUsuario">
+                <img src="./public/imagens/livrosRegAdmin.png">
+                <div><h2>Inserir Dados</h2></div>
             </div>
         </div>
     </div>

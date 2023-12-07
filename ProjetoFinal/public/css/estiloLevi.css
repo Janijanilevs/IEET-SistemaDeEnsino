@@ -537,3 +537,48 @@
     padding-left: 40%;
     padding-right: 0;
 }
+
+
+
+/*------------------------------ADMIN---------------------*/
+
+
+#AdicionaDirecao{
+    height: min-content;
+    width: 100%;
+
+}
+
+#AdUsuarioDirecao{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+#regDir {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#regDir img{
+    height: 50vh;
+}
+
+#regDir div{
+    width: 120%;
+    height: 15vh;
+    border-radius: 2.3rem;
+}
+
+
+
+
+
