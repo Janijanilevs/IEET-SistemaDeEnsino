@@ -87,6 +87,10 @@ class HomeController extends Controller{
     public function escolaRegistros(){
         $this->view("escolaRegistros", ["titulo" => "Ieet - Adicionar aluno"]);
     }
+
+    public function direcaoMainVerdadeiro(){
+        $this->view("direcaoMainVerdadeiro", ["titulo" => "Ieet - Adicionar aluno"]);
+    }
     #-----------------------------------------------------------------------#
     
 }
