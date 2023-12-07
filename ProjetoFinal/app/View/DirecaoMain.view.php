@@ -18,4 +18,4 @@
         </div>
        
     </main>
-<?=componente('rodape')?>
+<?=componente('rodape') #<?=::getById($_SESSION['__usuario'])->__get('nome')?>?> 

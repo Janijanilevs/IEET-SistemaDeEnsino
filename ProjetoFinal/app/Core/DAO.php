@@ -69,12 +69,12 @@ abstract class DAO{
         return $db->getAll(static::$class);
     }
 
-    public static function getById($id){
+    public static function getById($id, $table = '*'){
         $db = new Database();
         $tabela = static::$tabela;
-        $sql = "SELECT * from {$tabela} where id = ?";
+        $sql = "SELECT {$table} from {$tabela} where id = ?";
+
         $db->execute($sql, [$id]);
-        print "<pre>";
         return $db->get(static::$class);
     }
 
