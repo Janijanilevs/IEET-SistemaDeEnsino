@@ -31,7 +31,8 @@ Router::get("/inserirNotas", "HomeController", "inserirNotas"); // Professor: In
 Router::get("/inserirAtividades", "HomeController", "inserirAtividades"); // Professor: Inserir atividades
 
 /* Acesso: Direcao */
-Router::get("/direcaoMain", "HomeController", "mainDirecao"); // Direção: Parte inicial
+Router::get("/registro", "HomeController", "mainDirecao"); // Direção: Parte inicial
+Router::get("/direcaoMain", "HomeController", "mainDirecaoVedadeiro"); // Direção: Parte inicial
 Router::get("/adicionarAluno", "HomeController", "adcAluno"); // Direcao: Adicionar Aluno
 Router::get("/adicionaProfessor", "HomeController", "adicionaProfessor"); // Direcao: Adicionar professor
 Router::get("/adicionaTurma", "HomeController", "adicionaTurma");   // Direcao: Adicionar Turma
