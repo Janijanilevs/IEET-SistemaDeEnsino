@@ -15,7 +15,9 @@
             </div>
         </div>
     </div>
+    <div id="copyR">
     <h1>©2023 IEET</h1>
+    </div>
 </footer>
 </body>
 </html>
