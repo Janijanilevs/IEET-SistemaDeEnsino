@@ -27,7 +27,7 @@
         <a href="<?=linkrota('turmas')?>">
             <h1>Turmas</h1>
         </a>
-        <a href="<?=linkrota('')?>"> 
+        <a href="<?=linkrota('professorMain')?>"> 
             <h1>Chat</h1>
         </a>
         <a href="<?=linkrota('professorMain')?>" id="login">

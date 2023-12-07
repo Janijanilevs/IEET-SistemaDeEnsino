@@ -318,11 +318,11 @@ footer{
     /* Materiais e atividades*/
 
 .CaixaTarefasMateriais{
-    font-family: 'ubuntu';
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 25%;
     height: 50vh;
     margin-right: 4%;
@@ -338,9 +338,10 @@ footer{
     flex-direction: row;
     align-content: center;
     justify-content: space-evenly;
+    margin-bottom: 5vh;
 }
 #materiaisDeEstudoDiv{
-    height: 50vh;
+    height: 20vh;
     width: 100%;
     padding-top: 3vh;
     padding-left: 20%;
@@ -350,19 +351,35 @@ footer{
     align-items: center;
     justify-content: space-around;
 }
+
+.titAM{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 /* main - página professor */
     /*Professor turmas*/
-    #mainTurmas{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     #mainTurmas h1{
+        text-align: center;
         margin: 5%;
         font-family: 'Open Sans';
     }
+    #caixaTMProf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 30vh;
+        font-family: 'Open Sans', sans-serif;
+    }
     .caixaTarefa{
         width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        word-break: break-all;
+        padding: 0 2vw;
     }
     .caixaTarefa a h3{
         background-color: #FF5C00;
@@ -370,16 +387,18 @@ footer{
         border: #000 2px solid;
         border-radius: 30px;
         padding: 5% 5vh;
-        margin-top: 20%;
-        width: 10vw;
+        margin-top: 15%;
+        text-align: center;
+        width: 13vw;
+        
     }
     .caixaTarefa a{
         text-decoration: none;
     }
     /* Professor Atividades*/
-    #MainProfessorVeriAtiv{
+    /*#MainProfessorVeriAtiv{
         display: flex;
-    }
+    }*/
 /* main - página direção*/
 
 /* main - página admin */
