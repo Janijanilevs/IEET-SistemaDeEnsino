@@ -170,9 +170,10 @@ footer{
     margin-bottom: 10%;
 }
 .section-padrao{
-    background-color: #909694;
-    box-shadow: 20px 20px 55px black;
-    height:12%;
+    background: rgb(32,39,63);
+    background: linear-gradient(180deg, rgba(32,39,63,1) 12%, rgba(144,150,148,1) 29%, rgba(144,150,148,1) 100%);
+    /*box-shadow: 20px 20px 55px black;
+    */height:12%;
     width: 30%;
 
     border-radius: 60px;
