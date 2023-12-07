@@ -5,7 +5,7 @@
         <div id="AdUsuarioDirecao">
             <div id="regDir" class="adUsuario">
                 <img src="./public/imagens/livrosRegAdmin.png">
-                <div><h2>Inserir Dados</h2></div>
+                <div><a href="<?=linkrota('adicionaDirecao')?>"><h2>Inserir Dados</h2></a></div>
             </div>
         </div>
     </div>
