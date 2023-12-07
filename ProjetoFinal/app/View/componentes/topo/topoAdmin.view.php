@@ -23,12 +23,12 @@
             <h1 id="ieet-header"> IEET </h1>
         </a>
         <a href="<?=linkrota('')?>">
-            <h1>Mensagens</h1>
+            <h1>Registro</h1>
         </a>
-        <a href="<?=linkrota('')?>"> 
-            <h1>Criar Escolas e adicionar direção</h1>
+        <a href="<?=linkrota('adicionaDirecao')?>"> 
+            <h1>Criar Direção</h1>
         </a>
-        <a href="<?=linkrota('')?>" id="login">
-            <h1>Perfil</h1>
+        <a href="<?=linkrota('adminMain')?>" id="login">
+            <h1>Pagina Inicial</h1>
         </a>
     </header>
