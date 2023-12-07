@@ -83,8 +83,18 @@ abstract class DAO{
         $tabela = static::$tabela;
         $sql = "DELETE From {$tabela} where id = ?";
 
-        return $db->execute($sql, [$usuario->id]);
+        return $db->execute($sql, [$entidade->id]);
     }
 
+    public static function getBy(string $where,...$valores)
+    {
+        $db = new Database;
+        $tabela = static::$tabela;
+        $sql = "SELECT * FROM {$tabela} WHERE $where LIMIT 1";
+        
+        $db->execute($sql,$valores);
+        
+        return $db->get(static::$class);
+    }
     
 }

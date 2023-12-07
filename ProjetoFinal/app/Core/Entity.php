@@ -49,4 +49,18 @@ abstract class Entity{
     public function getProps(){
         return get_object_vars($this);
     }
+
+    public function autentica(string $senha)
+    {   
+        if(password_verify($senha, $this->senha))
+        {
+
+            $_SESSION['__usuario'] = $this->id;
+            $_SESSION['__logado'] = true;
+
+            return true;
+        }
+
+        return false;
+    }
 }

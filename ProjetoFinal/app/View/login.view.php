@@ -15,7 +15,10 @@
             <div id="loginTotal">
                 <img id="logo" src="public/imagens/Logo.png" alt="IEET">
                 <div id="formLogin">
-                    <form action="<?=linkrota('logarconta')?>" method="post">
+                <center>
+                    <h3><?= verificaSession()?></h3>
+                </center>
+                    <form action="<?=linkrota('autentica')?>" method="post">
                         <label class="campoDados">
                             <input type="text" name="login" placeholder="Login" required class="dados">   
                         </label>
@@ -23,12 +26,14 @@
                             <input type="password" name="senha" placeholder="Senha" required class="dados">   
                         </label>
                         <div id="selectForm">
-                            <select name="tipo:" id="seletortipo" placeholder="Tipo">
+                            <select name="tipo" id="seletortipo" placeholder="Tipo" required>
+
                                 <option value=""> Selecione o nivel de usuário </option>
                                 <option value="1"> Entrar como Admin </option>
                                 <option value="2"> Entrar como Direção </option>
                                 <option value="3"> Entrar como Professor </option>
                                 <option value="4"> Entrar como Aluno </option>
+
                             </select>
                         </div>
                         <button name="acessar" class="botaoAcesso"> Acessar </button>

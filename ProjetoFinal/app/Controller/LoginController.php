@@ -7,6 +7,7 @@ use IeetSite\Model\Entities\Aluno;
 use IeetSite\Model\DAO\AlunoDAO;
 use IeetSite\Core\Validator;
 use IeetSite\Core\helper;
+use IeetSite\Model\DAO\AdminDAO;
 use IeetSite\Model\DAO\DirecaoDAO;
 use IeetSite\Model\DAO\DisciplinasDAO;
 use IeetSite\Model\DAO\ProfessorDAO;
@@ -16,6 +17,7 @@ use IeetSite\Model\Entities\Disciplina;
 use IeetSite\Model\Entities\Notas;
 use IeetSite\Model\Entities\Professor;
 use IeetSite\Model\Entities\Turma;
+use IeetSite\Model\Entities\Usuario;
 
 class LoginController extends Controller{
 
@@ -23,9 +25,61 @@ class LoginController extends Controller{
         $this->view("login",["titulo" => "Página de Login - Ieet"]);
     }
 
-    public function logarConta(){
+    public function autentica()
+    {
         
+        $houveErro = Validator::execute(Usuario::getLoginRegras(),$this->post());
+
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(),'erro');
+            redirecionar('login');
+        }
         
+        # $usuario = AdminDAO::getBy("login = ?", $this->post('login'));
+        
+
+        switch( $this->post('tipo')){
+            case "1":
+                $usuario = AdminDAO::getBy("login = ?",$this->post('login'));
+                break;
+            case "2":
+                $usuario = DirecaoDAO::getBy("login = ?",$this->post('login'));
+                break;
+            case "3":
+                $usuario = ProfessorDAO::getBy("login = ?",$this->post('login'));
+                break;
+            case "4":
+                $usuario = AlunoDAO::getBy("login = ?",$this->post('login'));
+                break;
+
+            default:
+                print 'Teste';
+                die;
+                break;
+        }
+
+        
+        if($usuario &&  $usuario->autentica($this->post('senha'))){
+            switch( $this->post()['tipo']){
+                case 1:
+                    redirecionar('adminMain');
+                    break;
+                case 2:
+                    redirecionar('direcaoMain');
+                    break;
+                case 3:
+                    redirecionar('professorMain');
+                    break;
+                case 4:
+                    redirecionar('alunoMain');
+                    break;
+            }
+        }else{
+            addFormData($this->post());
+            verificaSession('Usuário ou Senha Incorreta','erro');
+            redirecionar('login');
+        }
     }
 
     public function plano(){

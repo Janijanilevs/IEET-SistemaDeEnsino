@@ -56,7 +56,7 @@ Router::get("/adminMain", "HomeController", "adminMain"); // ADMIN: Adicionar Di
         Router::post("/adicioAtividade", "LoginController", "adicionaAtividade");
         Router::post("/adicioMaterial", "LoginController", "adicionaMaterial");
         Router::post("/adicioNota", "LoginController", "adicionaNota");
-
+        Router::post('/autentica','LoginController','autentica');
         
 /* Teste Banco de Dados */
 
