@@ -22,7 +22,7 @@
             <img src="public/imagens/Logo-ieet-topo.png">
             <h1 id="ieet-header"> IEET </h1>
         </a>
-        <a href="<?=linkrota('')?>">
+        <a href="<?=linkrota('escolaRegistros')?>">
             <h1>Registro</h1>
         </a>
         <a href="<?=linkrota('adicionaDirecao')?>"> 

@@ -40,7 +40,7 @@ Router::get("/adicionaDisciplina", "HomeController", "adicionaDisciplina");   //
 /* Acesso: Admin */
 Router::get("/adicionaDirecao", "HomeController", "adicionaDirecao"); // ADMIN: Adicionar Direcao
 Router::get("/adminMain", "HomeController", "adminMain"); // ADMIN: Adicionar Direcao
-Router::get("/escolaRegistros", "HomeController", "escolaResgistros"); // ADMIN: P
+Router::get("/escolaRegistros", "HomeController", "escolaRegistros"); // ADMIN: P
 Router::get("/situacaoPag", "HomeController", "situacaoPag"); // ADMIN: P
 
 /* Login */
