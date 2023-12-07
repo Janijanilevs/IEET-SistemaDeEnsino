@@ -72,8 +72,8 @@ class HomeController extends Controller{
         $this->view("dadosrequisicao", ["titulo" => "Ieet - Adicionar aluno"]);
     }
 
-    public function adicionaDirecao(){
-        $this->view("adicionaDirecao", ["titulo" => "Ieet - Adicionar aluno"]);
+    public function adminMain(){
+        $this->view("adminMain", ["titulo" => "Ieet - Adicionar aluno"]);
     }
     #-----------------------------------------------------------------------#
     

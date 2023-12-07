@@ -26,10 +26,10 @@
         <a href="<?=linkrota('alunoBoletim')?>">
             <h1>Boletim</h1>
         </a>
-        <a href="<?=linkrota('')?>"> 
+        <a href="<?=linkrota('alunoMateriais')?>"> 
             <h1>Atividades<br>Material de estudo</h1>
         </a>
-        <a href="<?=linkrota('')?>" id="login">
+        <a href="<?=linkrota('alunoMain')?>" id="login">
             <h1>Perfil</h1>
         </a>
     </header>

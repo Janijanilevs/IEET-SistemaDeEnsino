@@ -9,7 +9,7 @@
                     <div class="CaixaTarefasMateriais">
                         <h3 class="TituloTarefa">TurmaNome </h3>
                         <div class="caixaTarefa">
-                            <h3>Disciplina: </h3>
+                            <h3>Disciplina:</h3><p></p>
                             <a href=""><h3>Ver Turma</h3></a>
                         </div>
                     </div>

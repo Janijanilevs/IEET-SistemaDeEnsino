@@ -24,13 +24,13 @@
             <img src="public/imagens/Logo-ieet-topo.png">
             <h1 id="ieet-header"> IEET </h1>
         </a>
-        <a href="<?=linkrota('')?>">
+        <a href="<?=linkrota('turmas')?>">
             <h1>Turmas</h1>
         </a>
         <a href="<?=linkrota('')?>"> 
             <h1>Chat</h1>
         </a>
-        <a href="<?=linkrota('')?>" id="login">
+        <a href="<?=linkrota('professorMain')?>" id="login">
             <h1>Perfil</h1>
         </a>
     </header>
