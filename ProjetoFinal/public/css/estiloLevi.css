@@ -594,15 +594,106 @@
 
 
 #verificaRegistro{
-    height: min-content;
+
     margin-bottom: 10vh;
 }
 
 #TituloVerReg{
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 4vh;
+    font-family: 'Paytone One';
 }
+
+#tabEscolas{
+    height: min-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#InfTabReg{
+    width: 95%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nEscola{
+    width: 30%;
+    text-align: center;
+}
+
+.nCnpj{
+    width: 15%;
+    text-align: center;
+}
+
+.nCont{
+    width: 25%;
+    text-align: center;
+}
+
+.nSit{
+    width: 15%;
+    text-align: center;
+}
+
+.nUsu{
+    width: 10%;
+    text-align: center;
+}
+
+
+
+.linha1TabReg{
+    background-color: #D9D9D9;
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    border-radius: 2.5rem;
+    margin-bottom: 5vh;
+}
+
+.linha2TabReg{
+    background-color: #FF5C00;
+    font-family: 'Open Sans', sans-serif;
+    width: 95%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    border-radius: 2.5rem;
+    margin-bottom: 5vh;
+}
+
+
+
+#altSit{
+    background-color: #FF7940;
+    margin: 5vh 35%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+#altSit a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+
 
