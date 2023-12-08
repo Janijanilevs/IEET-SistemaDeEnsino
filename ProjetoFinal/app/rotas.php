@@ -60,6 +60,7 @@ Router::get("/situacaoPag", "HomeController", "situacaoPag"); // ADMIN: P
         Router::post("/adicioMaterial", "LoginController", "adicionaMaterial");
         Router::post("/adicioNota", "LoginController", "adicionaNota");
         Router::post('/autentica','LoginController','autentica');
+        Router::post('/alteraSituacao', "LoginController", "alteraSituacao");
         
 /* Teste Banco de Dados */
 

@@ -202,4 +202,11 @@ class LoginController extends Controller{
         }
         redirecionar('turmas'); // Mudar aqui 
     }
+
+    public function alteraSituacao(){
+        $direcao = DirecaoDAO::getById($_GET['idEscola']);
+        $direcao->__set('situacao', $this->post('situacao'));
+        DirecaoDAO::editar($direcao);
+        redirecionar('escolaRegistros');
+    }
 }
