@@ -1,3 +1,7 @@
+<?php
+
+use IeetSite\Model\DAO\AlunoDAO;
+?>
 <?=componente('topo/topoProfessor')?>
     <main >
         <div id="MainProfessorNotas">  
@@ -5,8 +9,8 @@
                 <img src="./public/imagens/perfil.png">
             </div>
             <div id="if2">
-                <h2>Nome: Aluno da Silva</h2>
-                <h2>Matricula: 20222022</h2>
+                <h2>Nome: <?= AlunoDAO::getById($_GET['idAluno'])->__get("nome")?></h2>
+                <h2>Matricula: <?= AlunoDAO::getById($_GET['idAluno'])->__get("matricula")?></h2>
             </div>
             <div id="if1">
                 <h2>Situação: Matriculado</h2>
