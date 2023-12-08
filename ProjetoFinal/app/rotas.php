@@ -13,7 +13,7 @@ use IeetSite\Core\Router;
 /* Acesso: Padrão */
 Router::get("/", "HomeController", "index");    // Index
 Router::get("/confirmacao", "HomeController", "confirmacao");   // Página de confirmação, provavelmente não será utilizada
-
+Router::get('/sobrenos', "HomeController", "sobrenos");
 Router::get("/dadosRequisicao", "HomeController", "dadosrequisicao"); // Página
 
 /* Acesso: Aluno */
