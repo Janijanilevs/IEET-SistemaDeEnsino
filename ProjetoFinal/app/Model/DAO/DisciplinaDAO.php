@@ -3,10 +3,10 @@
 namespace IeetSite\Model\DAO;
 
 use IeetSite\Core\DAO;
-use IeetSite\Model\Entities\Disciplinas;
+use IeetSite\Model\Entities\Disciplina;
 
-class DisciplinasDAO extends DAO{
+class DisciplinaDAO extends DAO{
     
     protected static string $tabela = "disciplinas";
-    protected static string $class = Disciplicas::class;
+    protected static string $class = Disciplina::class;
 }

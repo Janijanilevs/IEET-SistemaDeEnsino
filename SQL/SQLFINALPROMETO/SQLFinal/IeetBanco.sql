@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `ieetbanco`.`ieetadmin` (
   `id` INT(11) NOT NULL DEFAULT 123,
   `nome` VARCHAR(45) NULL DEFAULT 'IeetAdmin',
   `login` VARCHAR(45) NULL DEFAULT 'admin',
-  `senha` VARCHAR(100) NULL DEFAULT 'admin',
+  `senha` VARCHAR(100) NULL DEFAULT '$2y$10$xmhMN1vRHtI9DdtSQwD.a.7vRqMYt3HGwoHxEbwheg3NtQ49dkvyy',
   `tipo` VARCHAR(45) NULL DEFAULT '1',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
