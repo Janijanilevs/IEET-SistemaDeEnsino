@@ -19,7 +19,7 @@ class Atividades extends Entity{
             'descricao' => 'obrigatorio ',
             'dataFinal' => 'obrigatorio ',
              'dataInicial' => 'obrigatorio ',
-             'Disciplinas_idDisciplinas' => 'obrigatorio '
+             'Disciplinas_idDisciplinas' => 'obrigatorio'
         ];
         }
     }

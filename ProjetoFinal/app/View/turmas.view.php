@@ -19,7 +19,7 @@ componente('topo/topoProfessor');
                         <h3 class="TituloTarefa"><?= TurmaDAO::getById($disciplina->__get('Turma_idTurma'))->__get('nome'); ?> </h3>
                         <div class="caixaTarefa">
                             <h3>Disciplina: <?= $disciplina->__get('nome') ?> </h3>
-                            <a href="<?= linkrota('turmaAlunos')?>?idTurma= <?= $disciplina->__get('Turma_idTurma')?>&nomeDisciplina= <?= $disciplina->__get('nome')?>&cargaHoraria= <?= $disciplina->__get('carga_Horaria')?> ">
+                            <a href="<?= linkrota('turmaAlunos')?>?idTurma= <?= $disciplina->__get('Turma_idTurma')?>&nomeDisciplina= <?= $disciplina->__get('nome')?>&cargaHoraria= <?= $disciplina->__get('carga_Horaria')?>&idDisciplina=<?= $disciplina->__get('id')?> ">
                             <h3>Ver Turma</h3></a>
                         </div>
                     </div>

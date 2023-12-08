@@ -27,27 +27,27 @@ use IeetSite\Model\DAO\AlunoDAO;
                     <div id="linhaNota1">
                         <h2>Unidade 1</h2>
                         <div id="tabNotas1"  class="tabNotas">
-                            <input type="number" id="nota1.1" name="nota1.1" step="0.1">
-                            <input type="number" id="nota1.1" name="nota1.2" step="0.1">
-                            <input type="number" id="nota1.1" name="nota1.3" step="0.1">
+                            <input type="number" id="nota1.1" name="nota1.1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota1.1" name="nota1.2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota1.1" name="nota1.3" step="0.1" min='0' max='10'>
                             <h3>Media1</h3>
                         </div>
                     </div>
                     <div id="linhaNota2">
                         <h2>Unidade 2</h2>
                         <div id="tabNotas2"  class="tabNotas">
-                            <input type="number" id="nota2.1" name="nota2.1" step="0.1">
-                            <input type="number" id="nota2.1" name="nota2.2" step="0.1">
-                            <input type="number" id="nota2.1" name="nota2.3" step="0.1">
+                            <input type="number" id="nota2.1" name="nota2.1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota2.1" name="nota2.2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota2.1" name="nota2.3" step="0.1" min='0' max='10'>
                             <h3>Media2</h3>
                         </div>
                     </div>
                     <div id="linhaNota1">
                         <h2>Unidade 3</h2>
                         <div id="tabNotas1"  class="tabNotas">
-                            <input type="number" id="nota3.1" name="nota3.1" step="0.1">
-                            <input type="number" id="nota3.1" name="nota3.2" step="0.1">
-                            <input type="number" id="nota3.1" name="nota3.3" step="0.1">
+                            <input type="number" id="nota3.1" name="nota3.1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota3.1" name="nota3.2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota3.1" name="nota3.3" step="0.1" min='0' max='10'>
                             <h3>Media3</h3>
                         </div>
                     </div>

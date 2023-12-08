@@ -17,7 +17,7 @@ class Disciplina extends Entity{
             'nome' => 'obrigatorio ',
              'Turma_idTurma' => 'obrigatorio ',
              'carga_Horaria' => 'obrigatorio ',
-             'usuario_professor_id' => 'obrigatorio '
+             'usuario_professor_id' => 'obrigatorio'
         ];
     }
 }
