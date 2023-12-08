@@ -16,7 +16,7 @@ use IeetSite\Model\DAO\AlunoDAO;
                 <h2>Situação: Matriculado</h2>
             </div>
 
-            <form action="<?=linkrota('adicioAluno')?>" method="post">
+            <form action="<?=linkrota('insertNotas')?>" method="post">
                 <div id="formNotas">
                     <div id="tabTopo">
                         <h3>Nota 1</h3>
@@ -27,27 +27,28 @@ use IeetSite\Model\DAO\AlunoDAO;
                     <div id="linhaNota1">
                         <h2>Unidade 1</h2>
                         <div id="tabNotas1"  class="tabNotas">
-                            <input type="number" id="nota1.1" name="nota1.1" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota1.1" name="nota1.2" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota1.1" name="nota1.3" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota1.1" name="nota1_1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota1.1" name="nota1_2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota1.1" name="nota1_3" step="0.1" min='0' max='10'>
                             <h3>Media1</h3>
                         </div>
                     </div>
                     <div id="linhaNota2">
                         <h2>Unidade 2</h2>
                         <div id="tabNotas2"  class="tabNotas">
-                            <input type="number" id="nota2.1" name="nota2.1" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota2.1" name="nota2.2" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota2.1" name="nota2.3" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota2.1" name="nota2_1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota2.1" name="nota2_2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota2.1" name="nota2_3" step="0.1" min='0' max='10'>
                             <h3>Media2</h3>
                         </div>
                     </div>
                     <div id="linhaNota1">
                         <h2>Unidade 3</h2>
                         <div id="tabNotas1"  class="tabNotas">
-                            <input type="number" id="nota3.1" name="nota3.1" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota3.1" name="nota3.2" step="0.1" min='0' max='10'>
-                            <input type="number" id="nota3.1" name="nota3.3" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota3.1" name="nota3_1" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota3.1" name="nota3_2" step="0.1" min='0' max='10'>
+                            <input type="number" id="nota3.1" name="nota3_3" step="0.1" min='0' max='10'>
+                            <input type="hidden" id="alunoid" name="Usuario_aluno_idUsuario" value="<?= $_GET['idAluno']?>">
                             <h3>Media3</h3>
                         </div>
                     </div>

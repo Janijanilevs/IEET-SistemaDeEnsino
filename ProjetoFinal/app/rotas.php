@@ -61,6 +61,7 @@ Router::get("/situacaoPag", "HomeController", "situacaoPag"); // ADMIN: P
         Router::post("/adicioNota", "LoginController", "adicionaNota");
         Router::post('/autentica','LoginController','autentica');
         Router::post('/alteraSituacao', "LoginController", "alteraSituacao");
+        Router::post('/insertNotas', 'LoginController', 'inserirNotas');
         
 /* Teste Banco de Dados */
 

@@ -12,6 +12,7 @@ use IeetSite\Model\DAO\AtividadesDAO;
 use IeetSite\Model\DAO\DirecaoDAO;
 use IeetSite\Model\DAO\DisciplinaDAO;
 use IeetSite\Model\DAO\MateriaisDAO;
+use IeetSite\Model\DAO\NotasDAO;
 use IeetSite\Model\DAO\ProfessorDAO;
 use IeetSite\Model\DAO\TurmaDAO;
 use IeetSite\Model\Entities\Atividades;
@@ -208,5 +209,17 @@ class LoginController extends Controller{
         $direcao->__set('situacao', $this->post('situacao'));
         DirecaoDAO::editar($direcao);
         redirecionar('escolaRegistros');
+    }
+
+    public function inserirNotas(){ 
+        $indices = array_keys($this->post());
+        $tamanho = count($indices);
+        for($i = 0; $i < $tamanho; $i++){
+            print $indices[$i];
+        }
+        
+        die;
+        $adicionado = new Notas();
+        NotasDAO::inserir($adicionado);
     }
 }
