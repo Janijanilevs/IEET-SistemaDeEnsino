@@ -8,12 +8,16 @@ use IeetSite\Model\DAO\AlunoDAO;
 use IeetSite\Core\Validator;
 use IeetSite\Core\helper;
 use IeetSite\Model\DAO\AdminDAO;
+use IeetSite\Model\DAO\AtividadesDAO;
 use IeetSite\Model\DAO\DirecaoDAO;
-use IeetSite\Model\DAO\DisciplinasDAO;
+use IeetSite\Model\DAO\DisciplinaDAO;
+use IeetSite\Model\DAO\MateriaisDAO;
 use IeetSite\Model\DAO\ProfessorDAO;
 use IeetSite\Model\DAO\TurmaDAO;
+use IeetSite\Model\Entities\Atividades;
 use IeetSite\Model\Entities\Direcao;
 use IeetSite\Model\Entities\Disciplina;
+use IeetSite\Model\Entities\Materiais;
 use IeetSite\Model\Entities\Notas;
 use IeetSite\Model\Entities\Professor;
 use IeetSite\Model\Entities\Turma;
@@ -161,24 +165,41 @@ class LoginController extends Controller{
         }
 
         $adicionado = new Disciplina($this->post()); // Mudar aqui
-        if(DisciplinasDAO::inserir($adicionado)){ // Mudar aqui
+        if(DisciplinaDAO::inserir($adicionado)){ // Mudar aqui
             verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
         }
         redirecionar('adicionaDisciplina'); // Mudar aqui 
     }
 
-    public function adicionaNota(){ // Mudar aqui
-        $houveErro = Validator::execute(Notas::getRegras(), $this->post()); // Mudar aqui
+    public function adicionaAtividade(){ // Mudar aqui
+        $houveErro = Validator::execute(Atividades::getRegras(), $this->post()); // Mudar aqui
         if($houveErro){
             addFormData($this->post());
             verificaSession(Validator::getListaErros(), "erro");
-            redirecionar('adicionaDisciplina'); //Mudar aqui
+            redirecionar('turmas'); //Mudar aqui
         }
+        
+        
 
-        $adicionado = new Disciplina($this->post()); // Mudar aqui
-        if(DisciplinasDAO::inserir($adicionado)){ // Mudar aqui
+        $adicionado = new Atividades($this->post()); // Mudar aqui
+        if(AtividadesDAO::inserir($adicionado)){ // Mudar aqui
             verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
         }
-        redirecionar('adicionaDisciplina'); // Mudar aqui 
+        redirecionar('turmas'); // Mudar aqui 
+    }
+
+    public function adicionaMaterial(){ // Mudar aqui
+        $houveErro = Validator::execute(Materiais::getRegras(), $this->post()); // Mudar aqui
+        if($houveErro){
+            addFormData($this->post());
+            verificaSession(Validator::getListaErros(), "erro");
+            redirecionar('turmas'); //Mudar aqui
+        }
+
+        $adicionado = new Materiais($this->post()); // Mudar aqui
+        if(MateriaisDAO::inserir($adicionado)){ // Mudar aqui
+            verificaSession(ltrim(get_class($adicionado), 'IeetSite\\Model\\Entities\\') . " {$adicionado->nome} foi cadastrado com sucesso!");
+        }
+        redirecionar('turmas'); // Mudar aqui 
     }
 }

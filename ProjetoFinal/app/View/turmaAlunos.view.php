@@ -1,5 +1,4 @@
 <?php
-
 use IeetSite\Model\DAO\AlunoDAO;
 use IeetSite\Model\DAO\TurmaDAO;
 #var_dump($_GET['nomeDisciplina']);
@@ -36,8 +35,8 @@ componente('topo/topoProfessor')?>
             </div>
 
             <div id="butonAdVe">
-                <div class="btsAV"><a href="<?=linkrota('inserirAtividades')?>"><h2>Adicionar Atividades ou Material</h2></a></div>
-                <div class="btsAV"><a href="<?=linkrota('verificaAtividade')?>"><h2>Verificar Atividades</h2></a></div>
+                <div class="btsAV"><a href="<?=linkrota('inserirAtividades')?>?idDisciplina=<?= $_GET['idDisciplina']?>"><h2>Adicionar Atividades ou Material</h2></a></div>
+                <div class="btsAV"><a href="<?=linkrota('verificaAtividade')?>?idDisciplina=<?= $_GET['idDisciplina']?>"><h2>Verificar Atividades</h2></a></div>
             </div>
 
         </div>

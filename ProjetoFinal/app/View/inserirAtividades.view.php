@@ -1,7 +1,7 @@
-<?=componente('topo/topoProfessor')?>
+<?=componente('topo/topoProfessor'); ?>
     <main >
         <div id="MainProfessorInAtiv">  
-            <form action="<?=linkrota('')?>" method="post" class="FormAdicionar">
+            <form action="<?=linkrota('adicioAtividade')?>" method="post" class="FormAdicionar">
                 <center>
                 <h3><?= verificaSession()?></h3>
                 </center>
@@ -17,13 +17,15 @@
                 </div>
                 <div class="flexInput">
                 <label for="dataEntrega">Data de Entrega: </label>
-                <input type="date" id="dataEntrega" name="dataEntrega" required>
+                <input type="date" id="dataEntrega" name="dataFinal" required>
                 </div>
+                <input type='hidden' name='dataInicial' value='<?= date('Y-m-d') ?>'>
+                <input type='hidden' name="Disciplinas_idDisciplinas" value='<?= intval($_GET['idDisciplina']) ?>' >
                 <div class="buttonRegistra">
                 <button type="submit">Enviar</button>
                 </div>
             </form>
-            <form action="<?=linkrota('')?>" method="post" class="FormAdicionar">
+            <form action="<?=linkrota('adicioMaterial')?>" method="post" class="FormAdicionar">
                 <center>
                 <h3><?= verificaSession()?></h3>
                 </center>
@@ -41,6 +43,7 @@
                 <label for="descricao">Descrição: </label>
                 <input type="text" id="descricao" name="descricao" required>
                 </div>
+                <input type='hidden' name="disciplinas_id" value='<?= intval($_GET['idDisciplina']) ?>' >
                 <div class="buttonRegistra">
                 <button type="submit">Enviar</button>
                 </div>

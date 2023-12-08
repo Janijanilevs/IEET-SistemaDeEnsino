@@ -10,14 +10,14 @@ class Materiais extends Entity{
     protected ?string $link;
     protected ?string $nome;
     protected ?string $descricao;
-    protected ?int $disciplina_id;
+    protected ?int $disciplinas_id;
 
     public static function getRegras(){
         return[
             'nome' => 'obrigatorio ',
              'link' => 'obrigatorio ',
              'descricao' => 'obrigatorio ',
-             'Disciplinas_idDisciplinas' => 'obrigatorio '
+             'disciplinas_id' => 'obrigatorio '
             ];
     }
 }
