@@ -28,10 +28,10 @@
             </div>
         </div>
         <div id="AdquirirPlanos">
-            <div class="BtnAdquirir"><h4>Adquirir Plano</h4></div>
-            <div class="BtnAdquirir"><h4>Adquirir Plano</h4></div>
-            <div class="BtnAdquirir"><h4>Adquirir Plano</h4></div>
-            <div class="BtnAdquirir"><h4>Adquirir Plano</h4></div>
+            <div class="BtnAdquirir"><a href="<?=linkrota('dadosRequisicao')?>"><h4>Adquirir Plano</h4></a></div>
+            <div class="BtnAdquirir"><a href="<?=linkrota('dadosRequisicao')?>"><h4>Adquirir Plano</h4></a></div>
+            <div class="BtnAdquirir"><a href="<?=linkrota('dadosRequisicao')?>"><h4>Adquirir Plano</h4></a></div>
+            <div class="BtnAdquirir"><a href="<?=linkrota('dadosRequisicao')?>"><h4>Adquirir Plano</h4></a></div>
         </div>
     </main>
 <?php componente('rodape')?>

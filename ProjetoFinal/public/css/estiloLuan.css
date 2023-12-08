@@ -173,7 +173,8 @@
     color: #ffffff;
     font-size: 35px;
     text-align: center;
+}
 
-    
-
+.BtnAdquirir a{
+    text-decoration: none;
 }
