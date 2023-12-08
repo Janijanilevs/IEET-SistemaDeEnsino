@@ -366,6 +366,9 @@ footer{
 
 /* main - página professor */
     /*Professor turmas*/
+    .TituloTarefa{
+        text-align: center;
+    }
     #mainTurmas h1{
         text-align: center;
         margin: 5%;
