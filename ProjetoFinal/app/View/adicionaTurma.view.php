@@ -1,4 +1,6 @@
-<?=componente('topo/topoDirecao')?>
+<?php
+
+componente('topo/topoDirecao')?>
     <main id="AdicionarTurmaForm">
     <div id="divTurmaForm">
     <form action="<?=linkrota('adicioTurma')?>" method="post" class="FormAdicionar">
@@ -11,10 +13,7 @@
             <label for="nome">Nome: </label>
             <input type="text" id="nome" name="nome" required>
             </div>
-            <div class="flexInput">
-            <label for="Direcao_id">Direção: </label>
-            <input type="text" id="Direcao_id" name="Direcao_id" required>
-            </div>
+            <input type="hidden" id="Direcao_id" name="Direcao_id" value="<?= $_SESSION['__usuario'] ?>">
             <div class="buttonRegistra">
             <button type="submit">Registrar</button>
             </div>

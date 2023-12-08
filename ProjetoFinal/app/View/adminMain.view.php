@@ -1,4 +1,6 @@
-<?php componente('topo/topoAdmin')?>
+<?php
+
+ componente('topo/topoAdmin');?>
 <main>
     <div id="AdicionaDirecao">
         <div id="TituloDirecaoMain"><h1>Registar Escola e Direção</h1></div>

@@ -1,4 +1,9 @@
-<?php componente('topo/topoDirecao')?>
+<?php
+
+use IeetSite\Model\DAO\TurmaDAO;
+
+
+ componente('topo/topoDirecao')?>
 <main id="AdicionarAlunoForm">
     <div id="divAlunoForm">
         <form action="<?=linkrota('adicioAluno')?>" method="post" class="FormAdicionar">
@@ -34,17 +39,21 @@
             <div class="flexInput">
             <input type="hidden" name="dataDeCriacao" value="<?=date('Y/m/d')?>">
             </div>
-            <div class="flexInput">
-            <label for="turma">Turma:</label>
-            <input type="text" id="turma" name="Turma_idTurma" required>
+            <div class="flexSelectAluno">
+
+            <select name="Turma_idTurma" id="seletortipo" required>
+                <option value=""> Selecione a turma do aluno </option>
+            <?php foreach(TurmaDAO::getAll() as $turma){
+                if($turma->__get('Direcao_id') == $_SESSION['__usuario']){?>
+                    <option value="<?= $turma->__get('id') ?> "> <?= $turma->__get('nome') ?> </option>
+            <?php }} ?>
+            </select>
+            
             </div>
             <div class="flexInput">
             <input type="hidden" id="matricula" name="matricula" value="<?= getMatricula('Aluno') ?>" required >
             </div>
-            <div class="flexInput">
-            <label for="Direcao_id">Direção:</label>
-            <input type="text" id="Direcao_id" name="Direcao_id" required>
-            </div>
+            <input type="hidden" id="Direcao_id" name="Direcao_id" value=" <?= $_SESSION['__usuario'] ?> " >
             <div class="buttonRegistra">
             <button type="submit">Registrar</button>
             </div>

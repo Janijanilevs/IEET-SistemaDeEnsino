@@ -1,4 +1,6 @@
-<?=componente('topo/topoAluno')?>
+<?php
+
+componente('topo/topoAluno')?>
     <main >
         <div id="MainAlunoBoletim">
             <div id="imgPerfilBoletim">

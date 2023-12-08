@@ -411,7 +411,22 @@ footer{
         display: flex;
     }*/
 /* main - página direção*/
-
+.flexSelectAluno{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+.flexSelectAluno select{
+    width: 95%;
+    border: 2px black solid;
+    margin-bottom: 2vh;
+    font-size: 3vh;
+    background-color: white;
+    height: 6vh;
+    padding-left: 25%;
+    border-radius: 30px;
+    font-size: 30px;
+}
 /* main - página admin */
 
 /* main - confirmacao */

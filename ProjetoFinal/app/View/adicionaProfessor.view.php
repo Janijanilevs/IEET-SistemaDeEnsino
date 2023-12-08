@@ -41,10 +41,7 @@
             <div class="flexInput">
             <input type="hidden" id="matricula" name="matricula" value="<?= getMatricula('Aluno') ?>">
             </div>
-            <div class="flexInput">
-            <label for="Direcao_id">Direção: </label>
-            <input type="text" id="Direcao_id" name="Direcao_id" required>
-            </div>
+            <input type="hidden" id="Direcao_id" name="Direcao_id" value="<?= $_SESSION['__usuario'] ?>">
             <div class="buttonRegistra">
             <button type="submit">Registrar</button>
             </div>
